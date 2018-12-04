@@ -1,5 +1,4 @@
 class Bottle < ApplicationRecord
-  mount_uploader :photo, PhotoUploader
   has_many :wishes
   has_many :user_bottles
   has_many :reviews
@@ -13,4 +12,6 @@ class Bottle < ApplicationRecord
 
   validates :title, presence: true
   validates :year, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end
