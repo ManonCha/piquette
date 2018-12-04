@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   resources :user_bottles, only: [:index, :create, :new]
   resources :wishes, only: [:index, :create, :new, :destroy]
   resources :bottles, only: [:index, :show, :new, :create]
+  resources :recommendations, only: [:index]
+  get 'recommendations/search', to: "recommendations#search", as: :search
 end
 
