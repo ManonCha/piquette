@@ -5,19 +5,34 @@
 .form-wrapper {
   width: 100%;
   padding: 3px;
-  background: lightblue;
 }
 
 .form-container {
-  background: lightgrey;
   padding: 20px 10px;
-  margin: 60px 0px;
-  align-items: center;
+  margin: 60px 0;
+  align-item: center;
   justify-content: center;
+  background: white;
 }
 
+.highlight {
+  background: black;
+}
 .form-container p {
   font-weight: lighter;
+}
+
+.form-container label {
+  padding: 10px 20px;
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+  background: navy;
+  color: white;
+  width: 90%;
+  margin: 10px 0px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px lightgrey;
 }
 
 .form-btn {
@@ -29,4 +44,14 @@
   color: white;
   width: 90%;
   margin: 10px 0px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px lightgrey;
+}
+
+.form-container input[type=radio] {
+  display:none;
+}
+
+.form-container input[type=radio]:checked+label {
+  background: grey;
 }
