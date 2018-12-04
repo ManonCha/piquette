@@ -67,16 +67,13 @@ html_doc.search('.products .row').each do |element|
 
   # récupération de l'url de la photo
   element.search('.product-thumb a img').each do |el|
-    # bottle.photo.remote_photo_url = el['src']
+    bottle.remote_photo_url = 'https://www.1jour1vin.com/' + el['src']
   end
 
   # récupération du lien de la fiche produit
   element.search('.description-product h3 a').each do |el|
     bottle_url = 'https://www.1jour1vin.com' + el['href']
   end
-
-  puts bottle_url
-  puts "------------------"
 
   # switch URL => récupération des détails de la fiche bouteille
   html_file_bottle = open(bottle_url).read
@@ -88,16 +85,12 @@ html_doc.search('.products .row').each do |element|
     wine_pairing_block = el.text.strip
     bottle.wine_pairing = wine_pairing_block.split(':').last
   end
-  puts bottle.wine_pairing
-puts "------------------"
 
   #récupération du prix
   html_doc_bottle.search('.prix-wrapper').each do |el|
     price_string = el.search(".price").text.strip + el.search(".price2").text.strip
     bottle.price = price_string.to_i
   end
-  puts bottle.price
-  puts "------------------"
 
   # récupération des descriptions
   bottle_details = {}

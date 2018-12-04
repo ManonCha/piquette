@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_04_161611) do
+ActiveRecord::Schema.define(version: 2018_12_04_184003) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2018_12_04_161611) do
     t.string "tasting_advice"
     t.string "wine_pairing"
     t.integer "price"
+    t.string "photo"
     t.index ["bottle_grape_id"], name: "index_bottles_on_bottle_grape_id"
     t.index ["color_id"], name: "index_bottles_on_color_id"
     t.index ["country_id"], name: "index_bottles_on_country_id"
