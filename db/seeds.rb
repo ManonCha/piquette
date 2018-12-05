@@ -9,20 +9,19 @@
   Wish
 ].each(&:destroy_all)
 
-
 user = User.create! email: "a@a.com", password: "123456"
 
-region = Region.create! name: "the Region"
-winery = Winery.create! name: "the Winery"
-color = Color.create! name: "the Color"
+region = Region.create! name: "Rousillon"
+winery = Winery.create! name: "Domaine du Chateau"
+color = Color.create! name: "Rouge"
 
 bottle = Bottle.create!(
   region: region,
   winery: winery,
   color: color,
   bio: false,
-  title: "title",
-  grapes: "grapes",
+  title: "Les vignes",
+  grapes: "100\% grenache",
   designation: "designation",
   terroir: "terroir",
   harvest: "harvest",
@@ -32,8 +31,8 @@ bottle = Bottle.create!(
   nose: "nose",
   appearance: "appearance",
   taste: "taste",
-  tasting_advice: "tasting_advice",
-  wine_pairing: "wine_pairing",
+  tasting_advice: "advice",
+  wine_pairing: "viande rouge, fromage",
   year: 1992,
   best_before: 2022,
   best_after: 2000,

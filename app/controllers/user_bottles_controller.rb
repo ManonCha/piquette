@@ -1,8 +1,7 @@
 class UserBottlesController < ApplicationController
 
   def index
-    @user_bottles = UserBottle.all
-
+    @user_bottles = current_user.user_bottles
   end
 
   def new

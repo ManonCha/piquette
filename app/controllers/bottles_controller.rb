@@ -1,21 +1,18 @@
 class BottlesController < ApplicationController
-
+  before_action :set_bottle, only: [:show]
   def show
-
-    @bottle = Bottle.find(params[:id])
-
-
-  end
-
-  def new
-  end
-
-  def create
+    respond_to |format|
+      format.html
+      format.js
+    end
   end
 
   private
   def bottle_params
-  params.recquire(:bottle).permit(:title)
+    params.recquire(:bottle).permit(:title)
+  end
 
+  def set_bottle
+    @bottle = Bottle.find(params[:id])
   end
 end
