@@ -1,19 +1,38 @@
-<div class="col-xs-12">
-  <div class='review-header'>
-    <h1>My reviews</h1>
-  </div>
+<div>
+  <% @reviews.each do |review| %>
+    <button type="button" data-toggle="modal" data-target="#modal<%= review.id %>">
+      <div class ='card_review_index row '>
+          <div class='card_review_index_content col-xs-4 text-center'>
+            <%= review.comment %>
+          </div>
+          <div class='card_review_index_rating col-xs-4 text-center'>
+            <%= review.rating %>
+          </div>
+          <div class='card_review_index_tasting_date col-xs-4 text-center'>
+            <%= review.tasting_date %>
+          </div>
+      </div>
+    </button>
+</div>
 
-  <div class='index-reviews-container'>
-      <ul>
-        <% @reviews.each do |review| %>
-          <%= link_to review_path(review) do%>
-            <li>
-              <%= review.bottle.title %>
-              <%= review.bottle.winery.name %>
-              <%= review.bottle.year %>
-            </li>
-          <% end %>
-        <% end %>
-      </ul>
+<div class="modal fade" id="modal<%= review.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= review.comment %></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
   </div>
 </div>
+<% end %>
+
