@@ -1,0 +1,34 @@
+
+
+
+    <% @user_bottles.each do |user_bottle| %>
+      <div class ='card__user_bottle_index row '>
+        <%= link_to bottle_path(user_bottle.bottle) do %>
+        <%#if user_bottle.photo.present? %>
+          <div class='card__user_bottle_index_photo col-xs-4 text-center'> <%# image_tag user_bottle.photo  %> </div>
+          <div class='card__user_bottle_index_title col-xs-4 text-center'><%= user_bottle.bottle.title.capitalize %></div>
+          <div class='card__user_bottle_index_description col-xs-4 text-center'>
+            quantité:<%= user_bottle.quantity %>
+            provenance: <span>  <%= user_bottle.bottle.region.name.capitalize %>
+            </span>
+          </div>
+        <% end %>
+      </div>
+
+      <%# else %>
+      <div class='card__user_bottle_index_title_no_photo'><%#= user_bottle.bottle.title %></div>
+      <div class='card__user_bottle_index_description_no_photo'> <%#= user_bottle.bottle.quantity %>
+        <%#= #user_bottle.bottle.region %>
+
+      </div>
+
+
+      <%# end %>
+    <% end %>
+  </div>
+
+
+<!-- <a href="/bottles/1">Titre de la bouteille</a>
+<a href="<%#= bottle_path(user_bottle.bottle) %>"><%#= user_bottle.bottle.title %></a>
+
+<%#= link_to user_bottle.bottle.title, bottle_path(user_bottle.bottle) %> -->
