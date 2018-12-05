@@ -1,1 +1,63 @@
-// Specific CSS for your home-page
+/* Ma cave */
+
+.cellar-card {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 22px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.home-cellar-picto {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home-picto-glass {
+  border: solid 6px lightgrey;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+.fa-wine-glass{
+  color: grey;
+}
+
+.cellar-card h3 {
+  margin-top: 10px;
+}
+
+/* Mes dégustations */
+
+.review-card {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
+  margin: auto;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* wishlist */
+.wish-card {
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
+  margin: auto;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
