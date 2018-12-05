@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_many :user_bottles
-  has_many :reviews
-  has_many :wishes
+  has_many :user_bottles, dependent: :destroy
+  has_many :reviews, dependent: :destroy
+  has_many :wishes, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

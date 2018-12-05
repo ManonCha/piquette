@@ -1,0 +1,53 @@
+.landing-background {
+  width: 100%;
+  height: 667px;
+  display: flex;
+  justify-content: center;
+}
+
+.landing-logo {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin: auto;
+  letter-spacing: 0.1em;
+}
+
+.landing-logo a{
+  text-decoration: none;
+  color: white;
+}
+
+.tracking-in-expand {
+  animation: tracking-in-expand 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.color-change-2x {
+  animation: color-change-2x 2s linear infinite alternate both;
+}
+
+
+/* ---------------------------------------------- */
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.9em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes color-change-2x {
+  0% {
+    background: darkblue;
+  }
+  100% {
+    background: #005c97;
+  }
+}
