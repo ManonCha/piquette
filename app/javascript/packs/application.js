@@ -6,7 +6,8 @@ import {hideForm} from "../components/hide_form";
 
 if (document.getElementById('search')) {
   displayForm()
-  hideForm()
 }
+
+hideForm()
 
 initNavbar();

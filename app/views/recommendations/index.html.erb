@@ -1,0 +1,12 @@
+<h1>Recommendation</h1>
+<% @bottles.each do |bottle| %>
+  <%= bottle.color.name %>
+<% end %>
+  *****************************************************************$
+<% @bottles.each do |bottle| %>
+  <%= bottle.region.name %>
+<% end %>
+  *****************************************************************$
+<% @bottles.each do |bottle| %>
+  <%= bottle.price %>
+<% end %>
