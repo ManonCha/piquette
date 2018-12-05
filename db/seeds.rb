@@ -1,3 +1,4 @@
+
 require 'open-uri'
 require 'nokogiri'
 
@@ -151,5 +152,4 @@ wine_regions.each do |region_item|
   end
 end
 puts "bottles created !"
-
 
