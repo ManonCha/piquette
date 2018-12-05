@@ -9,4 +9,3 @@ Rails.application.routes.draw do
   resources :recommendations, only: [:index]
   get 'recommendations/search', to: "recommendations#search", as: :search
 end
-
