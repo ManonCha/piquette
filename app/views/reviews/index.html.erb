@@ -1,0 +1,19 @@
+<div class="col-xs-12">
+  <div class='review-header'>
+    <h1>My reviews</h1>
+  </div>
+
+  <div class='index-reviews-container'>
+      <ul>
+        <% @reviews.each do |review| %>
+          <%= link_to review_path(review) do%>
+            <li>
+              <%= review.bottle.title %>
+              <%= review.bottle.winery.name %>
+              <%= review.bottle.year %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+  </div>
+</div>
