@@ -2,78 +2,65 @@
 
 <div class="form-wrapper">
 
-  <div class="form-container">
+<!--   <div class="form-container highlight">
     <p>Que cherchez-vous?</p>
     <button class="form-btn" id="search" >Consommer une bouteille de ma cave</button>
     <button class="form-btn" id="buy">Acquérir de nouvelles bouteilles</button>
-  </div>
+  </div> -->
 
-  <form action="" method="get" class='search disabled'>
+  <form action="" method="get" class='buy'>
 
-    <div class="form-container">
+    <div class="form-container highlight">
       <p>Quelle couleur de vin rechercher vous?</p>
-      <input type="radio" name="color" value="red" id="color_red">
+      <input type="radio" name="color" value="Rouge" id="color_red">
       <label for="color_red">Rouge</label>
-      <input type="radio" name="color" value="white" id="color_white">
+      <input type="radio" name="color" value="Blanc" id="color_white">
       <label for="color_white">Blanc</label>
-      <input type="radio" name="color" value="rose" id="color_rose">
+      <input type="radio" name="color" value="Rosé" id="color_rose">
       <label for="color_rose">Rosé</label>
-      <input type="radio" name="color" value="sparkling" id="color_sparkling">
+      <input type="radio" name="color" value="petillant" id="color_sparkling">
       <label for="color_sparkling">Effervescent</label>
       <input type="radio" name="color" value="all" id="color_all">
       <label for="color_all">Toutes</label>
-    </div>
-
-    <div class="form-container" id="wine-type">
-      <p>Quel type de vin rechercher vous?</p>
-      <input type="radio" name="type" value="organic" id="type_organic">
-      <label for="type_organic">Biologique</label>
-      <input type="radio" name="type" value="biodynamic" id="type_biodynamic">
-      <label for="type_biodynamic">Biodynamique</label>
-      <input type="radio" name="type" value="nature" id="type_nature">
-      <label for="type_nature">Nature</label>
-      <input type="radio" name="type" value="classic" id="type_classic">
-      <label for="type_classic">Classique</label>
-      <input type="radio" name="type" value="all" id="type_all">
-      <label for="type_all">Tous</label>
     </div>
 
     <div class="form-container">
       <p>Pour quelle occasion?</p>
-      <input type="radio" name="pairing" value="appetizer" id="pairing_appetizer">
-      <label for="pairing_appetizer">Apéritif</label>
-      <input type="radio" name="pairing" value="red-meat" id="pairing_read-meat">
-      <label for="pairing_read-meat">Viande rouge</label>
-      <input type="radio" name="pairing" value="white-meat" id="pairing_white-meat">
-      <label for="pairing_white-meat">Viande blanche</label>
-      <input type="radio" name="pairing" value="fish" id="pairing_fish">
-      <label for="pairing_fish">Poisson</label>
-      <input type="radio" name="pairing" value="cheese" id="pairing_cheese">
-      <label for="pairing_cheese">Fromage</label>
+      <input type="radio" name="pairing" value="apero" id="pairing_apero">
+      <label for="pairing_apero">Apéritif</label>
+      <input type="radio" name="pairing" value="viandes-rouges" id="pairing_viandes-rouges">
+      <label for="pairing_viandes-rouges">Viande rouge</label>
+      <input type="radio" name="pairing" value="viandes-blanches" id="pairing_viandes-blanches">
+      <label for="pairing_viandes-blanches">Viande blanche</label>
+      <input type="radio" name="pairing" value="poissons" id="pairing_poissons">
+      <label for="pairing_poissons">Poisson</label>
+      <input type="radio" name="pairing" value="fromages" id="pairing_fromages">
+      <label for="pairing_fromages">Fromage</label>
       <input type="radio" name="pairing" value="dessert" id="pairing_dessert">
       <label for="pairing_dessert">Dessert</label>
     </div>
 
-  </form>
-
-
-
-  <form action="" method="get" class='buy disabled'>
-
     <div class="form-container">
-      <p>Quelle couleur de vin rechercher vous?</p>
-      <input type="radio" name="color" value="red" id="color_red">
-      <label for="color_red">Rouge</label>
-      <input type="radio" name="color" value="white" id="color_white">
-      <label for="color_white">Blanc</label>
-      <input type="radio" name="color" value="rose" id="color_rose">
-      <label for="color_rose">Rosé</label>
-      <input type="radio" name="color" value="sparkling" id="color_sparkling">
-      <label for="color_sparkling">Effervescent</label>
-      <input type="radio" name="color" value="all" id="color_all">
-      <label for="color_all">Toutes</label>
+      <p>Bio?</p>
+      <input type="radio" name="bio" value="true" id="bio_true">
+      <label for="bio_true">Oui</label>
+      <input type="radio" name="bio" value="false" id="bio_false">
+      <label for="bio_false">Non</label>
+      <input type="radio" name="bio" value="all" id="bio_all">
+      <label for="bio_all">Les 2</label>
     </div>
 
+    <div class="form-container">
+      <p>A quoi ce vin est-il destiné?</p>
+      <input type="radio" name="garder" value="true" id="garder_true">
+      <label for="garder_true">Etre gardé</label>
+      <input type="radio" name="garder" value="false" id="garder_false">
+      <label for="garder_false">Etre prêt à boire</label>
+      <input type="radio" name="garder" value="all" id="garder_all">
+      <label for="garder_all">Peu importe</label>
+    </div>
+
+      <input type="submit" value="Search">
   </form>
 
 </div>
