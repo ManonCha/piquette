@@ -13,10 +13,11 @@
   align-item: center;
   justify-content: center;
   background: white;
+  opacity: 0.7;
 }
 
 .highlight {
-  background: black;
+  opacity: 1;
 }
 .form-container p {
   font-weight: lighter;
