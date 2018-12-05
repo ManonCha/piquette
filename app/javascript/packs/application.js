@@ -10,3 +10,7 @@ if (document.getElementById('search')) {
   hideForm()
 
 initNavbar();
+
+const quantity = document.getElementById('quantity_field')
+const bottle = document.querySelector('.user_bottle_add')
+

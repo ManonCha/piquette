@@ -6,9 +6,17 @@ class UserBottlesController < ApplicationController
   end
 
   def new
+
   end
 
   def create
+    @user_bottle = UserBottle.new(
+      bottle_id: params[:user_bottle][:bottle_id],
+      quantity: params[:user_bottle][:quantity])
+    @user_bottle.user = current_user
+    @user_bottle.save
+
+    redirect_to bottles_path
   end
 
 end

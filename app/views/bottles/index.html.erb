@@ -1,0 +1,18 @@
+<div>
+  <% @bottles.each do |bottle| %>
+    <%=bottle.title %>
+    <%=bottle.grapes %>
+    <%=bottle.designation %>
+
+    <%= simple_form_for @user_bottle do |f| %>
+      <%= f.hidden_field :bottle_id, value: bottle.id %>
+      <%= f.number_field :quantity, placeholder:1%>
+      <%= f.button :submit %>
+
+    <%#= link_to "Add this bottle", user_bottles_path(bottle_id: bottle.id, user_id: current_user, quantity:),
+          method: :post,
+          data: { confirm: "Are you sure?" } %>
+
+    <% end %>
+  <% end %>
+</div>
