@@ -11,12 +11,12 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
-    @bottles = UserBottle.all
   end
 
   def create
     @review = Review.new(review_params)
     @review.user = current_user
+    @review.user_bottle = @user_bottle
     if @review.save!
       redirect_to review_path(@review)
     else
@@ -40,7 +40,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:comment, :rating, :date)
+    params.require(:review).permit(:comment, :rating)
   end
 
   def set_review
