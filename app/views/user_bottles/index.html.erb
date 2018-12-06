@@ -1,35 +1,28 @@
-<div>
+<div class="container_user_bottle_index">
   <% @user_bottles.each do |user_bottle| %>
-    <button type="button" data-toggle="modal" data-target="#modal<%= user_bottle.id %>">
+    <button type="button" class ='btn_user_bottle_index' data-toggle="modal" data-target="#modal<%= user_bottle.id %>">
 
-    <div class ='card_user_bottle_index row '>
+      <div class="card_user_bottle_index">
 
-      <%#if user_bottle.photo.present? %>
-
-        <div class='card__user_bottle_index_photo col-xs-4 text-center'>
-          <%# image_tag user_bottle.photo  %>
+        <div class="title_card_user_bottle_index">
+          <h4><%= user_bottle.bottle.title.capitalize %>bjbazronaiozrniraznoaznrairaoenarenoiarnraijioarioeajiroaraioearireoijarijareiojar</h4>
         </div>
-        <div class='card__user_bottle_index_title col-xs-4 text-center'>
-          <%= user_bottle.bottle.title.capitalize %>
-        </div>
-        <div class='card__user_bottle_index_description col-xs-4 text-center'>
-          quantité:<%= user_bottle.quantity %>
-          provenance: <span>  <%= user_bottle.bottle.region.name.capitalize %>
-          </span>
-        </div>
-    </div>
 
-    <%# else %>
-    <div class='card__user_bottle_index_title_no_photo'>
-      <%#= user_bottle.bottle.title %>
-    </div>
-    <div class='card__user_bottle_index_description_no_photo'> <%#= user_bottle.bottle.quantity %>
-      <%#= #user_bottle.bottle.region %>
-    </div>
+        <div class="desc_card_user_bottle_index">
+          <h4><%= user_bottle.bottle.title.capitalize %>bjbazronaiozrniraznoaznrairaoenarenoiarnraijioarioeajiroaraioearireoijarijareiojar</h4>
+        </div>
+
+      </div>
+
     </button>
 </div>
+<!-- user_bottle.bottle.title.capitalize -->
 
-
+<!-- nom du vin
+domaine
+année
+gradient sur la couleur du vin
+click pour déployer la modale de la bottle-show (déjà en place avec ) -->
 <!-- <a href="/bottles/1">Titre de la bouteille</a>
 <a href="<%#= bottle_path(user_bottle.bottle) %>"><%#= user_bottle.bottle.title %></a>
 
@@ -56,3 +49,4 @@
 </div>
 
 <% end %>
+
