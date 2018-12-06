@@ -9,6 +9,8 @@ gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
 gem "letter_opener", group: :development
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'postmark-rails'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'

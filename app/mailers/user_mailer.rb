@@ -6,9 +6,16 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.welcome.subject
   #
   def welcome(user)
-    @user = current_user
-    @greeting = "Hi"
+    @user = user
+    @greeting = "Salut"
 
-    mail to: @user.email, subject:"bonjour #{@user.email}"
+    mail to: @user.email, subject:"Bienvenue #{@user.email}"
   end
+  def prevent(user)
+    @user = user
+    @greeting = "Salut"
+
+    mail to: @user.email, subject:"BOITTT #{@user.email}"
+  end
+
 end
