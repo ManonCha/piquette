@@ -1,5 +1,58 @@
-<h1>Recommendation</h1>
-<%= @bottles.count %>
-<% @bottles.each do |b| %>
-   <% b.title%>
+<h1>Recommendations</h1>
+<div>
+  <% @bottles.each do |bottle| %>
+    <button type="button" data-toggle="modal" data-target="#modal<%= bottle.id %>">
+
+    <div class ='card_bottle_index row '>
+      <!-- ajouter ici les bottle short cards de François -->
+      <%= bottle.title %>
+    </div>
+
+    </button>
+</div>
+
+<!-- MODALE // NE PAS TOUCHER -->
+
+<div class="modal bottle-modal slide-in-fwd-center" id="modal<%= bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog bottle-modal-dialog" role="document">
+    <div class="modal-content bottle-modal-content">
+      <div class="bottle-modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <%= bottle.title %>
+          <span><i class="far fa-heart add-wish"></i></span>
+          <span><i class="fas fa-heart delete-wish"></i></span>
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="bottle-modal-top">
+          <div class="bottle-modal-photo">
+            <%= cl_image_tag bottle.photo, height: 100, crop: :fill %>
+          </div>
+          <div class="bottle-modal-primary-infos">
+            <p><strong> <%= bottle.winery.name %></strong></p>
+            <p><%= bottle.year %></p>
+            <p><%= bottle.region.name %></p>
+            <p>Bio : <%= bottle.bio %></p>
+          </div>
+        </div>
+        <div class="bottle-modal-advice">
+          <div class="bottle-modal-desc">
+            <p>Apogée : <%= bottle.best_after %> - <%= bottle.best_before %></p>
+            <p><%= bottle.tasting_advice %></p>
+          </div>
+          <div class="bottle_modal_wine_pairing">
+            <p><%= bottle.wine_pairing %></p>
+          </div>
+        </div>
+      </div>
+      <div class="bottle-modal-cta">
+        <button type="button" class="btn btn-primary"> + ma cave </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <% end %>
