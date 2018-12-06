@@ -1,4 +1,12 @@
 p{
   font-size: 15px;
-  color: darkblue;
+  color: $dark-gray;
+}
+
+h1 {
+  color: $dark-gray;
+}
+
+body {
+  background-color: white;
 }
