@@ -2,6 +2,7 @@ class UserBottlesController < ApplicationController
 
   def index
     @user_bottles = current_user.user_bottles
+    # @review = Review.new
   end
 
   def new
