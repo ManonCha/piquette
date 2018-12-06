@@ -4,12 +4,42 @@
 </div>
 <div>
   <% @reviews.each do |review| %>
+
     <button type="button" data-toggle="modal" data-target="#modal<%= review.id %>">
 
-    <div class ='card_review_index row '>
-      <!-- ajouter ici les bottle short cards de François -->
-      <%= review.bottle.title %>
-    </div>
+      <div class="card_user_bottle_index <%= review.bottle.color.name %>">
+
+       <!--  <div class="image_card_user_bottle_index">
+          <img src="../../assets/images/red_wine.png" alt="">
+        </div> -->
+
+        <div class="content_card_user_bottle_index">
+
+          <div class="title_card_user_bottle_index">
+            <h5><%= review.bottle.title.capitalize %></h5>
+          </div>
+
+          <div class="desc_card_user_bottle_index">
+            <p><%= review.bottle.designation.capitalize%></p>
+          </div>
+          <div class="footer_card_user_bottle_index">
+            <div class="year_card_user_bottle_index">
+              <p><i class="far fa-calendar-alt"></i>  <%= review.bottle.year%></p>
+            </div>
+
+            <% if review.bottle.best_after > Date.today.year%>
+              <div class="keep_card_user_bottle_index">
+                <p><i class="far fa-check-square"></i>  A boire</p>
+              </div>
+            <% else %>
+              <div class="keep_card_user_bottle_index">
+                <p><i class="far fa-check-square"></i>  A garder</p>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
 
     </button>
 </div>
