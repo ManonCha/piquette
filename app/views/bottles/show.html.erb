@@ -1,0 +1,38 @@
+
+  <div class="container_show_name row">
+    <div class="col-xs-8">
+      <div class="bottle_show_name">
+        <%=@bottle.title%>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="glyphicon glyphicon-remove-circle ">
+      </div>
+    </div>
+  </div>
+
+  <div class ="bottle_show_photo">
+    <%=@bottle%>
+
+  </div>
+  <div class ="bottle_show_infos">
+
+
+      <%=@bottle.winery.name%>
+      <%=@bottle.color.name%>
+      <%=@bottle.year%>
+
+
+  </div>
+  <div class ="bottle_show_other_infos">
+    <%=@bottle.best_before%>
+      <%=@bottle.best_after%>
+      <%#=@bottle.meal%>
+      <%#=@bottle.grape%>
+  </div>
+  <div class ="bottle_show_add_a_review">
+
+
+  </div>
+
+

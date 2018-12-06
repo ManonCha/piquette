@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :user_bottles, dependent: :destroy
+  has_many :bottles, through: :user_bottles
   has_many :reviews, dependent: :destroy
   has_many :wishes, dependent: :destroy
   # Include default devise modules. Others available are:
