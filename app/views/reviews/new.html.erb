@@ -1,49 +1,9 @@
-<form action="" method="get" class='buy'>
+<h1>Nouvelle dégustations</h1>
 
-  <div class="form-container highlight">
-    <p>Quelle bouteille as-tu bu ?</p>
-    <select name="bottle">
-      <% @bottles.each do |bottle| %>
-      <option><%= bottle.bottle.title %></option>
-      <input type="hidden" name="id" value="<%= bottle.bottle.id %>">
-      <% end %>
-    </select>
-  </div>
+  <%= simple_form_for @review  do |f| %>
 
+    <%= f.input :rating, collection: 0..5 %>
+    <%= f.input :comment %>
 
-  <div>
-    <div class="form-container">
-      <p>Combien d'étoiles pour cette bouteille ?</p>
-    </div>
-
-    <div class="form-rating">
-      <input type="radio" name="rating" value="1" id="rating_one">
-      <label for="rating_one"><i class="far fa-star"></i></label>
-
-      <input type="radio" name="rating" value="2" id="rating_two">
-      <label for="rating_two"><i class="far fa-star"></i></label>
-
-      <input type="radio" name="rating" value="3" id="rating_three">
-      <label for="rating_three"><i class="far fa-star"></i></label>
-
-      <input type="radio" name="rating" value="4" id="rating_four">
-      <label for="rating_four"><i class="far fa-star"></i></label>
-
-      <input type="radio" name="rating" value="5" id="rating_five">
-      <label for="rating_five"><i class="far fa-star"></i></label>
-    </div>
-  </div>
-
-  <div class="form-container">
-    <p>Donne plus de détails :</p>
-    <textarea type ="text" id="review_comment" name="comment"></textarea>
-  </div>
-
-  <input type="submit" value="goooo">
-</form>
-
-  <div class="form-container">
-    <p>Quand ?</p>
-  </div>
-
-</div>
+    <%= f.submit %>
+  <% end %>
