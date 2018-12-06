@@ -1,0 +1,59 @@
+.bottle-modal {
+  background-color: white;
+  opacity: 0.7
+}
+
+.bottle-modal-dialog {
+  margin: 4px;
+}
+
+.bottle-modal-content {
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+.bottle-modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottle-modal-top {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottle-modal-photo {
+
+  width: 30vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bottle-modal-primary-infos {
+  width: 70vw;
+
+}
+.bottle-modal-advice {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottle-modal-desc {
+
+}
+
+.bottle_modal_wine_pairing {
+
+}
+
+.bottle_modal_review {
+  border-top: 1px solid $light-gray
+
+}
+
+.bottle-modal-cta {
+  display: flex;
+  justify-content: space-around;
+}
