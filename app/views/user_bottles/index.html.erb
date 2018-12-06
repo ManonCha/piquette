@@ -1,4 +1,8 @@
 
+<div>
+  <h1>Ma cave</h1>
+</div>
+
 <div class="container_user_bottle_index">
 
   <% @user_bottles.each do |user_bottle| %>
@@ -84,7 +88,9 @@
         </div>
       </div>
       <div class="bottle-modal-cta">
-        <button type="button" class="btn btn-primary"> + dégustation</button>
+        <%= link_to new_review_path(user_bottle) do %>
+          <button class="btn btn-primary">Ajouter une review</button>
+        <% end %>
       </div>
     </div>
   </div>
