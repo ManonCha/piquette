@@ -10,15 +10,17 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    @bottle = Bottle.find(params[:bottle_id])
     @review = Review.new
   end
 
   def create
+    @bottle = Bottle.find(params[:bottle_id])
     @review = Review.new(review_params)
     @review.user = current_user
-    @review.user_bottle = @user_bottle
+    @review.bottle = @bottle
     if @review.save!
-      redirect_to review_path(@review)
+      redirect_to reviews_path
     else
       render 'new'
     end
@@ -40,7 +42,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:comment, :rating)
+    params.require(:review).permit(:comment, :rating, :user_bottle)
   end
 
   def set_review
