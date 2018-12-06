@@ -67,6 +67,15 @@
 require 'open-uri'
 require 'nokogiri'
 
+
+puts "destroying all reviews"
+Review.destroy_all
+puts "reviews destroyed !"
+
+puts "destroying all wishes"
+Wish.destroy_all
+puts "wishes destroyed !"
+
 puts "destroying all bottles"
 Bottle.destroy_all
 puts "bottles destroyed !"
@@ -77,7 +86,7 @@ puts "users destroyed !"
 
 puts "creating users"
 manon = User.create(email: "manoncharron8@gmail.com", password: "123456")
-francois = User.create(email: "f-hameau@gmail.com", password: "123456")
+francois = User.create(email: "f.hameau@gmail.com", password: "123456")
 philippine = User.create(email: "alyssa_phi@hotmail.com", password: "123456")
 antoine = User.create(email: "antoine.fourgous1997@gmail.com", password: "123456")
 puts "users created !"
