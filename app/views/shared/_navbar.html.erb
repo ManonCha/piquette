@@ -1,19 +1,21 @@
-<div class="navbar">
-  <div class="menu">
-    <ul class="menu-link">
-      <li><%= link_to "HOME", home_path%>
-      <hr>
-      <li><%= link_to "MA CAVE", user_bottles_path%>
-      <hr>
-      <li><%= link_to "MES DEGUSTATIONS", reviews_path%>
-      <hr>
-      <li><%= link_to "MA WISHLIST", wishes_path%>
-      <hr>
-      <li><%= link_to "LOG IN  |", new_user_session_path, id:"log" %><%= link_to "  LOG OUT", destroy_user_session_path, id:"log" %>
-    </ul>
-  </div>
+<div class="wrapper-navbar">
+  <div class="navbar">
+    <div class="menu">
+      <ul class="menu-link">
+        <li><%= link_to "HOME", home_path%>
+        <hr>
+        <li><%= link_to "MA CAVE", user_bottles_path%>
+        <hr>
+        <li><%= link_to "MES DEGUSTATIONS", reviews_path%>
+        <hr>
+        <li><%= link_to "MA WISHLIST", wishes_path%>
+        <hr>
+        <li><%= link_to "LOG IN  |", new_user_session_path, id:"log" %><%= link_to "  LOG OUT", destroy_user_session_path, method: :delete, id:"log" %>
+      </ul>
+    </div>
 
-  <div class="logo" id="logo">
-    <h1>P</h1>
+    <div class="logo" id="logo">
+      <h1>P</h1>
+    </div>
   </div>
 </div>
