@@ -11,7 +11,11 @@ class RecommendationService
   def call
     year = Date.today.year
 
-    @bottles_color = Bottle.joins(:color).where(colors: { name: @color })
+    if @color == 'all'
+      @bottles_color = Bottle.all
+    else
+      @bottles_color = Bottle.joins(:color).where(colors: { name: @color })
+    end
 
     if @bio != 'all'
       @bottles_bio = @bottles_color.where(bio: @bio)
