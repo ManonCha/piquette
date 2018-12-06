@@ -10,4 +10,3 @@ Rails.application.routes.draw do
   get 'recommendations/search', to: "recommendations#search", as: :search
   get 'pages/home', to: "pages#home", as: :home
 end
-

@@ -4,18 +4,27 @@
     <div class='home-picto-glass'>
       <i class="fas fa-wine-glass"></i>
     </div>
-    <div class='home-picto-glass'>
-      <i class="fas fa-wine-glass"></i>
-    </div>
-    <div class='home-picto-glass'>
-      <i class="fas fa-wine-glass"></i>
+
+  <div>
+    <% if current_user %>
+      <p>Tu as <%= @user_red_bottles %> bouteilles de vin rouge.</p>
+      <p>Tu as <%= @user_yellow_bottles %> bouteilles de vin blanc.</p>
+      <p>Tu as <%= @user_pink_bottles %> bouteilles de vin rosé.</p>
+      <p>Tu as <%= @user_champ_bottles %> bouteilles de vin pétillant.</p>
+    <% else %>
+      <p>Ta cave est vide.</p>
+    <% end %>
+  </div>
+
+    <div>
+      <p>Tu as bouteilles <%= @user_bottles %> dans ta cave.</p>
+      <i class="fas fa-wine-bottle"></i>
     </div>
   </div>
 </div>
 
-<div class='wish-card'>
-  <p>MA WISHLIST</p>
-
+<div class='reco-card'>
+  <%= link_to "J'AI SOIF", search_path, class:'reco-btn' %>
 </div>
 
 <div class='review-card'>
