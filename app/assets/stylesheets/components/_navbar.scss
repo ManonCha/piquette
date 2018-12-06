@@ -1,9 +1,10 @@
 .wrapper-navbar {
   position: fixed;
   top: 0px;
-  height: 100vh;
+  height: 20px;
   width: 100vw;
   z-index: 100;
+  overflow: visible;
 }
 
 /* Menu */
