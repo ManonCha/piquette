@@ -1,33 +1,46 @@
-<div>
+
+<div class="container_user_bottle_index">
+
   <% @user_bottles.each do |user_bottle| %>
     <button type="button" data-toggle="modal" data-target="#modal<%= user_bottle.id %>">
 
-    <div class ='card_user_bottle_index row '>
+      <div class="card_user_bottle_index <%= user_bottle.bottle.color.name %>">
 
-      <%#if user_bottle.photo.present? %>
+       <!--  <div class="image_card_user_bottle_index">
+          <img src="../../assets/images/red_wine.png" alt="">
+        </div> -->
 
-        <div class='card__user_bottle_index_photo col-xs-4 text-center'>
-          <%# image_tag user_bottle.photo  %>
-        </div>
-        <div class='card__user_bottle_index_title col-xs-4 text-center'>
-          <%= user_bottle.bottle.title.capitalize %>
-        </div>
-        <div class='card__user_bottle_index_description col-xs-4 text-center'>
-          quantité:<%= user_bottle.quantity %>
-          provenance: <span>  <%= user_bottle.bottle.region.name.capitalize %>
-          </span>
-        </div>
-    </div>
+        <div class="content_card_user_bottle_index">
 
-    <%# else %>
-    <div class='card__user_bottle_index_title_no_photo'>
-      <%#= user_bottle.bottle.title %>
-    </div>
-    <div class='card__user_bottle_index_description_no_photo'> <%#= user_bottle.bottle.quantity %>
-      <%#= #user_bottle.bottle.region %>
-    </div>
+          <div class="title_card_user_bottle_index">
+            <h5><%= user_bottle.bottle.title.capitalize %></h5>
+          </div>
+
+          <div class="desc_card_user_bottle_index">
+            <p><%= user_bottle.bottle.designation.capitalize%></p>
+          </div>
+          <div class="footer_card_user_bottle_index">
+            <div class="year_card_user_bottle_index">
+              <p><i class="far fa-calendar-alt"></i>  <%= user_bottle.bottle.year%></p>
+            </div>
+
+            <% if user_bottle.bottle.best_after > Date.today.year%>
+              <div class="keep_card_user_bottle_index">
+                <p><i class="far fa-check-square"></i>  A boire</p>
+              </div>
+            <% else %>
+              <div class="keep_card_user_bottle_index">
+                <p><i class="far fa-check-square"></i>  A garder</p>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+
     </button>
 </div>
+
 
 <!-- <a href="/bottles/1">Titre de la bouteille</a>
 <a href="<%#= bottle_path(user_bottle.bottle) %>"><%#= user_bottle.bottle.title %></a>
@@ -43,6 +56,7 @@
           <span><i class="far fa-heart add-wish"></i></span>
           <span><i class="fas fa-heart delete-wish"></i></span>
         </h5>
+
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -77,3 +91,4 @@
 </div>
 
 <% end %>
+

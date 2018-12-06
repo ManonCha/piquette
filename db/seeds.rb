@@ -20,9 +20,9 @@ bottle = Bottle.create!(
   winery: winery,
   color: color,
   bio: false,
-  title: "Les vignes",
+  title: "Château Cantenac-Brown",
   grapes: "100\% grenache",
-  designation: "designation",
+  designation: "Margaux",
   terroir: "terroir",
   harvest: "harvest",
   viticulture: "viticulture",
@@ -232,4 +232,5 @@ Wish.create!(
 #   end
 # end
 # puts "bottles created !"
+
 
