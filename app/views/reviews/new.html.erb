@@ -1,0 +1,9 @@
+<h1>Nouvelle dégustations</h1>
+
+  <%= simple_form_for [@bottle, @review] do |f| %>
+
+    <%= f.input :rating, collection: 0..5 %>
+    <%= f.input :comment %>
+
+    <%= f.submit %>
+  <% end %>

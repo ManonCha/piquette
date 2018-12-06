@@ -28,7 +28,7 @@
   font-size: 15px;
   text-align: center;
   justify-content: center;
-  background: navy;
+  background: $dark-gray;
   color: white;
   width: 90%;
   margin: 10px 0px;
@@ -53,6 +53,35 @@
   display:none;
 }
 
+.form-rating input[type=radio] {
+  display:none;
+}
+
 .form-container input[type=radio]:checked+label {
   background: grey;
+}
+
+.form-container textarea {
+  padding: 10px 20px;
+  font-size: 15px;
+  justify-content: center;
+  color: $dark-gray;
+  width: 90%;
+  margin: 10px 0px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px lightgrey;
+}
+
+.form-rating {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.form-rating label{
+  font-size: 15px;
+  background-color: white;
+  color: $dark-gray;
 }
