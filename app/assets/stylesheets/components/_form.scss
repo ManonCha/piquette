@@ -28,7 +28,7 @@
   font-size: 15px;
   text-align: center;
   justify-content: center;
-  background: navy;
+  background: $dark-gray;
   color: white;
   width: 90%;
   margin: 10px 0px;
@@ -55,4 +55,25 @@
 
 .form-container input[type=radio]:checked+label {
   background: grey;
+}
+
+.form-container textarea {
+  padding: 10px 20px;
+  font-size: 15px;
+  justify-content: center;
+  color: white;
+  width: 90%;
+  margin: 10px 0px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px lightgrey;
+}
+
+.form-container-rating {
+  padding: 20px 10px;
+  margin: 60px 0;
+  display: flex;
+  align-item: center;
+  justify-content: space-around;
+  background: white;
+  opacity: 0.7;
 }
