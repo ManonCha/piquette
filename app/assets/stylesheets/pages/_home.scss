@@ -1,3 +1,25 @@
+.card-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 350px;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
+.card-link-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
 /* Ma cave */
 
 .cellar-card {
@@ -10,6 +32,7 @@
   margin-top: 22px;
   padding: 15px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  position: relative;
 }
 
 .home-cellar-picto {
@@ -48,6 +71,7 @@
   padding: 15px;
   margin-bottom: 10px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  position: relative;
 }
 
 /* Recommandations */
@@ -55,11 +79,12 @@
   width: 350px;
   height: 70px;
   border-radius: 10px;
-  background-color: darkblue;
+  background-color: white;
   margin: auto;
   padding: 15px;
   margin-bottom: 10px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  position: relative;
 }
 
 .reco-btn {
