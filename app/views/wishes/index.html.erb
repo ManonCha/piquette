@@ -1,6 +1,6 @@
 <div>
   <% @wishes.each do |wish| %>
-    <button type="button" data-toggle="modal" data-target="#modal<%= wish.id %>">
+    <button type="button" data-backdrop="false" data-toggle="modal" data-target="#modal<%= wish.id %>">
 
     <div class ='card_wish_index row '>
       <!-- ajouter ici les bottle short cards de François -->
@@ -48,7 +48,16 @@
         </div>
       </div>
       <div class="bottle-modal-cta">
-        <button type="button" class="btn btn-primary"> + ma cave</button>
+        <div class="bottle-modal-add-to-cellar">
+          <p> Ajouter à ma cave </p>
+          <div class="bottle-modal-cta">
+            <%= simple_form_for @user_bottle do |f| %>
+            <%= f.hidden_field :bottle_id, value: wish.bottle_id %>
+            <%= f.number_field :quantity, placeholder:0%>
+            <%= f.button :submit %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

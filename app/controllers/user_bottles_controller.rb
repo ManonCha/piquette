@@ -17,5 +17,4 @@ class UserBottlesController < ApplicationController
     @user_bottle.save
     redirect_to user_bottles_path
   end
-
 end
