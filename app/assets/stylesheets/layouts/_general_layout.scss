@@ -1,4 +1,4 @@
-p{
+p {
   font-size: 15px;
   color: $dark-gray;
 }
@@ -9,4 +9,10 @@ h1 {
 
 body {
   background-color: white;
+}
+
+span {
+  font-size: 15px;
+  color: $dark-gray;
+  font-family: $body-font
 }

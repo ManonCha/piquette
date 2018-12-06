@@ -29,27 +29,48 @@
     </button>
 </div>
 
-
 <!-- <a href="/bottles/1">Titre de la bouteille</a>
 <a href="<%#= bottle_path(user_bottle.bottle) %>"><%#= user_bottle.bottle.title %></a>
 
 <%#= link_to user_bottle.bottle.title, bottle_path(user_bottle.bottle) %> -->
 
-<div class="modal fade" id="modal<%= user_bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><%= user_bottle.bottle.title %></h5>
+<div class="modal bottle-modal slide-in-fwd-center" id="modal<%= user_bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog bottle-modal-dialog" role="document">
+    <div class="modal-content bottle-modal-content">
+      <div class="bottle-modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <%= user_bottle.bottle.title %>
+          <span><i class="far fa-heart add-wish"></i></span>
+          <span><i class="fas fa-heart delete-wish"></i></span>
+        </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <div class="bottle-modal-top">
+          <div class="bottle-modal-photo">
+            <%= cl_image_tag user_bottle.bottle.photo, height: 100, crop: :fill %>
+          </div>
+          <div class="bottle-modal-primary-infos">
+            <p><strong> <%= user_bottle.bottle.winery.name %></strong></p>
+            <p><%= user_bottle.bottle.year %></p>
+            <p><%= user_bottle.bottle.region.name %></p>
+            <p>Bio : <%= user_bottle.bottle.bio %></p>
+          </div>
+        </div>
+        <div class="bottle-modal-advice">
+          <div class="bottle-modal-desc">
+            <p>Apogée : <%= user_bottle.bottle.best_after %> - <%= user_bottle.bottle.best_before %></p>
+            <p><%= user_bottle.bottle.tasting_advice %></p>
+          </div>
+          <div class="bottle_modal_wine_pairing">
+            <p><%= user_bottle.bottle.wine_pairing %></p>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      <div class="bottle-modal-cta">
+        <button type="button" class="btn btn-primary"> + dégustation</button>
       </div>
     </div>
   </div>

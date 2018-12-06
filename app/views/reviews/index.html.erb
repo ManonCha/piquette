@@ -1,38 +1,63 @@
+
+<div class="headar">
+  <h1> Mon carnet de dégustation</h1>
+</div>
 <div>
   <% @reviews.each do |review| %>
     <button type="button" data-toggle="modal" data-target="#modal<%= review.id %>">
-      <div class ='card_review_index row '>
-          <div class='card_review_index_content col-xs-4 text-center'>
-            <%= review.comment %>
-          </div>
-          <div class='card_review_index_rating col-xs-4 text-center'>
-            <%= review.rating %>
-          </div>
-          <div class='card_review_index_tasting_date col-xs-4 text-center'>
-            <%= review.tasting_date %>
-          </div>
-      </div>
+
+    <div class ='card_review_index row '>
+      <!-- ajouter ici les bottle short cards de François -->
+      <%= review.bottle.title %>
+    </div>
+
     </button>
 </div>
 
-<div class="modal fade" id="modal<%= review.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"><%= review.comment %></h5>
+<!-- MODALE // NE PAS TOUCHER -->
+
+<div class="modal bottle-modal slide-in-fwd-center" id="modal<%= review.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog bottle-modal-dialog" role="document">
+    <div class="modal-content bottle-modal-content">
+      <div class="bottle-modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          <%= review.bottle.title %>
+<!--           <span><i class="far fa-heart add-wish"></i></span>
+          <span><i class="fas fa-heart delete-wish"></i></span> -->
+        </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="bottle-modal-top">
+          <div class="bottle-modal-photo">
+            <%= cl_image_tag review.bottle.photo, height: 100, crop: :fill %>
+          </div>
+          <div class="bottle-modal-primary-infos">
+            <p><strong> <%= review.bottle.winery.name %></strong></p>
+            <p><%= review.bottle.year %></p>
+            <p><%= review.bottle.region.name %></p>
+            <p>Bio : <%= review.bottle.bio %></p>
+          </div>
+        </div>
+        <div class="bottle-modal-desc">
+          <p>Apogée : <%= review.bottle.best_after %> - <%= review.bottle.best_before %></p>
+          <p><%= review.bottle.tasting_advice %></p>
+        </div>
+        <div class="bottle_modal_review">
+          <p> <%= review.tasting_date %></p>
+          <% review.rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <%  (5 - review.rating).times do %>
+            <i class="far fa-star"></i>
+          <% end %>
+          <p><em>"<%= review.comment %>"</em></p>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<% end %>
 
+<% end %>
