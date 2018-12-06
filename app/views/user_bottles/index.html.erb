@@ -1,36 +1,46 @@
+  <% 15.times do %>
 <div class="container_user_bottle_index">
+
   <% @user_bottles.each do |user_bottle| %>
-    <button type="button" class ='btn_user_bottle_index' data-toggle="modal" data-target="#modal<%= user_bottle.id %>">
+    <button type="button" data-toggle="modal" data-target="#modal<%= user_bottle.id %>">
 
-      <div class="card_user_bottle_index Rouge">
+      <div class="card_user_bottle_index <%= user_bottle.bottle.color.name %>">
 
-        <div class="title_card_user_bottle_index">
-          <h4><%= user_bottle.bottle.title.capitalize %></h4>
+        <div class="image_card_user_bottle_index">
+          <img src="../../assets/images/red_wine.png" alt="">
         </div>
 
-        <div class="desc_card_user_bottle_index">
-          <p><%= user_bottle.bottle.designation.capitalize%></p>
-        </div>
+        <div class="content_card_user_bottle_index">
 
-        <div class="year_card_user_bottle_index">
-          <h4><%= user_bottle.bottle.year%></h4>
-        </div>
+          <div class="title_card_user_bottle_index">
+            <h5><%= user_bottle.bottle.title.capitalize %></h5>
+          </div>
 
+          <div class="desc_card_user_bottle_index">
+            <p><%= user_bottle.bottle.designation.capitalize%></p>
+          </div>
+          <div class="footer_card_user_bottle_index">
+            <div class="year_card_user_bottle_index">
+              <p><%= user_bottle.bottle.year%></p>
+            </div>
+
+            <% if user_bottle.bottle.best_after > Date.today.year%>
+              <div class="keep_card_user_bottle_index">
+                <p>A boire</p>
+              </div>
+            <% else %>
+              <div class="keep_card_user_bottle_index">
+                <p>A garder</p>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
       </div>
 
     </button>
 </div>
-<!-- user_bottle.bottle.title.capitalize -->
 
-<!-- nom du vin
-domaine
-année
-gradient sur la couleur du vin
-click pour déployer la modale de la bottle-show (déjà en place avec ) -->
-<!-- <a href="/bottles/1">Titre de la bouteille</a>
-<a href="<%#= bottle_path(user_bottle.bottle) %>"><%#= user_bottle.bottle.title %></a>
-
-<%#= link_to user_bottle.bottle.title, bottle_path(user_bottle.bottle) %> -->
 
 <div class="modal fade" id="modal<%= user_bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -53,4 +63,5 @@ click pour déployer la modale de la bottle-show (déjà en place avec ) -->
 </div>
 
 <% end %>
+    <% end %>
 
