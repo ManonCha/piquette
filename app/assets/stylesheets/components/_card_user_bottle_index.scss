@@ -1,18 +1,65 @@
-.card_user_bottle_index {
+.container_user_bottle_index {
+  margin-top: 10px;
   display: flex;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-    width: 100%;
-    margin-top: 12px;
-    height: 85px;
-    border-radius: 10px;
-}
-.row{
-  margin-left: 0px;
-  margin-right: 0px;
+  width: 100vw;
+  justify-content: center;
 }
 
-.container{
-  align:center;
+.card_user_bottle_index {
+  padding: 4px;
+  height: 100%;
+  width: 95vw;
+  border-radius: 2px;
+  display: flex;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: 2fr 20px 40px;
+  // box-shadow: 0 0 3px lightgrey;
+  p {
+    font-size: 14px;
+    margin: 0 10px;
+  }
 }
+
+.image_card_user_bottle_index {
+  width: 30%;
+  background: grey;
+}
+.content_card_user_bottle_index {
+  width: 100%;
+}
+
+.footer_card_user_bottle_index {
+  display: flex;
+  justify-content: space-between;
+}
+.title_card_user_bottle_index {
+  justify-content: center;
+}
+
+
+.desc_card_user_bottle_index {
+}
+
+.year_card_user_bottle_index {
+  display: flex;
+}
+
+.keep_card_user_bottle_index {
+}
+.Rouge {
+  border-left: 8px solid $red-wine;
+  border-bottom: 1px solid $red-wine;
+
+}
+
+.Rose {
+  border-left: 8px solid $rose-wine;
+  border-bottom: 1px solid $rose-wine;
+}
+
+.white {
+  border-left: 8px solid $white-wine;
+  border-bottom: 1px solid $white-wine;
+}
+
+

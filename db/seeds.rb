@@ -20,18 +20,18 @@ bottle = Bottle.create!(
   winery: winery,
   color: color,
   bio: false,
-  title: "Les vignes",
+  title: "Château Cantenac-Brown",
   grapes: "100\% grenache",
-  designation: "designation",
+  designation: "Margaux",
   terroir: "terroir",
   harvest: "harvest",
   viticulture: "viticulture",
   winemaking: "winemaking",
   alcool: "alcool",
   nose: "nose",
-  appearance: "appearance",
+  appearance: "rouge profond",
   taste: "taste",
-  tasting_advice: "advice",
+  tasting_advice: "ouvrir 30min à l'avance",
   wine_pairing: "viande rouge, fromage",
   year: 1992,
   best_before: 2022,
@@ -39,12 +39,15 @@ bottle = Bottle.create!(
   price: 890,
 )
 
+bottle.remote_photo_url = 'https://www.1jour1vin.com/data/uploads/productimg/generated/xdomaine-chapoutier-cotes-roussillon-occultum-2013-G_544677b05201a_566019c8b7065_105x204.png.pagespeed.ic.-PqqnsU-uB.webp'
+bottle.save!
 
 Review.create!(
   bottle: bottle,
   rating: 5,
   user: user,
-  comment: 'lorem ipsum'
+  comment: 'délicieux !',
+  tasting_date: Date.today
 )
 
 UserBottle.create!(
@@ -229,4 +232,5 @@ Wish.create!(
 #   end
 # end
 # puts "bottles created !"
+
 

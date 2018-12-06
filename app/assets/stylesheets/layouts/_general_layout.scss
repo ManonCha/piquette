@@ -1,4 +1,4 @@
-p{
+p {
   font-size: 15px;
   color: $dark-gray;
 }
@@ -11,7 +11,21 @@ body {
   background-color: white;
 }
 
+span {
+  font-size: 15px;
+  color: $dark-gray;
+  font-family: $body-font;
+}
+    
 a:hover{
   text-decoration: none;
   color: white;
+}
+
+button, input[type="button"] {
+  background: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
 }
