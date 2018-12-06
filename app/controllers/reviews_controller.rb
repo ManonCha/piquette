@@ -11,6 +11,7 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    @bottles = UserBottle.all
   end
 
   def create
