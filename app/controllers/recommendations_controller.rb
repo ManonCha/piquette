@@ -12,5 +12,6 @@ class RecommendationsController < ApplicationController
   def index
     arguments = { pairing: params[:pairing], color: params[:color], bio: params[:bio], garder: params[:garder] }
     @bottles = RecommendationService.new(arguments).call
+    @user_bottle = UserBottle.new
   end
 end
