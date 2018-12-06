@@ -62,21 +62,6 @@
 # )
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #### DO NOT REMOVE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 require 'open-uri'
@@ -236,4 +221,5 @@ region_item = 'savoie'
   end
 
 puts "bottles created !"
+
 

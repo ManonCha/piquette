@@ -1,11 +1,39 @@
 <div>
   <% @wishes.each do |wish| %>
     <button type="button" data-backdrop="false" data-toggle="modal" data-target="#modal<%= wish.id %>">
+      <div class="card_user_bottle_index <%= wish.bottle.color.name %>">
 
-    <div class ='card_wish_index row '>
-      <!-- ajouter ici les bottle short cards de François -->
-      <%= wish.bottle.title %>
-    </div>
+       <!--  <div class="image_card_user_bottle_index">
+          <img src="../../assets/images/red_wine.png" alt="">
+        </div> -->
+
+        <div class="content_card_user_bottle_index">
+
+          <div class="title_card_user_bottle_index">
+            <h5><%= wish.bottle.title.capitalize %></h5>
+          </div>
+
+          <div class="desc_card_user_bottle_index">
+            <p><%= wish.bottle.designation.capitalize%></p>
+          </div>
+          <div class="footer_card_user_bottle_index">
+            <div class="year_card_user_bottle_index">
+              <p><i class="far fa-calendar-alt"></i>  <%= wish.bottle.year%></p>
+            </div>
+
+            <% if wish.bottle.best_after > Date.today.year%>
+              <div class="keep_card_user_bottle_index">
+                <p><i class="far fa-check-square"></i>  A boire</p>
+              </div>
+            <% else %>
+              <div class="keep_card_user_bottle_index">
+                <p><i class="far fa-check-square"></i>  A garder</p>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
 
     </button>
 </div>
