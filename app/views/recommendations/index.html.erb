@@ -44,7 +44,11 @@
       <div class="bottle-modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
           <%= bottle.title %>
-          <span><i class="far fa-heart add-wish"></i></span>
+          <%= link_to new_bottle_wish_path(user_bottle.bottle) do %>
+            <button class="btn btn-primary">
+              <i class="far fa-heart add-wish"></i>
+            </button>
+          <% end %>
           <span><i class="fas fa-heart delete-wish"></i></span>
         </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
