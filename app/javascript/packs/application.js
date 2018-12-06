@@ -8,6 +8,12 @@ if (document.getElementById('search')) {
   displayForm()
 }
 
-hideForm()
 
 initNavbar();
+
+
+
+hideForm();
+
+
+
