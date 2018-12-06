@@ -14,5 +14,10 @@ body {
 span {
   font-size: 15px;
   color: $dark-gray;
-  font-family: $body-font
+  font-family: $body-font;
+}
+    
+a:hover{
+  text-decoration: none;
+  color: white;
 }
