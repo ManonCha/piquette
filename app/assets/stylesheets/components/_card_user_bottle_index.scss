@@ -13,7 +13,7 @@
   display: flex;
   grid-template-columns: 5fr 3fr;
   grid-template-rows: 2fr 20px 40px;
-  box-shadow: 0 0 3px lightgrey;
+  // box-shadow: 0 0 3px lightgrey;
   p {
     font-size: 14px;
     margin: 0 10px;
@@ -25,7 +25,7 @@
   background: grey;
 }
 .content_card_user_bottle_index {
-  width: 70%;
+  width: 100%;
 }
 
 .footer_card_user_bottle_index {
@@ -41,20 +41,25 @@
 }
 
 .year_card_user_bottle_index {
+  display: flex;
 }
 
 .keep_card_user_bottle_index {
 }
-// .Rouge {
-//   border: 2px solid $red-wine;
-// }
+.Rouge {
+  border-left: 8px solid $red-wine;
+  border-bottom: 1px solid $red-wine;
 
-// .Rose {
-//   border: 2px solid $rose-wine;
-// }
+}
 
-// .white {
-//   border: 2px solid $white-wine;
-// }
+.Rose {
+  border-left: 8px solid $rose-wine;
+  border-bottom: 1px solid $rose-wine;
+}
+
+.white {
+  border-left: 8px solid $white-wine;
+  border-bottom: 1px solid $white-wine;
+}
 
 

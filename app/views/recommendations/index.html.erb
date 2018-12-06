@@ -1,14 +1,39 @@
 <h1>Recommendations</h1>
 <div>
   <% @bottles.each do |bottle| %>
-    <button type="button" data-toggle="modal" data-target="#modal<%= bottle.id %>">
+  <button type="button" data-toggle="modal" data-target="#modal<%= bottle.id %>">
 
-    <div class ='card_bottle_index row '>
-      <!-- ajouter ici les bottle short cards de François -->
-      <%= bottle.title %>
+    <div class="card_user_bottle_index <%= bottle.color.name %>">
+
+      <div class="content_card_user_bottle_index">
+
+        <div class="title_card_user_bottle_index">
+          <h5><%= bottle.title.capitalize %></h5>
+        </div>
+
+        <div class="desc_card_user_bottle_index">
+          <p><%= bottle.designation.capitalize%></p>
+        </div>
+        <div class="footer_card_user_bottle_index">
+          <div class="year_card_user_bottle_index">
+            <p><i class="far fa-calendar-alt"></i>  <%= bottle.year%></p>
+          </div>
+
+          <% if bottle.best_after > Date.today.year%>
+            <div class="keep_card_user_bottle_index">
+              <p><i class="far fa-check-square"></i>  A boire</p>
+            </div>
+          <% else %>
+            <div class="keep_card_user_bottle_index">
+              <p><i class="far fa-check-square"></i>  A garder</p>
+            </div>
+          <% end %>
+        </div>
+
+      </div>
     </div>
 
-    </button>
+  </button>
 </div>
 
 <!-- MODALE // NE PAS TOUCHER -->

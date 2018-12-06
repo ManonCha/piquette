@@ -1,4 +1,4 @@
-  <% 15.times do %>
+
 <div class="container_user_bottle_index">
 
   <% @user_bottles.each do |user_bottle| %>
@@ -6,9 +6,9 @@
 
       <div class="card_user_bottle_index <%= user_bottle.bottle.color.name %>">
 
-        <div class="image_card_user_bottle_index">
+       <!--  <div class="image_card_user_bottle_index">
           <img src="../../assets/images/red_wine.png" alt="">
-        </div>
+        </div> -->
 
         <div class="content_card_user_bottle_index">
 
@@ -21,16 +21,16 @@
           </div>
           <div class="footer_card_user_bottle_index">
             <div class="year_card_user_bottle_index">
-              <p><%= user_bottle.bottle.year%></p>
+              <p><i class="far fa-calendar-alt"></i>  <%= user_bottle.bottle.year%></p>
             </div>
 
             <% if user_bottle.bottle.best_after > Date.today.year%>
               <div class="keep_card_user_bottle_index">
-                <p>A boire</p>
+                <p><i class="far fa-check-square"></i>  A boire</p>
               </div>
             <% else %>
               <div class="keep_card_user_bottle_index">
-                <p>A garder</p>
+                <p><i class="far fa-check-square"></i>  A garder</p>
               </div>
             <% end %>
           </div>
@@ -91,5 +91,4 @@
 </div>
 
 <% end %>
-    <% end %>
 
