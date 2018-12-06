@@ -6,7 +6,7 @@
 }
 
 .landing-logo {
-  font-family: 'Berkshire Swash', cursive;
+  font-family: 'Megrim';
   font-size: 40px;
   color: white;
   text-align: center;
@@ -45,9 +45,9 @@
 
 @keyframes color-change-2x {
   0% {
-    background: darkblue;
+    background: $dark-gray;
   }
   100% {
-    background: #005c97;
+    background: #94969A;
   }
 }
