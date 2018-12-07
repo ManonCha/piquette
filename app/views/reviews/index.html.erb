@@ -1,7 +1,10 @@
 
-
-<h1> Mes dégustations</h1>
-<div>
+<div class="title-header-container">
+  <div class="title-header">
+    <h1>Mes<br>dégustations</h1>
+  </div>
+</div>
+<div class="reviews-container">
   <% @reviews.each do |review| %>
 
     <button type="button" data-toggle="modal" data-target="#modal<%= review.id %>">
@@ -68,7 +71,7 @@
             <p><strong> <%= review.bottle.winery.name %></strong></p>
             <p><%= review.bottle.year %></p>
             <p><%= review.bottle.region.name %></p>
-            <p>Bio : <%= review.bottle.bio %></p>
+<!--             <p>Bio : <%= review.bottle.bio %></p> -->
           </div>
         </div>
         <div class="bottle-modal-desc">

@@ -4,7 +4,7 @@ p {
 }
 
 h1 {
-  color: $dark-gray;
+  color: white;
 }
 
 body {
@@ -30,3 +30,25 @@ button, input[type="button"] {
   outline: inherit;
 }
 
+.title-header-container {
+  display: flex;
+  justify-content: flex-end;
+  .title-header {
+    width: 62vw;
+    height: 100px;
+    margin: 30px 10px 20px 0;
+    text-align: right;
+    h1 {
+      font-size: 35px;
+    }
+  }
+}
+
+.new-review-container {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+hr {
+  color: $dark-gray;
+}

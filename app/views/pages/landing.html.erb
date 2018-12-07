@@ -1,7 +1,9 @@
-<div class='landing-background color-change-2x'>
-  <% if current_user %>
-    <%= link_to "Piquette", home_path, class:'landing-logo tracking-in-expand' %>
-  <% else %>
-    <%= link_to "Piquette", new_user_session_path, class:'landing-logo tracking-in-expand' %>
-  <% end %>
+<div class="white-background">
+  <div class='landing-background color-change-2x'>
+    <% if current_user %>
+      <%= link_to "Piquette", home_path, class:'landing-logo tracking-in-expand' %>
+    <% else %>
+      <%= link_to "Piquette", new_user_session_path, class:'landing-logo tracking-in-expand' %>
+    <% end %>
+  </div>
 </div>

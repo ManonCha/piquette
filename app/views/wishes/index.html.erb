@@ -1,6 +1,10 @@
 
-<h1>Ma wishlist</h1>
-<div>
+<div class="title-header-container">
+  <div class="title-header">
+    <h1>Ma<br>wishlist</h1>
+  </div>
+</div>
+<div class="wishes-container">
   <% @wishes.each do |wish| %>
     <button type="button" data-backdrop="false" data-toggle="modal" data-target="#modal<%= wish.id %>">
       <div class="card_user_bottle_index <%= wish.bottle.color.name %>">
@@ -64,7 +68,7 @@
             <p><strong> <%= wish.bottle.winery.name %></strong></p>
             <p><%= wish.bottle.year %></p>
             <p><%= wish.bottle.region.name %></p>
-            <p>Bio : <%= wish.bottle.bio %></p>
+<!--             <p>Bio : <%= wish.bottle.bio %></p> -->
           </div>
         </div>
         <div class="bottle-modal-advice">
@@ -84,7 +88,7 @@
             <%= simple_form_for @user_bottle do |f| %>
             <%= f.hidden_field :bottle_id, value: wish.bottle_id %>
             <%= f.number_field :quantity, placeholder:0%>
-            <%= f.button :submit %>
+            <%= f.button :submit, value: "ajouter" %>
             <% end %>
           </div>
         </div>

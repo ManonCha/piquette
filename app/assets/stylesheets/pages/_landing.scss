@@ -3,12 +3,14 @@
   height: 667px;
   display: flex;
   justify-content: center;
-  background-image: url('wine-background-2');
+  // background-image: url('wine-background-2');
+  // background-repeat: no-repeat;
+  // background-position: center;
 
 }
 
 .landing-logo {
-  font-family: 'Eczar';
+  font-family: 'Playfair Display';
   font-size: 60px;
   color: white;
   text-align: center;
@@ -23,35 +25,39 @@
   color: white;
 }
 
-// .tracking-in-expand {
-//   animation: tracking-in-expand 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-// }
+.white-background {
+  background-color: white;
+}
 
-// .color-change-2x {
-//   animation: color-change-2x 2s linear infinite alternate both;
-// }
+.tracking-in-expand {
+  animation: tracking-in-expand 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.color-change-2x {
+  animation: color-change-2x 2s linear infinite alternate both;
+}
 
 
-// /* ---------------------------------------------- */
+/* ---------------------------------------------- */
 
-// @keyframes tracking-in-expand {
-//   0% {
-//     letter-spacing: -0.9em;
-//     opacity: 0;
-//   }
-//   40% {
-//     opacity: 0.6;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.9em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-// @keyframes color-change-2x {
-//   0% {
-//     background: $dark-gray;
-//   }
-//   100% {
-//     background: #94969A;
-//   }
-// }
+@keyframes color-change-2x {
+  0% {
+    background: $dark-gray;
+  }
+  100% {
+    background: #94969A;
+  }
+}

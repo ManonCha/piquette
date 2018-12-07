@@ -1,0 +1,27 @@
+.custom-background {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  top: 0;
+  background-color: white;
+  z-index: -10;
+}
+
+.right-background {
+  background-color: $dark-gray;
+  position: absolute;
+  right: 0px;
+  height: 100vh;
+  width: 70vw;
+  z-index: 10;
+}
+
+.bottom-background {
+  background-color: $light-gray;
+  position: absolute;
+  z-index: 5;
+  bottom: 0px;
+  height: 80vh;
+  width: 100vw;
+}
