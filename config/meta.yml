@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Piquette"
+meta_title: "Piquette - Build your first wine cellar"
+meta_description: "A very simple web app that helps users choose their first bottles, manage their storage and enhance tasting experiences"
+meta_image: "cover.png"                       # should exist in `app/assets/images/`
+twitter_account: "@FHameau"   # required for Twitter Cards
