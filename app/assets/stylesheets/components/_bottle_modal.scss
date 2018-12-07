@@ -1,6 +1,5 @@
 .bottle-modal {
-  background-color: white;
-  opacity: 0.7
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .bottle-modal-dialog {
@@ -8,7 +7,10 @@
 }
 
 .bottle-modal-content {
-  border-radius: 10px;
+  margin: auto;
+  top: 5vh;
+  height: 90vh;
+  width: 90%;
   border: none;
   padding: 10px;
   z-index: 10;
@@ -16,9 +18,19 @@
 
 .bottle-modal-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
+.modal-dialog span {
+  font-size: 40px;
+}
+
+.bottle-modal-dialog button {
+  position: relative;
+  top: 5vh;
+  right: 9%;
+  z-index: 20;
+}
 .bottle-modal-top {
   display: flex;
   justify-content: space-around;
@@ -26,9 +38,9 @@
 
 .bottle-modal-photo {
 
-  width: 30vw;
+  width: 25vw;
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
   align-items: center;
 }
 

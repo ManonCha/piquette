@@ -42,14 +42,14 @@
 
 <div class="modal bottle-modal slide-in-fwd-center" id="modal<%= bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
   <div class="modal-dialog bottle-modal-dialog" role="document">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
     <div class="modal-content bottle-modal-content">
       <div class="bottle-modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
+        <h4 class="modal-title" id="exampleModalLabel">
           <%= bottle.title %>
-        </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        </h4>
       </div>
       <div class="modal-body">
         <div class="bottle-modal-top">
