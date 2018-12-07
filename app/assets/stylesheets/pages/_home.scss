@@ -77,7 +77,7 @@
 /* Recommandations */
 .reco-card {
   width: 350px;
-  height: 70px;
+  height: 50px;
   border-radius: 10px;
   background-color: white;
   margin: auto;
@@ -87,12 +87,110 @@
   position: relative;
 }
 
+.reco-card {
+  text-align: center;
+}
+
 .reco-btn {
   color: white;
   text-align: center;
 }
 
-.fa-wine-bottle {
-  font-size: 30px;
-  color: black;
+.nbr_bottle{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
+
+.total_bottle{
+  width: 70px;
+  height: 70px;
+}
+
+.fa-wine-bottle{
+  font-size: 60px;
+  transform: rotate(-45deg)
+}
+
+.bottle-home {
+  width: 140px;
+  height: 140px;
+  background-color: grey;
+}
+
+.num-bottle-home {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+}
+
+.x-bottle-home {
+  position: relative;
+  top: 10px;
+  left: 30px;
+}
+
+.picto-bottle-home {
+
+}
+
+.color-bottle-home {
+
+}
+
+.xx-nbr_bottle{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.bg-grey{
+  background-color: grey;
+}
+.bg-red{
+  background-color: red;
+}
+.bg-green{
+  background-color: green;
+}
+.bg-blue{
+  background-color: blue;
+}
+.xx-bottle-home{
+  flex: 0 0 150px;
+  height: 140px;
+  margin-bottom: 10px;
+}
+.xx-bottle-home-top{
+  height: 66%;
+  h3{
+    margin: 0;
+  }
+}
+.xx-bottle-home-bottom{
+  height: 34%;
+}
+.flex-centerer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
