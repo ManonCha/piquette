@@ -4,6 +4,7 @@
 
     <%= f.input :rating, collection: 0..5 %>
     <%= f.input :comment %>
+    <%= f.input :tasting_date, as: :string, required: true, input_html: {class: "datepicker"} %>
 
     <%= f.submit %>
   <% end %>

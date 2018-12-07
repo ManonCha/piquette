@@ -76,7 +76,7 @@
           <p><%= review.bottle.tasting_advice %></p>
         </div>
         <div class="bottle_modal_review">
-          <p> <%= review.tasting_date %></p>
+          <p> <%= review.tasting_date&.strftime('%e %B %Y') %></p>
           <% review.rating.times do %>
             <i class="fas fa-star"></i>
           <% end %>
