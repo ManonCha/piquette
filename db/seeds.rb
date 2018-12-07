@@ -168,9 +168,10 @@ region_item = 'savoie'
     end
 
     #récupération du prix
-    html_doc_bottle.search('.prix-wrapper').each do |el|
-      bottle.price = el.search(".price").text.strip
-    end
+    # html_doc_bottle.search('.prix-wrapper').each do |el|
+    #   bottle.price = el.search(".price").text.strip
+    # end
+    bottle.price = rand(7..59)
 
     # récupération des descriptions
     bottle_details = {}
@@ -197,7 +198,7 @@ region_item = 'savoie'
       bottle.title = html_doc_bottle.search('.page-header h1').text.strip
     end
 
-    bottle.year = bottle_details["Millesime :"].to_i
+    bottle.year = bottle_details["Millésime :"].to_i
 
     bottle.designation = bottle_details["Appellation :"]
     if Region.find_by(name: bottle_details["Région :"])

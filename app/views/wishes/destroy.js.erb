@@ -1,0 +1,7 @@
+function refreshHeartButton() {
+  const heartButton = document.getElementById('bottle-wish-heart-<%= @wish.bottle.id %>');
+  const innerHTML = '<%= j render "wishes/heart_button", bottle: @wish.bottle %>';
+  heartButton.innerHTML = innerHTML;
+}
+
+refreshHeartButton();
