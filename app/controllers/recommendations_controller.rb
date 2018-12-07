@@ -1,7 +1,4 @@
-
-
 class RecommendationsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:search, :index]
 
   def search
     if params[:pairing].present? && params[:color].present? && params[:bio].present? && params[:garder].present?

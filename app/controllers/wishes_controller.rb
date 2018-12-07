@@ -10,18 +10,19 @@ class WishesController < ApplicationController
   end
 
   def create
-    @wish = Wish.new(wish_params)
+    @wish = Wish.new
     @bottle = Bottle.find(params[:bottle_id])
-    @wish.user = current_user
     @wish.bottle = @bottle
+    @wish.user = current_user
+
     if @wish.save!
       respond_to do |format|
-        format.html { redirect_to restaurant_path(@restaurant) }
-        format.js  # <-- will render `app/views/reviews/create.js.erb`
+        format.html { redirect_to wishes_path }
+        format.js  # <-- will render `app/views/wishes/create.js.erb`
       end
     else
       respond_to do |format|
-        format.html { render 'restaurants/show' }
+        format.html { redirect_to wishes_path }
         format.js  # <-- idem
       end
     end
@@ -29,16 +30,16 @@ class WishesController < ApplicationController
 
   def destroy
     @wish.destroy
-    redirect_to wishes_path
+
+    respond_to do |format|
+      format.html { redirect_to wishes_path }
+      format.js  # <-- will render `app/views/wishes/destroy.js.erb`
+    end
   end
 
   private
 
-  def wish_params
-    params.recquire(:wish).permit(:bottle_id)
-  end
-
   def set_wish
-    @wish = Wish.find(params[:id])
+    @wish = current_user.wishes.find(params[:id])
   end
 end

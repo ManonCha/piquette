@@ -28,6 +28,8 @@
               <p><i class="far fa-check-square"></i>  A garder</p>
             </div>
           <% end %>
+
+          <%= render 'wishes/heart_button', bottle: bottle %>
         </div>
 
       </div>
@@ -44,12 +46,6 @@
       <div class="bottle-modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
           <%= bottle.title %>
-          <%#= link_to new_bottle_wish_path(user_bottle.bottle) do %>
-<!--             <button class="btn btn-primary" remote="true">
-              <i class="far fa-heart add-wish"></i>
-            </button> -->
-          <%# end %>
-<!--           <span><i class="fas fa-heart delete-wish"></i></span> -->
         </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
