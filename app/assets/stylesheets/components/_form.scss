@@ -37,7 +37,7 @@
   font-size: 15px;
   text-align: center;
   justify-content: center;
-  background: #5D1223;
+  background: grey;
   color: white;
   width: 80%;
   margin: 10px 0px;
@@ -50,7 +50,7 @@
   font-size: 15px;
   text-align: center;
   justify-content: center;
-  background: #5D1223;
+  background: $dark-gray;
   color: white;
   width: 80%;
   margin: 10px 0px;
@@ -66,7 +66,7 @@
 
 
 .form-container input[type=radio]:checked+label {
-  background: #ED3833;
+  background: $dark-gray;
 }
 
 .form-container textarea {

@@ -14,14 +14,16 @@
   right: 3%;
   height: 500px;
   width: 93%;
-  background-color: $light-gray;
+  background-color: grey;
   display: flex;
   justify-content: center;
   margin: auto;
+  transition-duration: 1s;
 }
 
 .navbar.open {
  top: 0px;
+ transition-duration: 1s;
 }
 
 .menu {
@@ -39,7 +41,7 @@
 }
 
 .menu-link a{
-  color: $dark-gray;
+  color: white;
   font-family: 'helvetica', cursive;
   font-size: 12px;
   letter-spacing: 2px;
@@ -54,7 +56,7 @@
 
 /* Logo */
 .logo {
-  background-color: $light-gray;
+  background-color: grey;
   height: 60px;
   width: 90px;
   color: white;
@@ -64,7 +66,7 @@
   position: absolute;
   top: 488px;
   h1 {
-    color: $dark-gray !important;
+    color: white !important;
   }
 }
 
