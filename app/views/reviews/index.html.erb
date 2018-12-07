@@ -1,7 +1,6 @@
 
-<div class="header">
-  <h1> Mon carnet de dégustation</h1>
-</div>
+
+<h1> Mes dégustations</h1>
 <div>
   <% @reviews.each do |review| %>
 
@@ -44,9 +43,10 @@
     </button>
 </div>
 
+
 <!-- MODALE // NE PAS TOUCHER -->
 
-<div class="modal bottle-modal slide-in-fwd-center" id="modal<%= review.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal bottle-modal slide-in-fwd-center" id="modal<%= review.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
   <div class="modal-dialog bottle-modal-dialog" role="document">
     <div class="modal-content bottle-modal-content">
       <div class="bottle-modal-header">

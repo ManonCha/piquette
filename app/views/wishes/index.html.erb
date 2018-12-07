@@ -1,3 +1,5 @@
+
+<h1>Ma wishlist</h1>
 <div>
   <% @wishes.each do |wish| %>
     <button type="button" data-backdrop="false" data-toggle="modal" data-target="#modal<%= wish.id %>">
@@ -30,23 +32,23 @@
                 <p><i class="far fa-check-square"></i>  A garder</p>
               </div>
             <% end %>
+            <%= render 'wishes/heart_button', bottle: wish.bottle %>
           </div>
 
         </div>
       </div>
-
     </button>
 </div>
 
-<!-- MODALE // NE PAS TOUCHER -->
+  <!-- MODALE // NE PAS TOUCHER -->
 
-<div class="modal bottle-modal slide-in-fwd-center" id="modal<%= wish.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal bottle-modal slide-in-fwd-center" id="modal<%= wish.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
   <div class="modal-dialog bottle-modal-dialog" role="document">
     <div class="modal-content bottle-modal-content">
       <div class="bottle-modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
           <%= wish.bottle.title %>
-<!--           <span><i class="far fa-heart add-wish"></i></span>
+  <!--           <span><i class="far fa-heart add-wish"></i></span>
           <span><i class="fas fa-heart delete-wish"></i></span> -->
         </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -92,3 +94,4 @@
 </div>
 
 <% end %>
+
