@@ -1,8 +1,9 @@
 
-<div>
-  <h1>Ma cave</h1>
+<div class="title-header-container">
+  <div class="title-header">
+    <h1>Ma<br>cave</h1>
+  </div>
 </div>
-
 <div class="container_user_bottle_index">
 
   <% @user_bottles.each do |user_bottle| %>
@@ -57,8 +58,6 @@
       <div class="bottle-modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
           <%= user_bottle.bottle.title %>
-          <span><i class="far fa-heart add-wish"></i></span>
-          <span><i class="fas fa-heart delete-wish"></i></span>
         </h5>
 
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -74,7 +73,7 @@
             <p><strong> <%= user_bottle.bottle.winery.name %></strong></p>
             <p><%= user_bottle.bottle.year %></p>
             <p><%= user_bottle.bottle.region.name %></p>
-            <p>Bio : <%= user_bottle.bottle.bio %></p>
+<!--             <p>Bio : <%= user_bottle.bottle.bio %></p> -->
           </div>
         </div>
         <div class="bottle-modal-advice">

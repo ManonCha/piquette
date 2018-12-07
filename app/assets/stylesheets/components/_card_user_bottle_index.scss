@@ -6,10 +6,12 @@
 }
 
 .card_user_bottle_index {
+  box-shadow: 0px 0px 10px 0px #656565;
+  background-color: white;
+  margin: 5px;
   padding: 4px;
   height: 100%;
   width: 95vw;
-  border-radius: 2px;
   display: flex;
   grid-template-columns: 5fr 3fr;
   grid-template-rows: 2fr 20px 40px;
@@ -46,20 +48,20 @@
 
 .keep_card_user_bottle_index {
 }
-.Rouge {
-  border-left: 8px solid $red-wine;
-  border-bottom: 1px solid $red-wine;
+// .Rouge {
+//   border-left: 8px solid $red-wine;
+//   border-bottom: 1px solid $red-wine;
 
-}
+// }
 
-.Rose {
-  border-left: 8px solid $rose-wine;
-  border-bottom: 1px solid $rose-wine;
-}
+// .Rose {
+//   border-left: 8px solid $rose-wine;
+//   border-bottom: 1px solid $rose-wine;
+// }
 
-.Blanc {
-  border-left: 8px solid $white-wine;
-  border-bottom: 1px solid $white-wine;
-}
+// .Blanc {
+//   border-left: 8px solid $white-wine;
+//   border-bottom: 1px solid $white-wine;
+// }
 
 

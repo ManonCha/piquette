@@ -1,5 +1,10 @@
-<h1>Nouvelle dégustations</h1>
 
+<div class="title-header-container">
+  <div class="title-header">
+    <h1>Nouvelle<br>dégustation</h1>
+  </div>
+</div>
+<div class="new-review-container">
   <%= simple_form_for [@bottle, @review] do |f| %>
 
     <%= f.input :rating, collection: 0..5 %>
@@ -8,3 +13,4 @@
 
     <%= f.submit %>
   <% end %>
+</div>
