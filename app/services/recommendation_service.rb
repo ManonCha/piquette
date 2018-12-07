@@ -11,24 +11,23 @@ class RecommendationService
   def call
     year = Date.today.year
 
-    @bottles_color = Bottle.joins(:color).where(colors: { name: @color })
+    @bottles = Bottle.all
+
+    if @color != 'all'
+      @bottles = @bottles.joins(:color).where(colors: { name: @color })
+    end
 
     if @bio != 'all'
-      @bottles_bio = @bottles_color.where(bio: @bio)
-    else
-      @bottles_bio = @bottles_color.all
+      @bottles = @bottles.where(bio: @bio)
     end
 
-    @bottles_bio.map do |b|
-      b if b.wine_pairing.to_s.split.include?(@pairing)
-    end
+    @bottles = @bottles.where("wine_pairing @@ ?", "%#{@pairing}%")
 
     if @garder == 'false'
-      @bottles_bio.where('best_before < ?', year).where('best_after > ?', year)
+      @bottles = @bottles.where('best_before < ?', year).where('best_after > ?', year)
     elsif @garder == 'true'
-      @bottles_bio.where('best_before > ?', year)
-    else
-      @bottles_bio
+      @bottles = @bottles.where('best_before > ?', year)
     end
+    @bottles
   end
 end
