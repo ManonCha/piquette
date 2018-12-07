@@ -6,9 +6,9 @@
   <style>
 
   body {
-    font-family: arial, sans-serif;
-    color: white;
-    background-color: #221E1F;
+    font-family: sans-serif;
+    color: navy;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,22 +16,29 @@
     height: 100vh;
     margin: 0;
     padding: 0;
+    width: 100%;
   }
 
   img {
     max-height: 50vh;
   }
 
+  .dialog {
+    width: 100%;
+    text-align: center;
+  }
+
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body>
   <!-- This file lives in public/500.html -->
   <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
+    <img src="https://cdn.dribbble.com/users/257123/screenshots/5370165/precious.png" alt="">
+    <div class="dialog">
+      <h3>Tout ira bien sous peu</h3>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <p>Le temps d'un verre tout sera en ordre.</p>
   </div>
 </body>
 </html>
