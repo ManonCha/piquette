@@ -38,18 +38,18 @@
 
 <!-- MODALE // NE PAS TOUCHER -->
 
-<div class="modal bottle-modal slide-in-fwd-center" id="modal<%= bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal bottle-modal slide-in-fwd-center" id="modal<%= bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
   <div class="modal-dialog bottle-modal-dialog" role="document">
     <div class="modal-content bottle-modal-content">
       <div class="bottle-modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
           <%= bottle.title %>
-          <%= link_to new_bottle_wish_path(user_bottle.bottle) do %>
-            <button class="btn btn-primary">
+          <%#= link_to new_bottle_wish_path(user_bottle.bottle) do %>
+<!--             <button class="btn btn-primary" remote="true">
               <i class="far fa-heart add-wish"></i>
-            </button>
-          <% end %>
-          <span><i class="fas fa-heart delete-wish"></i></span>
+            </button> -->
+          <%# end %>
+<!--           <span><i class="fas fa-heart delete-wish"></i></span> -->
         </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -82,7 +82,7 @@
         <div class="bottle-modal-cta">
           <%= simple_form_for @user_bottle do |f| %>
           <%= f.hidden_field :bottle_id, value: bottle.id %>
-          <%= f.number_field :quantity, placeholder:1%>
+          <%= f.number_field :quantity, placeholder:"quantité"%>
           <%= f.button :submit %>
           <% end %>
         </div>
