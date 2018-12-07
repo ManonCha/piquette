@@ -1,5 +1,5 @@
 const initNavbar = () => {
-
+  console.log('hello')
   const btn = document.getElementById('logo');
   const navbar = document.querySelector('.navbar');
 
