@@ -1,4 +1,7 @@
-<div class="white-background">
+<div id="background-video">
+  <%= video_tag "Piquette-landing.mp4", muted: true, autoplay: true, loop: true, class:'background-video' %>
+</div>
+
   <div class='landing-background color-change-2x'>
     <% if current_user %>
       <%= link_to "Piquette", home_path, class:'landing-logo tracking-in-expand' %>
