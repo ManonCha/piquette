@@ -23,6 +23,8 @@ if (document.getElementById('search-btn')) {
 initNavbar();
 
 // slide
+// hideForm();
+
 
 
 

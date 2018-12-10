@@ -39,6 +39,23 @@ class UserBottlesController < ApplicationController
     redirect_to user_bottles_path
   end
 
+
+  def update_quantity
+    @user_bottle = UserBottle.find(params[:id])
+    @user_bottle.quantity += params[:addition_type] == "plus" ? 1 : -1
+    # binding.pry
+    if @user_bottle.save
+      respond_to do |format|
+        format.html { redirect_to user_bottles_path }
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html { render 'user_bottle/index' }
+        format.js
+      end
+    end
+
   private
 
   def set_user_bottles
