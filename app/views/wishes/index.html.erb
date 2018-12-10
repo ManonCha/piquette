@@ -20,7 +20,7 @@
           </div>
 
           <div class="desc_card_user_bottle_index">
-            <p><%= wish.bottle.designation.capitalize%></p>
+            <p><%= wish.bottle.winery.name.capitalize%></p>
           </div>
           <div class="footer_card_user_bottle_index">
             <div class="year_card_user_bottle_index">
@@ -48,6 +48,9 @@
 
   <div class="modal bottle-modal slide-in-fwd-center" id="modal<%= wish.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
   <div class="modal-dialog bottle-modal-dialog" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
     <div class="modal-content bottle-modal-content">
       <div class="bottle-modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
@@ -55,9 +58,6 @@
   <!--           <span><i class="far fa-heart add-wish"></i></span>
           <span><i class="fas fa-heart delete-wish"></i></span> -->
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
       </div>
       <div class="modal-body">
         <div class="bottle-modal-top">

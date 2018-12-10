@@ -6,6 +6,7 @@ class RecommendationService
     @pairing = arguments[:pairing]
     @bio = arguments[:bio]
     @garder = arguments[:garder]
+    @price = arguments[:price]
   end
 
   def call
@@ -23,10 +24,12 @@ class RecommendationService
 
     @bottles = @bottles.where("wine_pairing @@ ?", "%#{@pairing}%")
 
+    @bottles = @bottles.where('price <= ?', @price)
+
     if @garder == 'false'
-      @bottles = @bottles.where('best_before < ?', year).where('best_after > ?', year)
+      @bottles = @bottles.where('best_before > ?', year).where('best_after <= ?', year)
     elsif @garder == 'true'
-      @bottles = @bottles.where('best_before > ?', year)
+      @bottles = @bottles.where('best_before > ?', year + 5)
     end
     @bottles
   end

@@ -1,5 +1,9 @@
-<h4>Recommandation</h1>
 
+<div class="title-header-container">
+  <div class="title-header">
+    <h1>Suggestions</h1>
+  </div>
+</div>
 <div class="form-wrapper">
 
 <!--   <div class="form-container highlight">
@@ -12,7 +16,7 @@
 
     <div data-aos="fade-up"
      data-aos-duration="1000" class="form-container highlight">
-      <h4>Que rechercher vous?</h4>
+      <h4>Que recherchez-vous?</h4>
 
       <input type="radio" name="color" value="Rouge" id="color_red">
       <label for="color_red">Rouge</label>
@@ -64,11 +68,24 @@
       <input type="radio" name="garder" value="all" id="garder_all">
       <label for="garder_all">Peu importe</label>
     </div>
+
+    <div data-aos="fade-up"
+     data-aos-duration="1000" class="form-container">
+      <h4>Prix max?</h4>
+      <br>
+      <%= range_field_tag 'price', nil,  min: 7, max: 59, step: 1 %>
+      <br>
+      <div id='target'>33</div>
+     </div>
+
+
     <div data-aos="fade-up"
      data-aos-duration="1000" class="form-container">
       <input type="submit" value="Search" class="form-btn">
     </div>
   </form>
+
+
 
 </div>
 
