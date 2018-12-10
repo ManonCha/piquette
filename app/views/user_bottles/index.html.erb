@@ -5,7 +5,11 @@
   </div>
 </div>
 
-<div class="search-bar">
+<div  id="search-btn">
+  <i class="fas fa-search" style="font-size: 30px"></i>
+  <br>
+</div>
+<div class="search-bar hidden-search">
   <div class='search-field'>
     <%= form_tag user_bottles_path, method: :get do %>
       <%= text_field_tag :query,

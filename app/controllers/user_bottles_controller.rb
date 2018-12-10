@@ -3,7 +3,7 @@ class UserBottlesController < ApplicationController
     if params[:query].present?
       if !params[:color].present?
         @region = Region.where("name ILIKE ?", "%#{params[:query]}%").first
-        @user_bottles_list = Bottle.of_user(current_user).color('Blanc').where(region_id: @region.id)
+        @user_bottles_list = Bottle.of_user(current_user).where(region_id: @region.id)
       else
         if params[:color] == 'rouge'
           @user_bottles_list = Bottle.of_user(current_user).color('Rouge').where(region_id: @region.id)
