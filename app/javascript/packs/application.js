@@ -13,8 +13,6 @@ if (document.getElementById('search')) {
 
 initNavbar();
 
-
-
 // hideForm();
 
 
