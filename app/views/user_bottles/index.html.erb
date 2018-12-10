@@ -115,19 +115,13 @@
         </div>
       </div>
     </button>
-</div>
 
-
-<!-- <a href="/bottles/1">Titre de la bouteille</a>
-<a href="<%#= bottle_path(user_bottle.bottle) %>"><%#= user_bottle.bottle.title %></a>
-
-<%#= link_to user_bottle.bottle.title, bottle_path(user_bottle.bottle) %> -->
-
-<div class="modal bottle-modal slide-in-fwd-center" id="modal<%= user_bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-  <div class="modal-dialog bottle-modal-dialog" role="document">
+    <div class="modal bottle-modal slide-in-fwd-center" id="modal<%= user_bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog bottle-modal-dialog" role="document">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+
     <div class="modal-content bottle-modal-content">
       <div class="bottle-modal-header">
         <h5 class="modal-title" id="exampleModalLabel">
@@ -157,14 +151,25 @@
           </div>
         </div>
       </div>
+      
+      <div class="bottle-modal-quantity">
+        <%= link_to update_quantity_user_bottle_path(user_bottle, addition_type: "minus"), method: :patch, id:'btn-minus', remote: true do %>
+          <i class="fas fa-minus-circle" id='btn-minus'></i>
+        <% end %>
+
+        <span id="bottle-quantity_<%= user_bottle.id %>"><%= user_bottle.quantity %></span>
+
+        <%= link_to update_quantity_user_bottle_path(user_bottle, addition_type: "plus"), method: :patch, id:'btn-minus', remote: true do %>
+         <i class="fas fa-plus-circle" id='btn-plus'></i>
+        <% end %>
+       </div>
+      
       <div class="bottle-modal-cta">
         <%= link_to new_bottle_review_path(user_bottle) do %>
           <button class="btn btn-primary">Ajouter une review</button>
         <% end %>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
-
-<% end %>
 
