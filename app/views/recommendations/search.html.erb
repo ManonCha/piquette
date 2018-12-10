@@ -68,11 +68,24 @@
       <input type="radio" name="garder" value="all" id="garder_all">
       <label for="garder_all">Peu importe</label>
     </div>
+
+    <div data-aos="fade-up"
+     data-aos-duration="1000" class="form-container">
+      <h4>Prix max?</h4>
+      <br>
+      <%= range_field_tag 'price', nil,  min: 7, max: 59, step: 1 %>
+      <br>
+      <div id='target'>33</div>
+     </div>
+
+
     <div data-aos="fade-up"
      data-aos-duration="1000" class="form-container">
       <input type="submit" value="Search" class="form-btn">
     </div>
   </form>
+
+
 
 </div>
 

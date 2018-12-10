@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   margin: auto;
-  transition-duration: 1s;
+  transition: 1s ease-in-out;
 }
 
 .navbar.open {
