@@ -18,10 +18,12 @@
   display: flex;
   justify-content: center;
   margin: auto;
+  transition: 1s ease-in-out;
 }
 
 .navbar.open {
  top: 0px;
+ transition: 1s ease-in-out;
 }
 
 .menu {
