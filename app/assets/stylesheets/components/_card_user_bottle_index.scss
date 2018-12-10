@@ -36,6 +36,7 @@
 }
 .title_card_user_bottle_index {
   justify-content: center;
+  position: relative;
 }
 
 
@@ -48,6 +49,17 @@
 
 .keep_card_user_bottle_index {
 }
+
+.quantity_card_user_bottle_index {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.picto-bottle-index{
+  font-size: 15px;
+}
+
 // .Rouge {
 //   border-left: 8px solid $red-wine;
 //   border-bottom: 1px solid $red-wine;
