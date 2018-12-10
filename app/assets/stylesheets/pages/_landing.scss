@@ -9,6 +9,16 @@
 
 }
 
+.background-video {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  margin: 0 auto;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: center;
+}
+
 .landing-logo {
   font-family: 'Playfair Display';
   font-size: 60px;
@@ -25,17 +35,17 @@
   color: white;
 }
 
-.white-background {
-  background-color: white;
-}
+// .white-background {
+//   background-color: white;
+// }
 
-.tracking-in-expand {
-  animation: tracking-in-expand 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
+// .tracking-in-expand {
+//   animation: tracking-in-expand 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+// }
 
-.color-change-2x {
-  animation: color-change-2x 2s linear infinite alternate both;
-}
+// .color-change-2x {
+//   animation: color-change-2x 2s linear infinite alternate both;
+// }
 
 
 /* ---------------------------------------------- */
