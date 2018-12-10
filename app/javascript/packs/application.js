@@ -1,6 +1,6 @@
 import "bootstrap";
 
-import { initNavbar } from "../components/navbar"
+import { initNavbar } from "../navbar"
 import {displayForm} from "../components/display_form";
 import {hideForm} from "../components/hide_form";
 import {slide} from "../components/slide";
