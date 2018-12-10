@@ -79,18 +79,16 @@
 
 <div class="container_user_bottle_index">
 
- 
-          
-
   <% @user_bottles_list.each do |user_bottle| %>
     <button type="button" data-toggle="modal" data-target="#modal<%= user_bottle.id %>">
-      // problème possible
-          <div class="title_card_user_bottle_index">
-            <h5><%= user_bottle.bottle.title.capitalize %></h5>
-            <div class="quantity_card_user_bottle_index">
-              <p><%= user_bottle.quantity %> <i class="fas fa-wine-bottle picto-bottle-index"></i></p>
-            </div>
-          </div>
+
+      <!-- problem -->
+      <div class="title_card_user_bottle_index">
+        <h5><%= user_bottle.title.capitalize %></h5>
+        <div class="quantity_card_user_bottle_index">
+          <p><%= UserBottle.find_by(bottle_id: user_bottle.id).quantity %> <i class="fas fa-wine-bottle picto-bottle-index"></i></p>
+        </div>
+      </div>
 
       <div class="card_user_bottle_index <%= user_bottle.color.name %> slide-in-left">
         <div class="title_card_user_bottle_index">
