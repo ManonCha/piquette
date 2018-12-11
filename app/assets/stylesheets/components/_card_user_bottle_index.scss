@@ -7,74 +7,104 @@
 }
 
 .card_user_bottle_index {
-  box-shadow: 0px 0px 10px 0px #656565;
   background-color: white;
-  margin: 5px;
-  padding: 4px;
-  height: 100%;
+  border-radius: 3px;
+  box-shadow: 0 0 10px lightgrey;
+  height: 100px;
   width: 95vw;
-  display: flex;
-  grid-template-columns: 5fr 3fr;
-  grid-template-rows: 2fr 20px 40px;
-  // box-shadow: 0 0 3px lightgrey;
-  p {
-    font-size: 14px;
-    margin: 0 10px;
-  }
-}
-
-.image_card_user_bottle_index {
-  width: 30%;
-  background: grey;
-}
-.content_card_user_bottle_index {
-  width: 100%;
-}
-
-.footer_card_user_bottle_index {
-  display: flex;
-  justify-content: space-between;
-}
-.title_card_user_bottle_index {
-  justify-content: center;
+  margin: 5px;
+  padding: 5px;
   position: relative;
 }
 
-
-.desc_card_user_bottle_index {
-}
-
-.year_card_user_bottle_index {
+.content_card_user_bottle_index {
+  width: 100%;
+  z-index: 1;
   display: flex;
 }
 
-.keep_card_user_bottle_index {
+.infos_wine_left {
+  flex-direction: columns;
+  flex-grow: 1;
+  text-align: left;
+
+  span {
+    font-family: $headers-font;
+    font-size: 14px;
+    margin: 1px;
+  };
+  h2 {
+    font-family: $body-font;
+    font-size: 12px;
+    margin: 1px;
+  };
+  h3 {
+    font-family: $body-font;
+    font-size: 12px;
+    margin: 1px;
+  };
 }
 
-.quantity_card_user_bottle_index {
+.infos_wine_right {
+  display: flex;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  right: 5px;
+  top: 5px;
+  h3 {
+    font-family: $body-font;
+    font-size: 12px;
+    margin: 1px;
+  };
 }
 
-.picto-bottle-index{
-  font-size: 15px;
+.color-background {
+  font-family: $headers-font !important;
+  font-size: 50px;
+  opacity: 0.3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  margin-bottom: -12px;
+
 }
 
-// .Rouge {
-//   border-left: 8px solid $red-wine;
-//   border-bottom: 1px solid $red-wine;
+.rouge {
+  color: $red;
+}
 
-// }
+.rose {
+  color: $pink;
+}
 
-// .Rose {
-//   border-left: 8px solid $rose-wine;
-//   border-bottom: 1px solid $rose-wine;
-// }
+.blanc {
+  color: $yellow;
+}
 
-// .Blanc {
-//   border-left: 8px solid $white-wine;
-//   border-bottom: 1px solid $white-wine;
-// }
+.advice-keep {
+  background-color: $yellow;
+  padding: 2px;
+  color: white;
+  font-family: $headers-font;
+  font-size: 10px;
 
+}
+
+.advice-late {
+  background-color: $red;
+  padding: 2px;
+  color: white;
+  font-family: $headers-font;
+  font-size: 10px;
+}
+
+.advice-drink {
+  background-color: $green;
+  padding: 2px;
+  color: white;
+  font-family: $headers-font;
+  font-size: 10px;
+}
 
