@@ -41,8 +41,12 @@ class UserBottlesController < ApplicationController
 
 
   def update_quantity
+    puts "----------------------------"
+    p params
+    puts "----------------------------"
     @user_bottle = UserBottle.find(params[:id])
     @user_bottle.quantity += params[:addition_type] == "plus" ? 1 : -1
+    p @user_bottle
     # binding.pry
     if @user_bottle.save
       respond_to do |format|
@@ -55,6 +59,7 @@ class UserBottlesController < ApplicationController
         format.js
       end
     end
+  end
 
   private
 
