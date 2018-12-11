@@ -1,4 +1,3 @@
-
 const search = () => {
   const searchBtn = document.getElementById('search-btn')
   const searchField = document.querySelector('.search-bar')

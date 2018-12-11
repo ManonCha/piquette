@@ -1,5 +1,3 @@
-
-
 const slide = () => {
   const slide = document.getElementById('price');
   const target = document.getElementById('target');
@@ -9,6 +7,5 @@ const slide = () => {
     target.innerText = event.target.value;
   });
 };
-
 
 export { slide }
