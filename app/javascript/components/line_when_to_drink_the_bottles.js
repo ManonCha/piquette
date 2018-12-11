@@ -10,7 +10,6 @@ const initLine = () => {
     data: {
       labels: ['', '', ''],
       datasets: [{
-        label: 'coucou',
         data: wine_line_values,
         borderColor: 'rgba(105,25,255)',
         backgroundColor:'rgba(0,0,0)'
@@ -29,9 +28,6 @@ const initLine = () => {
             }
          }]
       }
-
-
-
     }
   });
 }

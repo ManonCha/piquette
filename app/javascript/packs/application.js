@@ -9,6 +9,7 @@ import { slide } from "../components/slide";
 import { search } from "../components/search";
 import { initDognut } from "../components/dognut_circles";
 import { initLine } from "../components/line_when_to_drink_the_bottles";
+import { initHorizontalBarChart } from "../components/horizontal_bars_wine_regions";
 
 
 if (document.getElementById('search')) {
@@ -22,6 +23,7 @@ if (document.getElementById('price')) {
 initNavbar();
 initDognut();
 initLine();
+initHorizontalBarChart();
 
 if (document.getElementById('search-btn')) {
   search()
