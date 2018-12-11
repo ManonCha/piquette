@@ -42,7 +42,7 @@
 }
 
 .menu-link a{
-  color: white;
+  color: $black;
   font-family: 'helvetica', cursive;
   font-size: 12px;
   letter-spacing: 2px;
@@ -60,7 +60,7 @@
   background-color: white;
   height: 60px;
   width: 90px;
-  color: white;
+  color: $black;
   display: flex;
   justify-content: center;
   align-items: center;
