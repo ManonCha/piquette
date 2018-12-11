@@ -1,6 +1,6 @@
 p {
   font-size: 15px;
-  color: $dark-gray;
+  color: $black;
 }
 
 h1 {
@@ -13,7 +13,7 @@ body {
 
 span {
   font-size: 15px;
-  color: $dark-gray;
+  color: $black;
   font-family: $body-font;
 }
 
@@ -47,8 +47,4 @@ button, input[type="button"] {
 .new-review-container {
   margin-right: 10px;
   margin-left: 10px;
-}
-
-hr {
-  color: $dark-gray;
 }

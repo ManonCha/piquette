@@ -1,25 +1,7 @@
 // Import Google fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
-@import url('https://fonts.googleapis.com/css?family=Assistant:200,300,400,700|Megrim');
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:100,300');
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
-@import url("https://fonts.googleapis.com/css?family=Eczar:400,500,700|Rakkas");
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
-@import url('https://fonts.googleapis.com/css?family=Poiret+One');
-@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai%7CBaloo+Da");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai|Baloo+Da");
 
 // Define fonts for body and headers
 $body-font: 'Raleway', sans-serif;
 $headers-font: 'Baloo Bhai';
-
-// To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
