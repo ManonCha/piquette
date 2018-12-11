@@ -14,7 +14,8 @@
   width: 90%;
   border: none;
   padding: 10px;
-  z-index: 10;}
+  z-index: 10;
+}
 
 .bottle-modal-header {
   margin-top: 20px;
@@ -86,6 +87,7 @@
   letter-spacing: 0px;
   font-size: 100px;
   opacity: 0.2;
+  color: grey;
 }
 
 .year-back {
@@ -104,6 +106,7 @@
   border-radius: 50%;
   height: 31.5px;
   width: 31.5px;
+  color: grey;
 }
 
 .display-photo {
@@ -130,4 +133,9 @@
 
 .large-title {
   width-min: 100%;
+}
+
+.modal-title {
+  color: grey;
+  display: block;
 }
