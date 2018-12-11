@@ -1,5 +1,10 @@
+// .search-group {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
 .search-bar {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   opacity: 1;
   display: flex;
@@ -12,6 +17,9 @@
 .filters {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 #search-btn {
@@ -19,10 +27,11 @@
 }
 
 .search-btn {
+  margin-left: 15px;
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  background-color: white;
+  height: 30px !important;
+  width: 30px !important;
+  background-color: $black;
   border: 1px solid transparent;
   transition: 1s ease-in-out;
 }

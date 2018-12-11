@@ -4,16 +4,13 @@
     <h1>Mes<br>dégustations</h1>
   </div>
 </div>
+
 <div class="reviews-container">
   <% @reviews.each do |review| %>
 
     <button type="button" data-toggle="modal" data-target="#modal<%= review.id %>">
 
       <div class="card_user_bottle_index <%= review.bottle.color.name %>">
-
-       <!--  <div class="image_card_user_bottle_index">
-          <img src="../../assets/images/red_wine.png" alt="">
-        </div> -->
 
         <div class="content_card_user_bottle_index">
 

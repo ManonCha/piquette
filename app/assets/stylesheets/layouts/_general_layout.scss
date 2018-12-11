@@ -4,7 +4,7 @@ p {
 }
 
 h1 {
-  color: white;
+  color: $black;
 }
 
 body {
@@ -19,7 +19,6 @@ span {
 
 .landing-background a:hover{
   text-decoration: none;
-  color: white;
 }
 
 button, input[type="button"] {
