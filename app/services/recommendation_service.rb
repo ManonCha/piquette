@@ -31,3 +31,5 @@ class RecommendationService
     @bottles
   end
 end
+
+@bottles = @bottles.where('best_after > ?', year +5)
