@@ -20,7 +20,7 @@ if (document.getElementById('search-btn')) {
   search()
 };
 
-initNavbar();
+// initNavbar();
 
 // slide
 // hideForm();
