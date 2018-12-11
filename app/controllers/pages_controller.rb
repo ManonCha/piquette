@@ -37,5 +37,33 @@ class PagesController < ApplicationController
         @user_champ_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
       end
     end
+
+    Bottle.of_user(current_user).each do |bottle|
+      if bottle.region.name == 'Bordeaux'
+        @user_bordeaux_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Alsace'
+        @user_alsace_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Corse'
+        @user_Corse_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Provence'
+        @user_Provence_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Baujolais'
+        @user_Baujolais_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Jura'
+        @user_Jura_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Rhône'
+        @user_Rhône_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Afrique du sud'
+        @user_Afrique_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Argentine'
+        @user_Argentine_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Languedoc'
+        @user_Languedoc_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Roussillon'
+        @user_Roussillon_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Chili'
+        @user_Chili_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      end
+    end
   end
 end
