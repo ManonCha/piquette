@@ -46,30 +46,32 @@
 
 <div class="modal bottle-modal slide-in-fwd-center" id="modal<%= bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
   <div class="modal-dialog bottle-modal-dialog" role="document">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+
+
     <div class="modal-content bottle-modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
       <div class="bottle-modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">
+
+        <h3 class="modal-title" id="exampleModalLabel">
           <%= bottle.title %>
-        </h4>
+        </h3>
+        <div class="bottle-modal-photo">
+          <%= cl_image_tag bottle.photo, height: 100, crop: :fill %>
+        </div>
       </div>
+      <div class="display-photo"><button><</button></div>
+      <div class="bottle-modal-primary-infos">
+            <p><strong> <%= bottle.winery.name %></strong></p>
+            <p><i class="far fa-calendar-alt"></i>    <%= bottle.year %></p>
+            <p><i class="fas fa-globe-americas"></i>    <%= bottle.region.name %></p>
+<!--             <p>Bio : <%= bottle.bio %></p> -->
+          </div>
 
 
-
-
-      <div class="bottle-modal-add-to-cellar">
-        <div class="bottle-modal-cta">
-          <%= simple_form_for @user_bottle do |f| %>
-          <%= f.hidden_field :bottle_id, value: bottle.id %>
-          <%= f.number_field :quantity, placeholder:"quantité"%>
-          <%= f.button :submit, value:"ajouter" %>
-          <% end %>
-        </div>
-        <div class="year-back">
-          <h2><%= bottle.color.name %></h2>
-        </div>
+      <div class="year-back">
+        <h2><%= bottle.color.name.downcase %></h2>
       </div>
 
     </div>
