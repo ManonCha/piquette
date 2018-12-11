@@ -7,7 +7,7 @@ import { displayForm } from "../components/display_form";
 import { hideForm } from "../components/hide_form";
 import { slide } from "../components/slide";
 import { search } from "../components/search";
-// import { initDognut } from "../components/dognut_circles";
+import { initDognut } from "../components/dognut_circles";
 import { initLine } from "../components/line_when_to_drink_the_bottles";
 
 

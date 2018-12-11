@@ -5,14 +5,34 @@ const initLine = () => {
   const cty = document.getElementById('bottle_lines');
   const wine_line_values = cty.dataset.line.split(',');
 
-  var myLineChart = new Chart(cty, {
+  const myLineChart = new Chart(cty, {
     type: 'line',
     data: {
+      labels: ['', '', ''],
       datasets: [{
-        showLine: false,
-        data:wine_line_values // disable for a single dataset
+        label: 'coucou',
+        data: wine_line_values,
+        borderColor: 'rgba(105,25,255)',
+        backgroundColor:'rgba(0,0,0)'
       }]
     },
+    options: {
+      scales: {
+         xAxes: [{
+            gridLines: {
+               display: false
+            }
+         }],
+         yAxes: [{
+            gridLines: {
+               display: false
+            }
+         }]
+      }
+
+
+
+    }
   });
 }
 
