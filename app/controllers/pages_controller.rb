@@ -37,10 +37,14 @@ class PagesController < ApplicationController
         @user_champ_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
       end
     end
-
+    @user_bordeaux_bottles = 0
+    @user_Savoie_bottles = 0
+    @user_Provence_bottles = 3
+    @user_Rhône_bottles = 6
     Bottle.of_user(current_user).each do |bottle|
       if bottle.region.name == 'Bordeaux'
         @user_bordeaux_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+        # @user_bottle_name_bordeaux = {bordeaux: @user_bottle_name_bordeaux}
       elsif bottle.region.name == 'Alsace'
         @user_alsace_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
       elsif bottle.region.name == 'Corse'
@@ -63,7 +67,49 @@ class PagesController < ApplicationController
         @user_Roussillon_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
       elsif bottle.region.name == 'Chili'
         @user_Chili_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Bourgogne'
+        @user_Bourgogne_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Loire'
+        @user_Loire_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Savoie'
+        @user_Savoie_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Espagne'
+        @user_Espagne_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Champagne'
+        @user_Champagne_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Normandie'
+        @user_Normandie_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Sud ouest'
+        @user_Sud_ouest_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'Italie'
+        @user_Italie_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.region.name == 'France'
+        @user_France_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
       end
     end
+    @all_bottles = {
+      Bordeaux: @user_bordeaux_bottles,
+      # Alsace: @user_alsace_bottles,
+      # Corse: @user_Corse_bottles,
+      Provence: @user_Provence_bottles,
+      # Baujolais: @user_Baujolais_bottles,
+      # Jura: @user_Jura_bottles,
+      Rhône: @user_Rhône_bottles,
+      # Afrique_du_sud: @user_Afrique_bottles,
+      # Argentine: @user_Argentine_bottles,
+      # Languedoc: @user_Languedoc_bottles,
+      # Roussillon: @user_Roussillon_bottles,
+      # Chili: @user_Chili_bottles,
+      # Bourgogne: @user_Bourgogne_bottles,
+      # Loire: @user_Loire_bottles,
+      Savoie: @user_Savoie_bottles,
+      # Espagne: @user_Espagne_bottles,
+      # Champagne: @user_Champagne_bottles,
+      # Normandie: @user_Normandie_bottles,
+      # Sud_ouest: @user_Sud_ouest_bottles,
+      # Italie: @user_Italie_bottles,
+      # France: @user_France_bottles
+    }
+    @sorted_bottles = @all_bottles.sort_by{|key, value| -value }
   end
 end
