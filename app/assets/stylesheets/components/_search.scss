@@ -28,18 +28,19 @@
 }
 
 #rouge-btn {
-  background-color: $bordeaux;
+  background-color: $red;
   transition: 1s ease-in-out;
 }
 
 #blanc-btn {
-  background-color: $white-wine;
+  background-color: $yellow;
   transition: 1s ease-in-out;
 }
 
 #rose-btn {
   background-color: $pink;
   transition: 1s ease-in-out;
+  opacity: 0.8;
 }
 
 .active {
