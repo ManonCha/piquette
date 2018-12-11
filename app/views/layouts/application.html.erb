@@ -31,12 +31,18 @@
     <meta name="twitter:image:src" content="<%= meta_image %>">
   </head>
   <body>
-    <% unless action_name == 'landing' %>
-    <%= render 'shared/navbar' %>
-    <% end %>
-    <%= render 'shared/flashes' %>
-    <%= render 'shared/custom_background' %>
-    <%= yield %>
+    <div class='structure'>
+      <% unless action_name == 'landing' %>
+      <div class='nav-container'>
+        <%= render 'shared/navbar' %>
+      </div>
+      <% end %>
+      <div class='contenu'>
+        <%= render 'shared/flashes' %>
+        <%= render 'shared/custom_background' %>
+        <%= yield %>
+      </div>
+    </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
