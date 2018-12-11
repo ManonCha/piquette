@@ -19,12 +19,12 @@
 }
 
 .landing-logo {
-  font-family: 'Playfair Display';
+  font-family: "Baloo Bhai";
   font-size: 60px;
-  color: white;
+  color: $black;
   text-align: center;
   margin: auto;
-  text-shadow: 0px 0px 19px #000000;
+  // text-shadow: 0px 0px 19px #000000;
   z-index: 100;
   // letter-spacing: 0.1em;
   // text-shadow: 2px 2px #ff0000;
@@ -32,7 +32,7 @@
 
 .landing-logo a{
   text-decoration: none;
-  color: white;
+  // color: white;
 }
 
 // .white-background {
@@ -50,24 +50,24 @@
 
 /* ---------------------------------------------- */
 
-@keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.9em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+// @keyframes tracking-in-expand {
+//   0% {
+//     letter-spacing: -0.9em;
+//     opacity: 0;
+//   }
+//   40% {
+//     opacity: 0.6;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 
-@keyframes color-change-2x {
-  0% {
-    background: $dark-gray;
-  }
-  100% {
-    background: #94969A;
-  }
-}
+// @keyframes color-change-2x {
+//   0% {
+//     background: $black;
+//   }
+//   100% {
+//     background: #94969A;
+//   }
+// }

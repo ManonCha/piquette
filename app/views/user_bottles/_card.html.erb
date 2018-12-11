@@ -1,0 +1,30 @@
+<div class="card_user_bottle_index slide-in-left">
+  <div class="content_card_user_bottle_index">
+    <div class="infos_wine_left">
+      <span><%= user_bottle.title.capitalize %></span>
+      <span><%= user_bottle.year%></span>
+      <h2><%= user_bottle.winery.name.capitalize%></h2>
+      <h3><%= user_bottle.region.name%></h3>
+    </div>
+    <div class="infos_wine_right">
+
+      <% if user_bottle.best_after <= Date.today.year && user_bottle.best_before > Date.today.year%>
+          <div class="advice-drink">à boire</div>
+      <% elsif user_bottle.best_before < Date.today.year %>
+          <div class="advice-late">dépassé</div>
+      <% elsif user_bottle.best_after > Date.today.year %>
+          <div class="advice-keep">à garder</div>
+      <% end %>
+
+      <h3><%= UserBottle.find_by(bottle_id: user_bottle.id).quantity %></h3>
+    </div>
+  </div>
+  <div class="color-background <% user_bottle.color.name %>">
+    <%= user_bottle.color.name.downcase %>
+  </div>
+</div>
+
+
+<!-- <i class="far fa-check-square"></i>
+<i class="far fa-check-square"></i>
+ -->
