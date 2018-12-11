@@ -8,13 +8,12 @@
 
 .bottle-modal-content {
   margin: auto;
-  top: 5vh;
-  height: 90vh;
+  top: 15vh;
+  height: 70vh;
   width: 90%;
   border: none;
   padding: 10px;
-  z-index: 10;
-}
+  z-index: 10;}
 
 .bottle-modal-header {
   display: flex;
@@ -74,3 +73,17 @@
 .bottle-modal-add-to-cellar {
 
 }
+
+.year-back h2 {
+  font-weight: bold;
+  letter-spacing: 0px;
+  font-size: 80px;
+}
+
+.year-back {
+  position: relative;
+  top: 41vh;
+  right: -70px;
+}
+
+

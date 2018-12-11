@@ -55,6 +55,7 @@ class UserBottlesController < ApplicationController
         format.js
       end
     end
+  end
 
   private
 

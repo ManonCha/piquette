@@ -55,30 +55,11 @@
           <%= bottle.title %>
         </h4>
       </div>
-      <div class="modal-body">
-        <div class="bottle-modal-top">
-          <div class="bottle-modal-photo">
-            <%= cl_image_tag bottle.photo, height: 100, crop: :fill %>
-          </div>
-          <div class="bottle-modal-primary-infos">
-            <p><strong> <%= bottle.winery.name %></strong></p>
-            <p><%= bottle.year %></p>
-            <p><%= bottle.region.name %></p>
-<!--             <p>Bio : <%= bottle.bio %></p> -->
-          </div>
-        </div>
-        <div class="bottle-modal-advice">
-          <div class="bottle-modal-desc">
-            <p>Apogée : <%= bottle.best_after %> - <%= bottle.best_before %></p>
-            <p><%= bottle.tasting_advice %></p>
-          </div>
-          <div class="bottle_modal_wine_pairing">
-            <p><%= bottle.wine_pairing %></p>
-          </div>
-        </div>
-      </div>
+
+
+
+
       <div class="bottle-modal-add-to-cellar">
-        <p> Ajouter à ma cave </p>
         <div class="bottle-modal-cta">
           <%= simple_form_for @user_bottle do |f| %>
           <%= f.hidden_field :bottle_id, value: bottle.id %>
@@ -86,7 +67,11 @@
           <%= f.button :submit, value:"ajouter" %>
           <% end %>
         </div>
+        <div class="year-back">
+          <h2><%= bottle.color.name %></h2>
+        </div>
       </div>
+
     </div>
   </div>
 </div>

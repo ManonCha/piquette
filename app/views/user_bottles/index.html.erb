@@ -151,19 +151,18 @@
           </div>
         </div>
       </div>
-      
+
       <div class="bottle-modal-quantity">
         <%= link_to update_quantity_user_bottle_path(user_bottle, addition_type: "minus"), method: :patch, id:'btn-minus', remote: true do %>
           <i class="fas fa-minus-circle" id='btn-minus'></i>
         <% end %>
-
-        <span id="bottle-quantity_<%= user_bottle.id %>"><%= user_bottle.quantity %></span>
+        <span id="bottle-quantity_<%= user_bottle.id %>"><%= UserBottle.find_by(bottle_id: user_bottle.id).quantity %></span>
 
         <%= link_to update_quantity_user_bottle_path(user_bottle, addition_type: "plus"), method: :patch, id:'btn-minus', remote: true do %>
          <i class="fas fa-plus-circle" id='btn-plus'></i>
         <% end %>
        </div>
-      
+
       <div class="bottle-modal-cta">
         <%= link_to new_bottle_review_path(user_bottle) do %>
           <button class="btn btn-primary">Ajouter une review</button>
