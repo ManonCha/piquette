@@ -7,46 +7,55 @@
 }
 
 .bottle-modal-content {
+  position: relative;
   margin: auto;
-  top: 5vh;
-  height: 90vh;
+  top: 15vh;
+  height: 70vh;
   width: 90%;
   border: none;
   padding: 10px;
-  z-index: 10;
-}
+  z-index: 10;}
 
 .bottle-modal-header {
+  margin-top: 20px;
+  width: 90%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .modal-dialog span {
   font-size: 40px;
 }
 
-.bottle-modal-dialog button {
-  position: relative;
-  top: 5vh;
-  right: 9%;
+.close {
+  position: absolute;
+  top: -5px;
+  right: 4px;
   z-index: 20;
 }
 .bottle-modal-top {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .bottle-modal-photo {
-
-  width: 25vw;
+//  width: 20vw;
   display: flex;
-  // justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  transform: scale(1);
+  transition: 0.5s ease-in-out;
 }
 
-.bottle-modal-primary-infos {
-  width: 70vw;
+.bottle-modal-photo img {
+  transform: scale(1);
+  transition: 1s ease-in-out;
+}
 
+.bottle-modal-primary-infos p {
+  justify-content: left;
+  font-size: 19px;
+  text-align: center;
 }
 .bottle-modal-advice {
   display: flex;
@@ -71,6 +80,54 @@
   justify-content: space-around;
 }
 
-.bottle-modal-add-to-cellar {
 
+.year-back h2 {
+  font-weight: bold;
+  letter-spacing: 0px;
+  font-size: 100px;
+  opacity: 0.2;
+}
+
+.year-back {
+  position: absolute;
+  bottom: -15px;
+  right: 8px;
+}
+
+.display-photo button {
+  text-align: center;
+  align-items: center;
+  background: none;
+  font-weight: lighter;
+  font-size: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 50%;
+  height: 31.5px;
+  width: 31.5px;
+}
+
+.display-photo {
+  align-items: center;
+  text-align: center;
+  transform: rotate(180deg);
+  margin: auto 3px;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  top: 65px;
+  right: 5px;
+}
+
+.hidden-photo {
+  transform: scale(0);
+  transition: 0.5s;
+  display: none;
+}
+
+.photo-rotate {
+  transform: rotate(0deg);
+  transition: 1s ease-in-out;
+}
+
+.large-title {
+  width-min: 100%;
 }
