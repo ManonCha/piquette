@@ -2,70 +2,72 @@
   <i class="fas fa-search" style="font-size: 30px"></i>
   <br>
 </div>
-<div class="search-bar hidden-search">
-  <div class='search-field'>
-    <%= form_tag user_bottles_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Recherche par région"
-      %>
-    <% end %>
-  </div>
+<div class="search-group">
+  <div class="search-bar hidden-search">
+    <div class='search-field'>
+      <%= form_tag user_bottles_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Recherche par région"
+        %>
+      <% end %>
+    </div>
 
-  <div class='filters'>
-    <% if params[:color] == 'rouge' %>
-      <%= link_to user_bottles_path do %>
-        <button class='search-btn' id='all'></button>
+    <div class='filters'>
+      <% if params[:color] == 'rouge' %>
+        <%= link_to user_bottles_path do %>
+          <div class='search-btn' id='all'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "rouge") do %>
+          <div class='search-btn active' id='rouge-btn'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "blanc") do %>
+          <div class='search-btn' id='blanc-btn'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "rose") do %>
+          <div class='search-btn' id='rose-btn'></div>
+        <% end %>
+      <% elsif params[:color] == 'blanc' %>
+        <%= link_to user_bottles_path do %>
+          <div class='search-btn' id='all'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "rouge") do %>
+          <div class='search-btn' id='rouge-btn'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "blanc") do %>
+          <div class='search-btn active' id='blanc-btn'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "rose") do %>
+          <div class='search-btn' id='rose-btn'></div>
+        <% end %>
+      <% elsif params[:color] == 'rose' %>
+        <%= link_to user_bottles_path do %>
+          <div class='search-btn' id='all'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "rouge") do %>
+          <div class='search-btn' id='rouge-btn'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "blanc") do %>
+          <div class='search-btn' id='blanc-btn'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "rose") do %>
+          <div class='search-btn active' id='rose-btn'></div>
+        <% end %>
+      <% else %>
+        <%= link_to user_bottles_path do %>
+          <div class='search-btn' id='all'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "rouge") do %>
+          <div class='search-btn' id='rouge-btn'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "blanc") do %>
+          <div class='search-btn' id='blanc-btn'></div>
+        <% end %>
+        <%= link_to user_bottles_path(color: "rose") do %>
+          <div class='search-btn' id='rose-btn'></div>
+        <% end %>
       <% end %>
-      <%= link_to user_bottles_path(color: "rouge") do %>
-        <button class='search-btn active' id='rouge-btn'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "blanc") do %>
-        <button class='search-btn' id='blanc-btn'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "rose") do %>
-        <button class='search-btn' id='rose-btn'></button>
-      <% end %>
-    <% elsif params[:color] == 'blanc' %>
-      <%= link_to user_bottles_path do %>
-        <button class='search-btn' id='all'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "rouge") do %>
-        <button class='search-btn' id='rouge-btn'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "blanc") do %>
-        <button class='search-btn active' id='blanc-btn'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "rose") do %>
-        <button class='search-btn' id='rose-btn'></button>
-      <% end %>
-    <% elsif params[:color] == 'rose' %>
-      <%= link_to user_bottles_path do %>
-        <button class='search-btn' id='all'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "rouge") do %>
-        <button class='search-btn' id='rouge-btn'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "blanc") do %>
-        <button class='search-btn' id='blanc-btn'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "rose") do %>
-        <button class='search-btn active' id='rose-btn'></button>
-      <% end %>
-    <% else %>
-      <%= link_to user_bottles_path do %>
-        <button class='search-btn' id='all'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "rouge") do %>
-        <button class='search-btn' id='rouge-btn'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "blanc") do %>
-        <button class='search-btn' id='blanc-btn'></button>
-      <% end %>
-      <%= link_to user_bottles_path(color: "rose") do %>
-        <button class='search-btn' id='rose-btn'></button>
-      <% end %>
-    <% end %>
+    </div>
   </div>
 </div>

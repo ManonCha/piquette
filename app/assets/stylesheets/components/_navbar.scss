@@ -7,21 +7,6 @@ $menu-items:5;
 $open-distance:115px;
 $opening-angle:$pi - .2;
 
-body{
-  color:white;
-  text-align:center;
-}
-a{
-  color:inherit;
-}
-h1, h2, h3, h4{
-  margin:0;
-  margin-bottom:10px;
-  margin-top:10px;
-}
-h1{
-  font-size:3em;
-}
 %goo{
   filter:url('#shadowed-goo');
   // debug
