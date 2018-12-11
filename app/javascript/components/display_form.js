@@ -1,4 +1,3 @@
-
 const displayForm = () => {
   const buy = document.getElementById('buy');
   const search = document.getElementById('search');

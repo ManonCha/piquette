@@ -5,15 +5,27 @@ class PagesController < ApplicationController
   end
 
   def home
-    @user_bottles = Bottle.of_user(current_user).count
-    @user_red_bottles = Bottle.of_user(current_user).color('Rouge').count
-    @user_yellow_bottles = Bottle.of_user(current_user).color('Blanc').count
-    @user_pink_bottles = Bottle.of_user(current_user).color('Rosé').count
-    @user_champ_bottles = Bottle.of_user(current_user).color('Effervescent').count
     year = Date.today.year
     @garder = Bottle.where('best_after > ?', year +5)
     @boire = Bottle.of_user(current_user).where('best_after <= ?', year +5)
     @trop_vieux = 0
+    @user_bottles = 0
+    @user_red_bottles = 0
+    @user_yellow_bottles = 0
+    @user_pink_bottles = 0
+    @user_champ_bottles = 0
 
+    Bottle.of_user(current_user).each do |bottle|
+      @user_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      if bottle.color.name == 'Rouge'
+        @user_red_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.color.name == 'Blanc'
+        @user_yellow_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.color.name == 'Rosé'
+        @user_pink_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      elsif bottle.color.name == 'Effervescent'
+        @user_champ_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
+      end
+    end
   end
 end
