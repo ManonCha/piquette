@@ -3,12 +3,12 @@
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#A85DE7;}
-	.st1{fill:#F5AF32;}
-	.st2{fill:#CEB199;}
+	.st0{fill:#A85DE7; mix-blend-mode: multiply;}
+	.st1{fill:#F5AF32; mix-blend-mode: multiply;}
+	.st2{fill:#CEB199; mix-blend-mode: multiply;}
 	.st3{fill:#99C220;}
-	.st4{fill:#E94578;}
-	.st5{fill:#45A9E0;}
+	.st4{fill:#E94578; mix-blend-mode: multiply;}
+	.st5{fill:#45A9E0; mix-blend-mode: multiply;}
 </style>
 <g>
 	<g>

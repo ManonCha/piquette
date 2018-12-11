@@ -2,8 +2,6 @@
   <div class="navbar">
     <div class="menu">
       <ul class="menu-link">
-        <li><%= link_to "HOME", home_path%>
-        <hr>
         <li><%= link_to "MA CAVE", user_bottles_path%>
         <hr>
         <li><%= link_to "MES DEGUSTATIONS", reviews_path%>
@@ -15,7 +13,13 @@
     </div>
 
     <div class="logo" id="logo">
-      <h1>P</h1>
+      <div class="hamburger">
+        <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+      </div>
+      <div class="navbar-title">
+        <%= image_tag("favicon_piquette", size: "40x40") %>
+        <p>Piquette</p>
+      </div>
     </div>
   </div>
 </div>
