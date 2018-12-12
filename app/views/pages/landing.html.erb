@@ -1,16 +1,23 @@
-<!-- <div id="background-video"> -->
-  <%#= video_tag "Piquette-landing.mp4", muted: true, autoplay: true, loop: true, class:'background-video' %>
-<!-- </div> -->
+<div class="landing-wrapper">
+  <div class="landing-container">
 
-  <div class='landing-background color-change-2x'>
-    <div class="landing-logo">
-      <% if current_user %>
-        <%= link_to "piquette", home_path, class:'landing-logo tracking-in-expand' %>
-      <% else %>
-        <%= link_to "piquette", new_user_session_path, class:'landing-logo tracking-in-expand' %>
+  <h1>Piquette</h1>
+  <h6>Vos cuites n'auront<br>plus le même goût !</h6>
+  <%= image_tag('grape', class:'landing-img') %>
+
+
+  <% if current_user %>
+    <div class="bottle-modal-cta">
+      <%= link_to home_path do %>
+        <div>C'est parti !</div>
       <% end %>
-      <%= image_tag('grape') %>
     </div>
+  <% else %>
+    <div class="bottle-modal-cta">
+      <%= link_to new_user_session_path do %>
+        <div>C'est parti !</div>
+      <% end %>
+    </div>
+  <% end %>
   </div>
-<!-- </div> -->
-
+</div>
