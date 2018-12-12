@@ -79,3 +79,13 @@
     color: white;
   }
 }
+
+.new_review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  width: 100%;
+}

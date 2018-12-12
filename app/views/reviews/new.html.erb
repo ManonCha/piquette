@@ -6,6 +6,7 @@
   </div>
   <div class="new-review-container">
     <%= simple_form_for [@bottle, @review] do |f| %>
+
       <fieldset class="rating">
         <input type="radio" id="star5" name="review[rating]" value="5" />
         <label class = "full" for="star5" title="Awesome - 5 stars"></label>
@@ -25,7 +26,7 @@
         <input type="radio" id="starhalf" name="review[rating]" value="half" />
         <label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
       </fieldset>
-      <br>
+
       <%= f.input :comment, label:"commentaire" %>
       <%= f.input :tasting_date, as: :string, required: true, input_html: {class: "datepicker"}, label:"date" %>
 
