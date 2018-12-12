@@ -4,11 +4,11 @@ p {
 }
 
 h1 {
-  color: white;
+  color: $black;
 }
 
 body {
-  background-color: white;
+  background: linear-gradient(152.13deg, #FF006F 0%, #BB6BD9 97.31%);
 }
 
 span {
@@ -19,7 +19,6 @@ span {
 
 .landing-background a:hover{
   text-decoration: none;
-  color: white;
 }
 
 button, input[type="button"] {
@@ -48,3 +47,46 @@ button, input[type="button"] {
   margin-right: 10px;
   margin-left: 10px;
 }
+
+.structure {
+  position: relative;
+  width: 100%;
+}
+
+.nav-container{
+  // background-color: pink;
+  position: absolute;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

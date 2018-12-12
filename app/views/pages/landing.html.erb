@@ -4,12 +4,12 @@
 
   <div class='landing-background color-change-2x'>
     <div class="landing-logo">
-      <%= image_tag('logo_piquette') %>
       <% if current_user %>
         <%= link_to "piquette", home_path, class:'landing-logo tracking-in-expand' %>
       <% else %>
         <%= link_to "piquette", new_user_session_path, class:'landing-logo tracking-in-expand' %>
       <% end %>
+      <%= image_tag('grape') %>
     </div>
   </div>
 <!-- </div> -->
