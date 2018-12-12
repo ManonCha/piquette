@@ -6,13 +6,13 @@ const initLine = () => {
   const wine_line_values = cty.dataset.line.split(',');
 
   const myLineChart = new Chart(cty, {
-    type: 'line',
+    type: 'bar',
     data: {
-      labels: ['', '', ''],
+      labels: ['à boire', 'à garder', 'trop vieux'],
       datasets: [{
         data: wine_line_values,
         borderColor: '#FF006F',
-        backgroundColor:'rgba(255,255,255)'
+        backgroundColor:'#FF006F'
       }]
     },
     options: {

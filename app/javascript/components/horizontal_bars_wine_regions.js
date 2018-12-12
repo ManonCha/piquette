@@ -7,7 +7,7 @@ const initHorizontalBarChart = () => {
   const labels = JSON.parse(cta.dataset.labels);
 
   var myBarChart = new Chart(cta, {
-    type: 'horizontalBar',
+    type: 'bar',
     data: {
       labels: labels,
       datasets: [{

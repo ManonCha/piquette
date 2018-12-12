@@ -8,20 +8,22 @@ const initDognut = () => {
   var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
     options: {
-      cutoutPercentage: 95
+      cutoutPercentage: 55,
+      legend: {
+        display: true
+      }
     },
     data: {
       datasets: [{
         data: wine,
         backgroundColor: [
-          'rgba(250, 0, 134)',
-          'rgba(54, 162, 235)',
-          'rgba(255, 206, 86)',
-          'rgba(255,255,255)'
+          '#B13548',
+          'rgb(252, 238, 190)',
+          'rgba(255, 206, 86)'
         ],
         borderColor: 'rgba(255,255,255)',
         borderWidth: 0,
-      }],
+      }]
     }
   });
 }
