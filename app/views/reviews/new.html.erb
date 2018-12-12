@@ -1,16 +1,19 @@
 
-<div class="title-header-container">
-  <div class="title-header">
-    <h1>Nouvelle<br>dégustation</h1>
+
+  <div class="review-form-container">
+    <div class="title-header">
+      <h1>Nouvelle<br>dégustation</h1>
+    </div>
+    <div class="new-review-container">
+      <%= simple_form_for [@bottle, @review] do |f| %>
+
+        <%= f.input :rating, collection: 0..5, label:"nombre d'étoiles" %>
+        <%= f.input :comment, label:"commentaire" %>
+        <%= f.input :tasting_date, as: :string, required: true, input_html: {class: "datepicker"}, label:"date" %>
+
+        <%= f.submit class:"review-cta" %>
+      <% end %>
+    </div>
   </div>
-</div>
-<div class="new-review-container">
-  <%= simple_form_for [@bottle, @review] do |f| %>
 
-    <%= f.input :rating, collection: 0..5 %>
-    <%= f.input :comment %>
-    <%= f.input :tasting_date, as: :string, required: true, input_html: {class: "datepicker"} %>
 
-    <%= f.submit %>
-  <% end %>
-</div>
