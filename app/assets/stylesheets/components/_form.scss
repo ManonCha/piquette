@@ -2,11 +2,22 @@
   display: none;
 }
 
+.search-btn {
+  margin-left: 15px;
+  border-radius: 50%;
+  height: 30px !important;
+  width: 30px !important;
+  background-color: $black;
+  border: 1px solid transparent;
+  transition: 1s ease-in-out;
+}
+
 .form-wrapper {
   display: flex;
   width: 100%;
   padding: 3px;
   justify-content: center;
+  flex-direction: column;
 }
 
 .form-container {
@@ -15,9 +26,9 @@
   align-item: center;
   justify-content: center;
   text-align: center;
-  background: white;
+  // background: white;
   opacity: 1;
-  box-shadow: 0 0 5px lightgrey;
+  // box-shadow: 0 0 5px lightgrey;
   width: 90%;
   margin: auto;
   margin-top: 60px !important;
@@ -32,16 +43,20 @@
 }
 
 .form-container label {
-  margin: auto;
-  padding: 10px 20px;
-  font-size: 15px;
-  text-align: center;
-  justify-content: center;
-  background: white;
+  width: 90%;
+  margin: calc(100vw * 0.05);
+  display: flex;
+  justify-content: space-around;
   color: $black;
-  width: 80%;
-  margin: 10px 0px;
-  box-shadow: 0 0 5px lightgrey;
+  font-family: $headers-font;
+  font-size: 24px;
+  background: white;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 15px 20px;
+  a {
+    color: $black;
+  }
 }
 
 .form-btn {
@@ -58,7 +73,6 @@
   font-weight: bold;
 }
 
-
 .form-container input[type=radio] {
   display:none;
 }
@@ -66,7 +80,7 @@
 
 
 .form-container input[type=radio]:checked+label {
-  background: $black;
+  background: $yellow;
 }
 
 .form-container textarea {
