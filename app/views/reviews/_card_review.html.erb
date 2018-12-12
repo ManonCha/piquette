@@ -1,0 +1,22 @@
+<div class="piquette-wrapper">
+
+  <div class="piquette-card card-review">
+
+    <div class="piquette-card-title">
+      <h3><%= review.bottle.title.capitalize %> <%= review.bottle.year %></h3>
+      <h4><%= review.bottle.winery.name.upcase%></h4>
+      <p><%= review.bottle.region.name%></p>
+    </div>
+
+    <div class="piquette-modal-review-rating">
+      <% review.rating.times do %>
+        <i class="fas fa-star"></i>
+      <% end %>
+      <%  (5 - review.rating).times do %>
+        <i class="far fa-star"></i>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>
