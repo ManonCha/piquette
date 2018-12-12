@@ -35,7 +35,7 @@ class UserBottlesController < ApplicationController
       quantity: params[:user_bottle][:quantity]
     )
     @user_bottle.user = current_user
-    @user_bottle.saves
+    @user_bottle.save
     redirect_to user_bottles_path
   end
 

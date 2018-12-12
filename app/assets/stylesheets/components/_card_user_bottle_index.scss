@@ -1,110 +1,180 @@
-.container_user_bottle_index {
-  margin-top: 10px;
-  display: flex;
+.piquette-wrapper {
   width: 100vw;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
-.card_user_bottle_index {
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 0 10px lightgrey;
-  height: 100px;
-  width: 95vw;
-  margin: 5px;
-  padding: 5px;
-  position: relative;
+.piquette-card {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  margin-bottom: calc(100vw * 0.05);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
 }
 
-.content_card_user_bottle_index {
-  width: 100%;
-  z-index: 1;
+.piquette-card-title {
+  text-align: center;
+}
+
+.piquette-card-content {
   display: flex;
+  justify-content: space-between;
+  p {
+    margin-bottom: 2px;
+  }
 }
 
-.infos_wine_left {
-  flex-direction: columns;
-  flex-grow: 1;
-  text-align: left;
-
-  span {
-    font-family: $headers-font;
-    font-size: 14px;
-    margin: 1px;
-  };
-  h2 {
-    font-family: $body-font;
-    font-size: 12px;
-    margin: 1px;
-  };
-  h3 {
-    font-family: $body-font;
-    font-size: 12px;
-    margin: 1px;
-  };
-}
-
-.infos_wine_right {
+.piquette-card-content-item {
+  width: 30%;
   display: flex;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  h3 {
-    font-family: $body-font;
-    font-size: 12px;
-    margin: 1px;
-  };
+  flex-direction: column;
+  align-items: center;
 }
 
-.color-background {
-  font-family: $headers-font !important;
-  font-size: 50px;
-  opacity: 0.3;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  margin-bottom: -12px;
-
+.Rouge {
+  background: linear-gradient(147.09deg, #CE003C 5.2%, #9C1952 91.33%);
 }
 
-.rouge {
-  color: $red;
+.Blanc {
+  background: linear-gradient(147.09deg, #F9F8EB 5.2%, #FFE9A5 91.33%);
 }
 
-.rose {
-  color: $pink;
+.Rose {
+  background: linear-gradient(147.09deg, #FFE9A5 5.2%, #FFD3B6 5.21%, #FFBEC4 91.33%);
 }
 
-.blanc {
-  color: $yellow;
+.piquette-card-content-item-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #BDBDBD;
 }
 
-.advice-keep {
-  background-color: $yellow;
-  padding: 2px;
-  color: white;
-  font-family: $headers-font;
-  font-size: 10px;
 
-}
 
-.advice-late {
-  background-color: $red;
-  padding: 2px;
-  color: white;
-  font-family: $headers-font;
-  font-size: 10px;
-}
 
-.advice-drink {
-  background-color: $green;
-  padding: 2px;
-  color: white;
-  font-family: $headers-font;
-  font-size: 10px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .container_user_bottle_index {
+//   margin-top: 10px;
+//   display: flex;
+//   width: 100vw;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+// .card_user_bottle_index {
+//   background-color: white;
+//   border-radius: 3px;
+//   box-shadow: 0 0 10px lightgrey;
+//   height: 100px;
+//   width: 95vw;
+//   margin: 5px;
+//   padding: 5px;
+//   position: relative;
+// }
+
+// .content_card_user_bottle_index {
+//   width: 100%;
+//   z-index: 1;
+//   display: flex;
+// }
+
+// .infos_wine_left {
+//   flex-direction: columns;
+//   flex-grow: 1;
+//   text-align: left;
+
+//   span {
+//     font-family: $headers-font;
+//     font-size: 14px;
+//     margin: 1px;
+//   };
+//   h2 {
+//     font-family: $body-font;
+//     font-size: 12px;
+//     margin: 1px;
+//   };
+//   h3 {
+//     font-family: $body-font;
+//     font-size: 12px;
+//     margin: 1px;
+//   };
+// }
+
+// .infos_wine_right {
+//   display: flex;
+//   position: absolute;
+//   right: 5px;
+//   top: 5px;
+//   h3 {
+//     font-family: $body-font;
+//     font-size: 12px;
+//     margin: 1px;
+//   };
+// }
+
+// .color-background {
+//   font-family: $headers-font !important;
+//   font-size: 50px;
+//   opacity: 0.3;
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   position: absolute;
+//   right: 5px;
+//   bottom: 5px;
+//   margin-bottom: -12px;
+
+// }
+
+// .rouge {
+//   color: $red;
+// }
+
+// .rose {
+//   color: $pink;
+// }
+
+// .blanc {
+//   color: $yellow;
+// }
+
+// .advice-keep {
+//   background-color: $yellow;
+//   padding: 2px;
+//   color: white;
+//   font-family: $headers-font;
+//   font-size: 10px;
+
+// }
+
+// .advice-late {
+//   background-color: $red;
+//   padding: 2px;
+//   color: white;
+//   font-family: $headers-font;
+//   font-size: 10px;
+// }
+
+// .advice-drink {
+//   background-color: $green;
+//   padding: 2px;
+//   color: white;
+//   font-family: $headers-font;
+//   font-size: 10px;
+// }
 

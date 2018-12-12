@@ -1,14 +1,43 @@
+// ancien style
+
+
 p {
-  font-size: 15px;
-  color: $black;
+  font-size: 16px;
+  color: #4F4F4F;
+  font-family: $body-font;
 }
 
+
 h1 {
-  color: $black;
+  color: white;
+  font-family: $headers-font;
+  font-size: 50px;
+}
+
+h3 {
+  margin-top: 8px;
+  margin-bottom: 2px;
+  color: #4F4F4F;
+  font-size: 32px;
+}
+
+h4 {
+  margin: 2px 0px;
+  font-family: $body-font;
+  color: #4F4F4F;
+  font-size: 16px;
+}
+
+h5 {
+  margin: 0px;
+  font-size: 30px;
 }
 
 body {
   background: linear-gradient(152.13deg, #FF006F 0%, #BB6BD9 97.31%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 span {
@@ -29,19 +58,32 @@ button, input[type="button"] {
   outline: inherit;
 }
 
-.title-header-container {
+.piquette-header {
+  margin-top: 120px;
+  text-align: center;
+  width: 100vw;
   display: flex;
-  justify-content: flex-end;
-  .title-header {
-    width: 62vw;
-    height: 100px;
-    margin: 30px 10px 20px 0;
-    text-align: right;
-    h1 {
-      font-size: 35px;
-    }
-  }
+  align-items: center;
+  justify-content: center;
 }
+
+.piquette-header img {
+  height: 60px;
+}
+
+// .title-header-container {
+//   display: flex;
+//   justify-content: flex-end;
+//   .title-header {
+//     width: 62vw;
+//     height: 100px;
+//     margin: 30px 10px 20px 0;
+//     text-align: right;
+//     h1 {
+//       font-size: 35px;
+//     }
+//   }
+// }
 
 .new-review-container {
   margin-right: 10px;
@@ -50,6 +92,7 @@ button, input[type="button"] {
 
 .structure {
   position: relative;
+  top: 0px;
   width: 100%;
 }
 
