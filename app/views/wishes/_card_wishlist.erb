@@ -1,6 +1,7 @@
 <div class="piquette-wrapper">
 
   <div class="piquette-card">
+  <%= render "wishes/heart_button", bottle: wish.bottle %>
 
     <div class="piquette-card-title">
       <h3><%= wish.bottle.title.capitalize %> <%= wish.bottle.year %></h3>

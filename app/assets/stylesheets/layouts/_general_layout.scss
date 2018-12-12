@@ -103,7 +103,17 @@ button, input[type="button"] {
   width: 100%;
 }
 
+.fas .fa-heart {
+  font-size: 20px;
+  font-weight: bold;
+  color: $yellow;
+}
 
+.far .fa-heart{
+  font-size: 20px;
+  font-weight: bold;
+  color: $black
+}
 
 
 
