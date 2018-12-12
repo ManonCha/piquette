@@ -1,102 +1,13 @@
-
-<div class="title-header-container">
-  <div class="title-header">
-    <h1>Ma<br>wishlist</h1>
-  </div>
+<div class="piquette-header">
+  <%= image_tag "wine.svg", alt: "ma wishlist" %><h1>Ma wishlist</h1>
 </div>
 
-<div class="wishes-container">
+<div class="container_user_bottle_index">
   <% @wishes.each do |wish| %>
-    <button type="button" data-backdrop="false" data-toggle="modal" data-target="#modal<%= wish.id %>">
-      <div class="card_user_bottle_index <%= wish.bottle.color.name %>">
-
-       <!--  <div class="image_card_user_bottle_index">
-          <img src="../../assets/images/red_wine.png" alt="">
-        </div> -->
-
-        <div class="content_card_user_bottle_index">
-
-          <div class="title_card_user_bottle_index">
-            <h5><%= wish.bottle.title.capitalize %></h5>
-          </div>
-
-          <div class="desc_card_user_bottle_index">
-            <p><%= wish.bottle.winery.name.capitalize%></p>
-          </div>
-          <div class="footer_card_user_bottle_index">
-            <div class="year_card_user_bottle_index">
-              <p><i class="far fa-calendar-alt"></i>  <%= wish.bottle.year%></p>
-            </div>
-
-            <% if wish.bottle.best_after > Date.today.year%>
-              <div class="keep_card_user_bottle_index">
-                <p><i class="far fa-check-square"></i>  A boire</p>
-              </div>
-            <% else %>
-              <div class="keep_card_user_bottle_index">
-                <p><i class="far fa-check-square"></i>  A garder</p>
-              </div>
-            <% end %>
-            <%= render 'wishes/heart_button', bottle: wish.bottle %>
-          </div>
-
-        </div>
-      </div>
-    </button>
-</div>
-
-  <!-- MODALE // NE PAS TOUCHER -->
-
-  <div class="modal bottle-modal slide-in-fwd-center" id="modal<%= wish.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-  <div class="modal-dialog bottle-modal-dialog" role="document">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-    <div class="modal-content bottle-modal-content">
-      <div class="bottle-modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
-          <%= wish.bottle.title %>
-  <!--           <span><i class="far fa-heart add-wish"></i></span>
-          <span><i class="fas fa-heart delete-wish"></i></span> -->
-        </h5>
-      </div>
-      <div class="modal-body">
-        <div class="bottle-modal-top">
-          <div class="bottle-modal-photo">
-            <%= cl_image_tag wish.bottle.photo, height: 100, crop: :fill %>
-          </div>
-          <div class="bottle-modal-primary-infos">
-            <p><strong> <%= wish.bottle.winery.name %></strong></p>
-            <p><%= wish.bottle.year %></p>
-            <p><%= wish.bottle.region.name %></p>
-<!--             <p>Bio : <%= wish.bottle.bio %></p> -->
-          </div>
-        </div>
-        <div class="bottle-modal-advice">
-          <div class="bottle-modal-desc">
-            <p>Apogée : <%= wish.bottle.best_after %> - <%= wish.bottle.best_before %></p>
-            <p><%= wish.bottle.tasting_advice %></p>
-          </div>
-          <div class="bottle_modal_wine_pairing">
-            <p><%= wish.bottle.wine_pairing %></p>
-          </div>
-        </div>
-      </div>
-      <div class="bottle-modal-cta">
-        <div class="bottle-modal-add-to-cellar">
-          <p> Ajouter à ma cave </p>
-          <div class="bottle-modal-cta">
-            <%= simple_form_for @user_bottle do |f| %>
-            <%= f.hidden_field :bottle_id, value: wish.bottle_id %>
-            <%= f.number_field :quantity, placeholder:0%>
-            <%= f.button :submit, value: "ajouter" %>
-            <% end %>
-          </div>
-        </div>
-      </div>
+    <div type="button" data-toggle="modal" data-target="#modal<%= wish.id %>">
+      <%= render "wishes/card_wishlist", wish: wish %>
     </div>
-  </div>
+    <%= render "wishes/modal_wishlist", wish: wish %>
+  <% end %>
 </div>
-
-<% end %>
 

@@ -5,77 +5,130 @@
 </div>
 <div>
   <% @bottles.each do |bottle| %>
-  <button type="button" data-toggle="modal" data-target="#modal<%= bottle.id %>">
+  <div type="button" data-toggle="modal" data-target="#modal<%= bottle.id %>">
+    <div class="piquette-wrapper">
 
-    <div class="card_user_bottle_index <%= bottle.color.name %>">
+      <div class="piquette-card">
 
-      <div class="content_card_user_bottle_index">
-
-        <div class="title_card_user_bottle_index">
-          <h5><%= bottle.title.capitalize %></h5>
+        <div class="piquette-card-title">
+          <h3><%= bottle.title.capitalize %></h3>
+          <h4><%= bottle.winery.name.upcase%></h4>
+          <p><%= bottle.region.name%></p>
         </div>
 
-        <div class="desc_card_user_bottle_index">
-          <p><%= bottle.winery.name.capitalize%></p>
-        </div>
-        <div class="footer_card_user_bottle_index">
-          <div class="year_card_user_bottle_index">
-            <p><i class="far fa-calendar-alt"></i>  <%= bottle.year%></p>
+        <div class="piquette-card-content">
+
+          <div class="piquette-card-content-item">
+            <p><strong>Couleur</strong></p>
+            <div class="piquette-card-content-item-color <%= bottle.color.name %>"></div>
           </div>
 
-          <% if bottle.best_after > Date.today.year%>
-            <div class="keep_card_user_bottle_index">
-              <p><i class="far fa-check-square"></i>  A boire</p>
-            </div>
-          <% else %>
-            <div class="keep_card_user_bottle_index">
-              <p><i class="far fa-check-square"></i>  A garder</p>
-            </div>
-          <% end %>
+          <div class="piquette-card-content-item">
+            <p><strong>Millésime</strong></p>
+            <h5><%= bottle.year %></h5>
+          </div>
 
-          <%= render 'wishes/heart_button', bottle: bottle %>
+          <div class="piquette-card-content-item">
+            <p><strong>Maturation</strong></p>
+            <% if bottle.best_after <= Date.today.year && bottle.best_before > Date.today.year %>
+              <h5>👍</h5>
+            <% elsif bottle.best_before < Date.today.year %>
+              <h5>👎</h5>
+            <% elsif bottle.best_after > Date.today.year %>
+              <h5>✋</h5>
+            <% end %>
+          </div>
+
         </div>
 
       </div>
+
     </div>
 
-  </button>
+  </div>
 </div>
 
 <!-- MODALE // NE PAS TOUCHER -->
 
 <div class="modal bottle-modal slide-in-fwd-center" id="modal<%= bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-  <div class="modal-dialog bottle-modal-dialog" role="document">
+  <div type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </div>
+
+  <div class="modal-dialog" role="document">
 
 
     <div class="modal-content bottle-modal-content">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
       <div class="bottle-modal-header">
+      </div>
+      <div class="modal-body">
 
-        <h3 class="modal-title" id="exampleModalLabel">
-          <%= bottle.title %>
-        </h3>
-        <div class="bottle-modal-photo">
-          <%= cl_image_tag bottle.photo, height: 100, crop: :fill %>
+            <div class="piquette-card-title">
+              <h3><%= bottle.title.capitalize %> <%= bottle.year %></h3>
+              <h4><%= bottle.winery.name.upcase%></h4>
+              <p><%= bottle.region.name%></p>
+            </div>
+
+            <div class="piquette-card-content">
+
+              <div class="piquette-modal-content-item">
+                <p><strong>Couleur</strong></p>
+                <div class="piquette-card-content-item-color <%= bottle.color.name %>"></div>
+              </div>
+
+              <div class="piquette-modal-content-item">
+                <p><strong>Apogée</strong></p>
+                <h5><%= bottle.best_after %></h5>
+                <h5><%= bottle.best_before %></h5>
+              </div>
+
+              <div class="piquette-modal-content-item">
+                <p><strong>Contenance</strong></p>
+                <h5>75cl</h5>
+              </div>
+
+            </div>
+
+            <div class="piquette-modal-advice">
+
+              <% if bottle.tasting_advice %>
+                <div class="piquette-modal-content">
+                  <p><strong>Conseils de dégustation</strong></p>
+                  <p><%= bottle.tasting_advice %></p>
+                </div>
+              <% end %>
+
+              <% if bottle.wine_pairing %>
+                <div class="piquette-modal-content">
+                  <p><strong>Accords mets-vins</strong></p>
+                  <p><%= bottle.wine_pairing %></p>
+                </div>
+              <% end %>
+
+            </div>
+
         </div>
-      </div>
-      <div class="display-photo"><</div>
-      <div class="bottle-modal-primary-infos">
-            <p><strong> <%= bottle.winery.name %></strong></p>
-            <p><i class="far fa-calendar-alt"></i>    <%= bottle.year %></p>
-            <p><i class="fas fa-globe-americas"></i>    <%= bottle.region.name %></p>
-<!--             <p>Bio : <%= bottle.bio %></p> -->
-          </div>
 
-
-      <div class="year-back">
-        <h2><%= bottle.color.name.downcase %></h2>
       </div>
 
+
+
+
+
+      <div class="bottle-modal-cta">
+        <% wish = current_user.wishes.find_by(bottle: bottle) %>
+        <% if wish %>
+          <%= link_to wish_path(wish), method: :delete, remote: true do %>
+          <div>Ajouter à ma wishlist <i class="fas fa-check"></i></div>
+          <% end %>
+        <% else %>
+          <%= link_to bottle_wishes_path(bottle), method: :post, remote: true do %>
+          <div>Ajouter à ma wishlist</div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
+
   </div>
-</div>
 
 <% end %>
