@@ -7,16 +7,16 @@ const initHorizontalBarChart = () => {
   const labels = JSON.parse(cta.dataset.labels);
 
   var myBarChart = new Chart(cta, {
-    type: 'horizontalBar',
+    type: 'bar',
     data: {
       labels: labels,
       datasets: [{
         data: wine_regions,
         backgroundColor: [
-            'rgba(250, 0, 134)',
-            'rgba(54, 162, 235)',
-            'rgba(255, 206, 86)',
-            'rgba(255,255,255)'
+            '#FF006F',
+            '#FF006F',
+            '#FF006F',
+            '#FF006F'
         ]
       }]
     },

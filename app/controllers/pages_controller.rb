@@ -37,7 +37,7 @@ class PagesController < ApplicationController
         @user_champ_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
       end
     end
-    @user_bordeaux_bottles = 0
+    @user_bordeaux_bottles = 5
     @user_Savoie_bottles = 0
     @user_Provence_bottles = 3
     @user_Rhône_bottles = 6
