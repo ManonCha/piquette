@@ -126,7 +126,7 @@ puts "colors destroyed !"
 puts "creating colors"
 rouge = Color.create(name: 'Rouge')
 blanc = Color.create(name: 'Blanc')
-rose = Color.create(name: 'Rosé')
+rose = Color.create(name: 'Rose')
 effervescent = Color.create(name: 'Effervescent')
 puts "colors created !"
 

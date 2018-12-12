@@ -23,17 +23,21 @@ if (document.getElementById('price')) {
   slide();
 };
 
-
-// initNavbar();
 if (document.getElementById('ans-one')) {
   autoscroll();
 };
 
-initNavbar();
-initDognut();
+if (document.getElementById('bottle_charts')) {
+  initDognut();
+}
 
-initLine();
-initHorizontalBarChart();
+if (document.getElementById('bottle_lines')) {
+  initLine();
+}
+
+if (document.getElementById('regions_wine')) {
+  initHorizontalBarChart();
+}
 
 if (document.querySelector('.bottle-modal-photo')) {
   photo();
@@ -45,13 +49,6 @@ if (document.getElementById('search-btn')) {
 
 
 
-// initNavbar();
-
-
-
-// initNavbar();
-// slide
-// hideForm();
 
 
 
