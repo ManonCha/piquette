@@ -11,8 +11,8 @@ const initLine = () => {
       labels: ['', '', ''],
       datasets: [{
         data: wine_line_values,
-        borderColor: 'rgba(105,25,255)',
-        backgroundColor:'rgba(0,0,0)'
+        borderColor: '#FF006F',
+        backgroundColor:'rgba(255,255,255)'
       }]
     },
     options: {

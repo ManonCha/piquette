@@ -13,10 +13,10 @@ const initHorizontalBarChart = () => {
       datasets: [{
         data: wine_regions,
         backgroundColor: [
-            'rgba(250, 0, 134)',
-            'rgba(54, 162, 235)',
-            'rgba(255, 206, 86)',
-            'rgba(255,255,255)'
+            '#FF006F',
+            '#FF006F',
+            '#FF006F',
+            '#FF006F'
         ]
       }]
     },
