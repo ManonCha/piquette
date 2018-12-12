@@ -1,0 +1,30 @@
+.fa-star {
+  font-size: 35px;
+  color: #FFAF00;
+  background: -webkit-linear-gradient(108.27deg, #FFAF00 17.42%, #FFC850 88.86%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.review-modal-content {
+  background: white;
+  border-radius: 10px;
+  width: 90%;
+  margin-bottom: calc(100vw * 0.05);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  margin: calc(100vw * 0.05);
+}
+
+.review-modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.piquette-modal-review-rating {
+  padding: 10px;
+}
+
+.piquette-modal-review-comment {
+  padding: 10px;
+}
