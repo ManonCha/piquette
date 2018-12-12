@@ -1,0 +1,40 @@
+<div class="piquette-wrapper">
+
+  <div class="piquette-card">
+
+    <div class="piquette-card-title">
+      <h3><%= wish.bottle.title.capitalize %> <%= wish.bottle.year %></h3>
+      <h4><%= wish.bottle.winery.name.upcase%></h4>
+      <p><%= wish.bottle.region.name%></p>
+    </div>
+
+    <div class="piquette-card-content">
+
+      <div class="piquette-card-content-item">
+        <p><strong>Couleur</strong></p>
+        <div class="piquette-card-content-item-color <%= wish.bottle.color.name %>"></div>
+      </div>
+
+      <div class="piquette-modal-content-item">
+        <p><strong>Apogée</strong></p>
+        <h5><%= wish.bottle.best_after %></h5>
+        <h5><%= wish.bottle.best_before %></h5>
+      </div>
+
+      <div class="piquette-card-content-item">
+        <p><strong>Maturation</strong></p>
+        <% if wish.bottle.best_after <= Date.today.year && wish.bottle.best_before > Date.today.year %>
+          <h5>👍</h5>
+        <% elsif wish.bottle.best_before < Date.today.year %>
+          <h5>👎</h5>
+        <% elsif wish.bottle.best_after > Date.today.year %>
+          <h5>✋</h5>
+        <% end %>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

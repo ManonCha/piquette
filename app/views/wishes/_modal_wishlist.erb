@@ -1,0 +1,58 @@
+
+<div class="modal bottle-modal slide-in-fwd-center" id="modal<%= wish.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+  <div type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </div>
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bottle-modal-content">
+      <div class="bottle-modal-header"></div>
+      <div class="modal-body">
+        <div class="piquette-card-title">
+          <h3><%= wish.bottle.title.capitalize %> <%= wish.bottle.year %></h3>
+          <h4><%= wish.bottle.winery.name.upcase%></h4>
+          <p><%= wish.bottle.region.name%></p>
+        </div>
+
+        <div class="piquette-card-content">
+
+          <div class="piquette-modal-content-item">
+            <p><strong>Couleur</strong></p>
+            <div class="piquette-card-content-item-color <%= wish.bottle.color.name %>"></div>
+          </div>
+
+          <div class="piquette-modal-content-item">
+            <p><strong>Apogée</strong></p>
+            <h5><%= wish.bottle.best_after %></h5>
+            <h5><%= wish.bottle.best_before %></h5>
+          </div>
+
+          <div class="piquette-modal-content-item">
+            <p><strong>Contenance</strong></p>
+            <h5>75cl</h5>
+          </div>
+
+        </div>
+
+        <div class="piquette-modal-advice">
+
+          <% if wish.bottle.tasting_advice %>
+            <div class="piquette-modal-content">
+              <p><strong>Conseils de dégustation</strong></p>
+              <p><%= wish.bottle.tasting_advice %></p>
+            </div>
+          <% end %>
+
+          <% if wish.bottle.wine_pairing %>
+            <div class="piquette-modal-content">
+              <p><strong>Accords mets-vins</strong></p>
+              <p><%= wish.bottle.wine_pairing %></p>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
