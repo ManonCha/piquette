@@ -24,6 +24,7 @@ initNavbar();
 initDognut();
 initLine();
 initHorizontalBarChart();
+
 if (document.querySelector('.bottle-modal-photo')) {
   photo();
 };
