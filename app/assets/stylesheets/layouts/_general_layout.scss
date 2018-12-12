@@ -98,7 +98,8 @@ button, input[type="button"] {
 
 .nav-container{
   // background-color: pink;
-  position: absolute;
+  position: fixed;
+  top: 0px;
   width: 100%;
 }
 
