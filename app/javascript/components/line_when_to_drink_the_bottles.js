@@ -16,6 +16,9 @@ const initLine = () => {
       }]
     },
     options: {
+      legend: {
+        display: false,
+      },
       scales: {
          xAxes: [{
             gridLines: {

@@ -4,11 +4,12 @@ const initHorizontalBarChart = () => {
   console.log('bonjour monsieur');
   const cta = document.getElementById('regions_wine');
   const wine_regions = cta.dataset.bar.split(',');
+  const labels = JSON.parse(cta.dataset.labels);
 
   var myBarChart = new Chart(cta, {
     type: 'horizontalBar',
     data: {
-      labels: ['jhqsjkdhjkqs', '', ''],
+      labels: labels,
       datasets: [{
         data: wine_regions,
         backgroundColor: [

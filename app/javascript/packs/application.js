@@ -1,5 +1,7 @@
 import "bootstrap";
+
 import { initNavbar } from "../navbar"
+
 import {displayForm} from "../components/display_form";
 import {hideForm} from "../components/hide_form";
 import {slide} from "../components/slide";
@@ -21,12 +23,15 @@ if (document.getElementById('price')) {
   slide();
 };
 
+
+// initNavbar();
 if (document.getElementById('ans-one')) {
   autoscroll();
 };
 
 initNavbar();
 initDognut();
+
 initLine();
 initHorizontalBarChart();
 
@@ -38,8 +43,13 @@ if (document.getElementById('search-btn')) {
   search()
 };
 
+
+
 // initNavbar();
 
+
+
+// initNavbar();
 // slide
 // hideForm();
 
