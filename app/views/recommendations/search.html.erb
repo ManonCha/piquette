@@ -1,54 +1,73 @@
 
-<div class="title-header-container">
-  <div class="title-header">
-    <h1>Suggestions</h1>
-  </div>
-</div>
-
 <div class="form-wrapper">
 
   <div class="search-form-item">
-    <h1>Quelle couleur?</h1>
+    <h2>Couleur ?</h2>
     <form action="" method="get" class='buy'>
       <div data-aos="fade-up"
        data-aos-duration="1000" class="form-container highlight">
         <input type="radio" name="color" value="Rouge" id="color_red">
-        <label id="ans-one" for="color_red">Rouge</label>
+        <label id="ans-one" for="color_red">
+          <div class="piquette-card-content-item-color Rouge"></div>
+        </label>
         <input type="radio" name="color" value="Blanc" id="color_white">
-        <label id="ans-one" for="color_white">Blanc</label>
+        <label id="ans-one" for="color_white">
+          <div class="piquette-card-content-item-color Blanc"></div>
+        </label>
         <input type="radio" name="color" value="Rose" id="color_rose">
-        <label id="ans-one" for="color_rose">Rosé</label>
+        <label id="ans-one" for="color_rose">
+          <div class="piquette-card-content-item-color Rose"></div>
+          <h3>Rosé</h3>
+        </label>
         <input type="radio" name="color" value="petillant" id="color_sparkling">
-        <label id="ans-one" for="color_sparkling">Effervescent</label>
+        <label id="ans-one" for="color_sparkling">
+          <div class="piquette-card-content-item-color"></div>
+          <h3>Effervescent</h3>
+        </label>
         <input type="radio" name="color" value="all" id="color_all">
-        <label id="ans-one" for="color_all">Tout</label>
+        <label id="ans-one" for="color_all">
+          <div class="piquette-card-content-item-color"></div>
+          <h3>Tout</h3>
+        </label>
         <a id="two"></a>
       </div>
     </div>
 
   <div class="search-form-item">
-    <h1>Pour quelle occasion?</h1>
+    <h2>Occasion ?</h2>
     <div data-aos="fade-up"
      data-aos-duration="1000" class="form-container">
       <input type="radio" name="pairing" value="apéritif" id="pairing_apero">
-      <label id="ans-two" for="pairing_apero">Apéritif</label>
+      <label id="ans-two" for="pairing_apero">
+          <%= image_tag('cheers') %>
+      </label>
       <input type="radio" name="pairing" value="viande rouge" id="pairing_viandes-rouges">
-      <label id="ans-two" for="pairing_viandes-rouges">Viande rouge</label>
+      <label id="ans-two" for="pairing_viandes-rouges">
+          <%= image_tag('beef') %>
+      </label>
       <input type="radio" name="pairing" value="viande blanche" id="pairing_viandes-blanches">
-      <label id="ans-two" for="pairing_viandes-blanches">Viande blanche</label>
+      <label id="ans-two" for="pairing_viandes-blanches">
+          <%= image_tag('roast-chicken') %>
+      </label>
       <input type="radio" name="pairing" value="poisson" id="pairing_poissons">
-      <label id="ans-two" for="pairing_poissons">Poisson</label>
+      <label id="ans-two" for="pairing_poissons">
+          <%= image_tag('fish') %>
+      </label>
       <input type="radio" name="pairing" value="fromage" id="pairing_fromages">
-      <label id="ans-two" for="pairing_fromages">Fromage</label>
+      <label id="ans-two" for="pairing_fromages">
+          <%= image_tag('cheese') %>
+      </label>
       <input type="radio" name="pairing" value="dessert" id="pairing_dessert">
-      <label id="ans-two" for="pairing_dessert">Dessert</label>
+      <label id="ans-two" for="pairing_dessert">
+          <%= image_tag('cake') %>
+      </label>
     </div>
   </div>
 
     <div class="two"></div>
 
   <div class="search-form-item">
-      <h1>Du vin bio?</h1>
+      <h2>Bio ?</h2>
     <div data-aos="fade-up"
      data-aos-duration="1000" class="form-container">
       <input type="radio" name="bio" value="true" id="bio_true">
@@ -63,7 +82,7 @@
     <div class="three"></div>
 
   <div class="search-form-item">
-    <h1> A garder ou à boire maintenant ?</h1>
+    <h2>Pour quand ?</h2>
     <div data-aos="fade-up"
      data-aos-duration="1000" class="form-container">
       <input type="radio" name="garder" value="true" id="garder_true">
@@ -78,7 +97,7 @@
     <div class="four"></div>
 
   <div class="search-form-item">
-    <h1>Prix maximum?</h1>
+    <h2>Prix max ?</h2>
     <div data-aos="fade-up"
      data-aos-duration="1000" class="form-container">
       <br>

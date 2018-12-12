@@ -22,7 +22,6 @@
 
 .form-container {
   padding: 20px 10px;
-  margin-top: 60px;
   align-item: center;
   justify-content: center;
   text-align: center;
@@ -31,8 +30,9 @@
   // box-shadow: 0 0 5px lightgrey;
   width: 90%;
   margin: auto;
-  margin-top: 60px !important;
-  margin-bottom: 60px !important;
+  margin-top: 30px !important;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .highlight {
@@ -42,20 +42,39 @@
   font-weight: bold;
 }
 
+.search-form-item {
+  height: 100vh;
+  padding-top: 150px;
+  h2 {
+    color: white;
+    font-size: 44px;
+    text-align: center;
+  }
+
+}
+
+
 .form-container label {
-  width: 90%;
+  width: 35%;
+  justify-content: center;
   margin: calc(100vw * 0.05);
   display: flex;
-  justify-content: space-around;
   color: $black;
   font-family: $headers-font;
   font-size: 24px;
   background: white;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  padding: 15px 20px;
+  padding: 12px 20px;
   a {
     color: $black;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  img {
+    width: 45px;
+    height: 45px;
   }
 }
 
