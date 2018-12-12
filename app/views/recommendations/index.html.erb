@@ -5,6 +5,41 @@
 </div>
 <div>
   <% @bottles.each do |bottle| %>
+  <div class="piquette-wrapper">
+
+    <div class="piquette-card">
+
+      <div class="piquette-card-title">
+        <h3><%= bottle.title.capitalize %> <%= bottle.year %></h3>
+        <h4><%= bottle.winery.name.upcase%></h4>
+        <p><%= bottle.region.name%></p>
+      </div>
+
+      <div class="piquette-card-content">
+
+        <div class="piquette-card-content-item">
+          <p><strong>Couleur</strong></p>
+          <div class="piquette-card-content-item-color <%= bottle.color.name %>"></div>
+        </div>
+
+
+
+        <div class="piquette-card-content-item">
+          <p><strong>Maturation</strong></p>
+          <% if bottle.best_after <= Date.today.year && bottle.best_before > Date.today.year %>
+            <h5>👍</h5>
+          <% elsif bottle.best_before < Date.today.year %>
+            <h5>👎</h5>
+          <% elsif bottle.best_after > Date.today.year %>
+            <h5>✋</h5>
+          <% end %>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
   <button type="button" data-toggle="modal" data-target="#modal<%= bottle.id %>">
 
     <div class="card_user_bottle_index <%= bottle.color.name %>">
