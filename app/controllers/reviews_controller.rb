@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = current_user.reviews
+    @reviews = @reviews.sort_by(&:rating).reverse
   end
 
   def show
