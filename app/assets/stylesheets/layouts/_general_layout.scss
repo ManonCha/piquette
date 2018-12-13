@@ -1,5 +1,22 @@
 // ancien style
-
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+  &:visited {
+    text-decoration: none !important;
+  }
+  &:focus {
+    text-decoration: none !important;
+  }
+  &:active {
+    text-decoration: none !important;
+  }
+  &:focus-within {
+    text-decoration: none !important;
+  }
+}
 
 p {
   font-size: 16px;
