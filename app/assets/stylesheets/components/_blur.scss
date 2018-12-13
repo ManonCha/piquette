@@ -4,11 +4,12 @@
   bottom: 0;
   height: 0vh;
   width: 0vw;
+  background: white;
   opacity: 0;
-}
+  }
 
 .blur-active {
-  opacity: 0.8 !important;
+  opacity: 0.7 !important;
   z-index: 10;
   height: 100vh !important;
   width: 100vw !important;
@@ -16,4 +17,5 @@
 
 .body-fixe {
   overflow: hidden !important;
+  // height: 100%;
 }
