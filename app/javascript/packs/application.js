@@ -8,6 +8,7 @@ import {slide} from "../components/slide";
 import {photo} from "../components/photo";
 import {autoscroll} from "../components/autoscroll";
 import {search} from "../components/search";
+import {check_wish} from "../components/check_wish";
 import "../plugins/flatpickr";
 import "../plugins/aos"
 import { initDognut } from "../components/dognut_circles";
@@ -18,7 +19,9 @@ import { initHorizontalBarChart } from "../components/horizontal_bars_wine_regio
 if (document.getElementById('search')) {
   displayForm()
 };
-
+if (document.getElementById('reco-index')) {
+  // check_wish();
+};
 if (document.getElementById('price')) {
   slide();
 };
