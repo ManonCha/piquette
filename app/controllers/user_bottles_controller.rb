@@ -24,6 +24,8 @@ class UserBottlesController < ApplicationController
     else
       @user_bottles_list = Bottle.of_user(current_user)
     end
+
+    @user_bottle = UserBottle.new
   end
 
   def new

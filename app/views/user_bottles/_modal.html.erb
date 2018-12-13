@@ -10,74 +10,72 @@
     <div class="modal-content bottle-modal-content">
       <div class="bottle-modal-header">
       </div>
-      <div class="modal-body">
+        <div class="modal-body">
 
-            <div class="piquette-card-title">
-              <h3><%= user_bottle.title.capitalize %> <%= user_bottle.year %></h3>
-              <h4><%= user_bottle.winery.name.upcase%></h4>
-              <p><%= user_bottle.region.name%></p>
+          <div class="piquette-card-title">
+            <h3><%= user_bottle.title.capitalize %> <%= user_bottle.year %></h3>
+            <h4><%= user_bottle.winery.name.upcase%></h4>
+            <p><%= user_bottle.region.name%></p>
+          </div>
+
+          <div class="piquette-card-content">
+
+            <div class="piquette-modal-content-item">
+              <p><strong>Couleur</strong></p>
+              <div class="piquette-card-content-item-color <%= user_bottle.color.name %>"></div>
             </div>
 
-            <div class="piquette-card-content">
-
-              <div class="piquette-modal-content-item">
-                <p><strong>Couleur</strong></p>
-                <div class="piquette-card-content-item-color <%= user_bottle.color.name %>"></div>
-              </div>
-
-              <div class="piquette-modal-content-item">
-                <p><strong>Apogée</strong></p>
-                <h5><%= user_bottle.best_after %></h5>
-                <h5><%= user_bottle.best_before %></h5>
-              </div>
-
-              <div class="piquette-modal-content-item">
-                <p><strong>Contenance</strong></p>
-                <h5>75cl</h5>
-              </div>
-
+            <div class="piquette-modal-content-item">
+              <p><strong>Apogée</strong></p>
+              <h5><%= user_bottle.best_after %></h5>
+              <h5><%= user_bottle.best_before %></h5>
             </div>
 
-            <div class="piquette-modal-advice">
+            <div class="piquette-modal-content-item">
+              <p><strong>Contenance</strong></p>
+              <h5>75cl</h5>
+            </div>
 
-              <% if user_bottle.tasting_advice %>
-                <div class="piquette-modal-content">
-                  <p><strong>Conseils de dégustation</strong></p>
-                  <p><%= user_bottle.tasting_advice %></p>
-                </div>
+          </div>
+
+          <div class="piquette-modal-advice">
+
+            <% if user_bottle.tasting_advice %>
+              <div class="piquette-modal-content">
+                <p><strong>Conseils de dégustation</strong></p>
+                <p><%= user_bottle.tasting_advice %></p>
+              </div>
+            <% end %>
+
+            <% if user_bottle.wine_pairing %>
+              <div class="piquette-modal-content">
+                <p><strong>Accords mets-vins</strong></p>
+                <p><%= user_bottle.wine_pairing %></p>
+              </div>
+            <% end %>
+
+          </div>
+
+          <div class="piquette-modal-quantity">
+            <div class="piquette-modal-title-quantity">
+              <p><strong>Quantité</strong></p>
+            </div>
+
+            <div class="piquette-modal-content-quantity">
+              <%= link_to update_quantity_user_bottle_path(UserBottle.find_by(bottle_id: user_bottle.id), addition_type: "minus"), method: :patch, id:'btn-minus', remote: true do %>
+                <i class="fas fa-minus-circle" id='btn-minus'></i>
               <% end %>
 
-              <% if user_bottle.wine_pairing %>
-                <div class="piquette-modal-content">
-                  <p><strong>Accords mets-vins</strong></p>
-                  <p><%= user_bottle.wine_pairing %></p>
-                </div>
+              <h5 id="bottle-quantity_<%= user_bottle.id %>"><%= UserBottle.find_by(bottle_id: user_bottle.id).quantity %></h5>
+
+              <%= link_to update_quantity_user_bottle_path(UserBottle.find_by(bottle_id: user_bottle.id), addition_type: "plus"), method: :patch, id:'btn-minus', remote: true do %>
+               <i class="fas fa-plus-circle" id='btn-plus'></i>
               <% end %>
-
             </div>
 
-            <div class="piquette-modal-quantity">
-              <div class="piquette-modal-title-quantity">
-                <p><strong>Quantité</strong></p>
-              </div>
-
-              <div class="piquette-modal-content-quantity">
-                <%= link_to update_quantity_user_bottle_path(UserBottle.find_by(bottle_id: user_bottle.id), addition_type: "minus"), method: :patch, id:'btn-minus', remote: true do %>
-                  <i class="fas fa-minus-circle" id='btn-minus'></i>
-                <% end %>
-
-                <h5 id="bottle-quantity_<%= user_bottle.id %>"><%= UserBottle.find_by(bottle_id: user_bottle.id).quantity %></h5>
-
-                <%= link_to update_quantity_user_bottle_path(UserBottle.find_by(bottle_id: user_bottle.id), addition_type: "plus"), method: :patch, id:'btn-minus', remote: true do %>
-                 <i class="fas fa-plus-circle" id='btn-plus'></i>
-                <% end %>
-              </div>
-            </div>
-
+          </div>
         </div>
-
       </div>
-
 
       <div class="bottle-modal-cta">
         <%= link_to new_bottle_review_path(user_bottle) do %>
