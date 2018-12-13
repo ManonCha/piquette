@@ -35,11 +35,11 @@
       <% unless action_name == 'landing' %>
       <div class='nav-container'>
         <%= render 'shared/navbar' %>
+        <%= render 'shared/blur' %>
       </div>
       <% end %>
       <div class='contenu'>
         <%= render 'shared/flashes' %>
-        <%= render 'shared/blur' %>
         <%= render 'shared/custom_background' %>
         <% if action_name == 'landing' %>
           <%= yield %>
