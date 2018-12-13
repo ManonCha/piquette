@@ -19,7 +19,7 @@ const initDognut = () => {
         backgroundColor: [
           '#B13548',
           'rgb(252, 238, 190)',
-          'rgba(255, 206, 86)'
+          '#DF737A'
         ],
         borderColor: 'rgba(255,255,255)',
         borderWidth: 0,
