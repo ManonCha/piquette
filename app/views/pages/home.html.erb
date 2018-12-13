@@ -8,8 +8,8 @@
    <div class="bottle-modal-cta" >
     <%= link_to "Besoin d'inspiration ?", search_path %>
   </div>
-
-    <div class="piquette-card piquette-home-card">
+<%= link_to user_bottles_path do %>
+    <div class="piquette-card">
       <div class="piquette-card-title">
         <h3>Ma Cave</h3>
       </div>
@@ -44,8 +44,8 @@
           <p>Ta cave est vide.</p>
         <% end %>
       </div>
-      <%= link_to "", user_bottles_path, class:'card-link' %>
     </div>
+  <% end %>
 
 </div>
 
