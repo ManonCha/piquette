@@ -1,0 +1,23 @@
+.bottle_wish_heart {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-top: -10px;
+  margin-right: -8px;
+  .fas {
+    font-size: 40px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: $pink;
+  }
+  .fas.active {
+    font-size: 40px;
+    -webkit-text-fill-color: $pink;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    border: none;
+  }
+}
+
+
+
