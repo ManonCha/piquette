@@ -1,5 +1,22 @@
 // ancien style
-
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+  &:visited {
+    text-decoration: none !important;
+  }
+  &:focus {
+    text-decoration: none !important;
+  }
+  &:active {
+    text-decoration: none !important;
+  }
+  &:focus-within {
+    text-decoration: none !important;
+  }
+}
 
 p {
   font-size: 16px;
@@ -39,6 +56,7 @@ background: linear-gradient(135deg, rgba(255,126,0,0.9009978991596639) 0%, rgba(
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  // scroll-behavior: smooth;
 }
 
 span {
@@ -99,9 +117,11 @@ button, input[type="button"] {
 
 .nav-container{
   // background-color: pink;
+  z-index: 100;
   position: fixed;
   top: 0px;
   width: 100%;
+  height: 0px;
 }
 
 a {
