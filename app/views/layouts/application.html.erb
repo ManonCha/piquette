@@ -39,8 +39,15 @@
       <% end %>
       <div class='contenu'>
         <%= render 'shared/flashes' %>
+        <%= render 'shared/blur' %>
         <%= render 'shared/custom_background' %>
-        <%= yield %>
+        <% if action_name == 'landing' %>
+          <%= yield %>
+        <% else %>
+          <div class="contenu-yield">
+            <%= yield %>
+          </div>
+        <% end %>
       </div>
     </div>
     <%= javascript_include_tag 'application' %>

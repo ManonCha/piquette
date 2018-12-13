@@ -38,15 +38,20 @@
 }
 
 .Rouge {
-  background: linear-gradient(147.09deg, #CE003C 5.2%, #9C1952 91.33%);
+  background: linear-gradient(147.09deg, #CE003C 5.2%, #9C1952 91.33%) !important;
 }
 
 .Blanc {
-  background: linear-gradient(147.09deg, #F9F8EB 5.2%, #FFE9A5 91.33%);
+  background: linear-gradient(147.09deg, #F9F8EB 5.2%, #efcf6d 91.33%) !important;
 }
 
 .Rose {
-  background: linear-gradient(147.09deg, #FFE9A5 5.2%, #FFD3B6 5.21%, #FFBEC4 91.33%);
+  background: linear-gradient(147.09deg, #ffe38e 5.2%, #e49292 5.21%, #dc5b66 91.33%) !important;
+}
+
+.Effervescent {
+  background-image: image-url("sparkling.svg") !important;
+  background-position: center;
 }
 
 .piquette-card-content-item-color {
@@ -56,6 +61,9 @@
   border: 1px solid #BDBDBD;
 }
 
+.clickable {
+  cursor: pointer;
+}
 
 
 

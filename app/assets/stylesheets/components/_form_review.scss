@@ -1,0 +1,91 @@
+.review-form-container {
+  margin-top: 120px;
+  text-align: center;
+  width: 100vw;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  .form-control-label {
+    color: white;
+    font-weight: 500;
+  }
+  /****** Style Star Rating Widget *****/
+
+  .rating {
+    font-size: 24px;
+    border: none;
+    float: left;
+  }
+
+  .rating > input { display: none; }
+  .rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+  }
+
+  .rating > .half:before {
+    content: "\f089";
+    position: absolute;
+  }
+
+  .rating > label {
+    color: #ddd;
+   float: right;
+  }
+
+  /***** CSS Magic to Highlight Stars on Hover *****/
+
+  .rating > input:checked ~ label, /* show gold star when clicked */
+  .rating:not(:checked) > label:hover, /* hover current star */
+  .rating:not(:checked) > label:hover ~ label { color: #FFAF00;  } /* hover previous stars in list */
+
+  .rating > input:checked + label:hover, /* hover current star when changing rating */
+  .rating > input:checked ~ label:hover,
+  .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+  .rating > input:checked ~ label:hover ~ label { color: #FFAF00;  }
+}
+
+
+.form-control {
+  width: 90%;
+  margin: 0px calc(100vw * 0.05);
+  display: flex;
+  justify-content: space-around;
+  color: #4F4F4F;
+  font-family: $body-font;
+  font-size: 16px;
+  background: white;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  // padding: 15px 20px;
+}
+
+.review-cta {
+  width: 90%;
+  margin: calc(100vw * 0.05);
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-family: $headers-font;
+  font-size: 24px;
+  background: linear-gradient(108.27deg, #FFAF00 17.42%, #FFC850 88.86%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 15px 20px;
+  a {
+    color: white;
+  }
+}
+
+.new_review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  width: 100%;
+}
