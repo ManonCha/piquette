@@ -9,12 +9,14 @@ import {photo} from "../components/photo";
 import {autoscroll} from "../components/autoscroll";
 import {search} from "../components/search";
 import {check_wish} from "../components/check_wish";
+import {blur} from "../components/blur";
 import "../plugins/flatpickr";
 import "../plugins/aos"
 import { initDognut } from "../components/dognut_circles";
 import { initLine } from "../components/line_when_to_drink_the_bottles";
 import { initHorizontalBarChart } from "../components/horizontal_bars_wine_regions";
 
+blur();
 
 if (document.getElementById('search')) {
   displayForm()

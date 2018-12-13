@@ -2,10 +2,20 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 0vh;
+  width: 0vw;
+  // -webkit-filter: blur(8px);
+  background: black;
+  opacity: 0;
+}
+
+.blur-active {
+  opacity: 0.8 !important;
   z-index: 10;
-  filter: blur(4px);
-  background: white;
-  opacity: 0.9;
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+.body-fixe {
+  overflow: hidden;
 }
