@@ -1,6 +1,6 @@
 <div class="title-header-container">
   <div class="piquette-header">
-    <h1 id="reco-index">Suggestions</h1>
+    <%= image_tag "recommendation.svg", alt: "suggestion" %><h1>Suggestions</h1>
   </div>
 </div>
 <div>
@@ -38,7 +38,9 @@
             <% end %>
           </div>
 
-          <%= render 'wishes/heart_button', bottle: bottle %>
+          <div id="bottle-wish-heart-<%= bottle.id %>" class="bottle_wish_heart">
+            <%= render 'wishes/heart_button', bottle: bottle %>
+          </div>
 
         </div>
 
