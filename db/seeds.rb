@@ -133,8 +133,9 @@ puts "colors created !"
 puts "creating bottles"
 
 # iteration sur les régions
-wine_regions = ['bordeaux', 'alsace', 'corse', 'provence','afrique-du-sud', 'beaujolais', 'jura', 'rhone', 'argentine', 'languedoc', 'roussillon', 'chili', 'bourgogne', 'loire', 'savoie', 'espagne', 'champagne', 'normandie', 'sud-ouest', 'italie']
-wine_regions.each do |region_item|
+# wine_regions = ['bordeaux', 'alsace', 'corse', 'provence','afrique-du-sud', 'beaujolais', 'jura', 'rhone', 'argentine', 'languedoc', 'roussillon', 'chili', 'bourgogne', 'loire', 'savoie', 'espagne', 'champagne', 'normandie', 'sud-ouest', 'italie']
+# wine_regions.each do |region_item|
+region_item = "savoie"
   url = "https://www.1jour1vin.com/fr/guide-achat-vin/#{region_item}"
   sleep(rand(1..3))
   html_file = open(url).read
@@ -228,7 +229,7 @@ wine_regions.each do |region_item|
     end
     bottle.save!
   end
-end
+
 puts "bottles created !"
 
 
