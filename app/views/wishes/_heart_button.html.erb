@@ -1,12 +1,10 @@
-<div id="bottle-wish-heart-<%= bottle.id %>" class="bottle_wish_heart">
-  <% wish = current_user.wishes.find_by(bottle: bottle) %>
-  <% if wish %>
-    <%= link_to wish_path(wish), method: :delete, remote: true do %>
-      <span><i class="fas fa-heart active"></i></span>
-    <% end %>
-  <% else %>
-    <%= link_to bottle_wishes_path(bottle), method: :post, remote: true do %>
-      <i class="fas fa-heart"></i>
-    <% end %>
+<% wish = current_user.wishes.find_by(bottle: bottle) %>
+<% if wish %>
+  <%= link_to wish_path(wish), method: :delete, remote: true do %>
+    <span><i class="fas fa-heart active"></i></span>
   <% end %>
-</div>
+<% else %>
+  <%= link_to bottle_wishes_path(bottle), method: :post, remote: true do %>
+    <i class="fas fa-heart"></i>
+  <% end %>
+<% end %>
