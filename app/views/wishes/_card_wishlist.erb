@@ -1,6 +1,9 @@
 <div class="piquette-wrapper" data-wish-id="<%= wish.id %>">
   <div class="piquette-card">
-  <%= render "wishes/heart_button", bottle: wish.bottle %>
+
+  <div id="bottle-wish-heart-<%= wish.bottle.id %>" class="bottle_wish_heart">
+    <%= render "wishes/heart_button", bottle: wish.bottle %>
+  </div>
 
     <div class="piquette-card-title">
       <h3><%= wish.bottle.title.capitalize %> <%= wish.bottle.year %></h3>
