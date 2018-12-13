@@ -1,13 +1,12 @@
 <div class="title-header-container">
-
   <div class="piquette-header">
-    <%= image_tag "recommendation.svg", alt: "suggestions" %><h1>Suggestions</h1>
+    <h1 id="reco-index">Suggestions</h1>
   </div>
-
 </div>
+
 <div>
   <% @bottles.each do |bottle| %>
-  <div type="button" data-toggle="modal" data-target="#modal<%= bottle.id %>">
+  <div type="button" data-toggle="modal" class="clickable" data-target="#modal<%= bottle.id %>">
     <div class="piquette-wrapper">
 
       <div class="piquette-card">
@@ -39,6 +38,8 @@
               <h5>✋</h5>
             <% end %>
           </div>
+
+          <%= render 'wishes/heart_button', bottle: bottle %>
 
         </div>
 

@@ -11,6 +11,7 @@
   justify-content: space-around;
   transition: 1s ease-in-out;
   margin-top: 10px;
+  margin-bottom: 10px;
   transition-duration: 1s;
 }
 
@@ -20,6 +21,7 @@
   justify-content: space-around;
   flex-grow: 1;
   flex-basis: 0;
+  margin-right: 20px;
 }
 
 #search-btn {
@@ -30,6 +32,7 @@
   width: 90%;
   box-sizing: none !important;
   margin: calc(100vw * 0.05);
+  margin-top: 120px;
   display: flex;
   justify-content: space-around;
   color: white;
