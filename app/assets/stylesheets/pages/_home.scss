@@ -1,3 +1,11 @@
+#bottle_charts1{
+  color: #4F4F4F;
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    width: 100%;
+}
+
 .card-link {
   position: absolute;
   top: 0px;
@@ -197,8 +205,23 @@
     border-style: none !important;
     padding: 15px 20px;
 }
-
-
+.bottle-icon{
+  margin-right: 19px;
+}
+.bottle-icon-2{
+  margin-right:14px;
+}
+.bottle-icon-3 {
+  margin-right: 23px;
+}
+.bottle-home-icon{
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-around;
+}
+.subtitle{
+font-size:25px;
+}
 
 
 
