@@ -86,7 +86,7 @@
 }
 
 .bottle-modal-cta {
-  width: 90%;
+  width: 90vw;
   margin: calc(100vw * 0.05);
   display: flex;
   justify-content: space-around;
@@ -99,6 +99,9 @@
   padding: 15px 20px;
   a {
     color: white;
+    &:focus, &:active, &:hover {
+      color: $pink;
+    }
   }
 }
 
