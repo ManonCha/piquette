@@ -1,6 +1,19 @@
-#bottle_charts {
+.reco-card-home{
+  width: 90%;
+  box-sizing: none !important;
+  margin: calc(100vw * 0.05);
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-family: "Baloo Bhai";
+  font-size: 24px;
+  background: linear-gradient(108.27deg, #FFAF00 17.42%, #FFC850 88.86%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border-style: none !important;
+  padding: 15px 20px;
+  }
 
-}
 .center-element-home {
   text-align: center
 }

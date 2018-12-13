@@ -5,9 +5,8 @@
 
 
 <div class="piquette-wrapper">
-   <div class="reco-card">
-    <p>JE NE SAIS PAS QUOI BOIRE</p>
-    <%= link_to "", search_path, class:'card-link-btn' %>
+   <div class="bottle-modal-cta" >
+    <%= link_to "Besoin d'inspiration ?", search_path %>
   </div>
 
     <div class="piquette-card piquette-home-card">
@@ -23,7 +22,7 @@
           <div>
             <p class="center-element-home">
               <strong>
-                <%= pluralize(@user_bottles, "bouteille", "bouteilles") %>
+                <%= pluralize(@user_bottles, "bouteille", "bouteilles")%>
               </strong>
             </p>
           </div>

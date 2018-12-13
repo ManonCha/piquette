@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   def home
     year = Date.today.year
 
-    bottle_garder = Bottle.of_user(current_user).where('best_before > ?', year + 3)
+    bottle_garder = Bottle.of_user(current_user).where('best_after > ?', year + 4)
     @garder = 0
     bottle_garder.each do |b|
       @garder += UserBottle.find_by(bottle_id: b.id).quantity
