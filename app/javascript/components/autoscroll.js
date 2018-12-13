@@ -6,7 +6,8 @@ const autoscroll = () => {
   ones.forEach((one) => {
     one.addEventListener('click', () => {
       document.querySelector(".two").scrollIntoView({ behavior: 'smooth' });
-    })
+
+    });
   });
 
   const twos = document.querySelectorAll('#ans-two')
