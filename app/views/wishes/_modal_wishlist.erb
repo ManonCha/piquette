@@ -55,13 +55,16 @@
 
     <div class="wish-quantity-container">
       <div class="modal-content wish-modal-content">
-
         <%= simple_form_for @user_bottle do |f| %>
-          <%= f.hidden_field :bottle_id, value: wish.bottle_id %>
-          <%= f.input :quantity, collection: 1..20, placeholder:0, label:"quantité" %>
-          <%= f.button :submit, 'Ajouter à ma cave', class:"review-cta" %>
-        <% end %>
+          <div>
+            <%= f.hidden_field :bottle_id, value: wish.bottle_id %>
+            <%= f.input :quantity, collection: 1..20, placeholder:0, label:"quantité" %>
+          </div>
 
+          <div>
+            <%= f.button :submit, 'Ajouter à ma cave', class:"review-cta" %>
+          </div>
+        <% end %>
       </div>
     </div>
 

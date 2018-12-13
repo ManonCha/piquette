@@ -1,14 +1,16 @@
-
 <div class="piquette-header">
+
   <%= image_tag "wine.svg", alt: "ma cave", class: 'bottle-icon-2' %><h1>Ma cave</h1>
+
 </div>
+
 
 <%= render 'user_bottles/search_bar' %>
 
 <div class="container_user_bottle_index">
   <% @user_bottles_list.each do |user_bottle| %>
     <% if UserBottle.find_by(bottle_id: user_bottle.id).quantity > 0 %>
-      <div type="button" data-toggle="modal" data-target="#modal<%= user_bottle.id %>">
+      <div type="button" data-toggle="modal" class="clickable" data-target="#modal<%= user_bottle.id %>">
         <%= render "user_bottles/card", user_bottle: user_bottle %>
       </div>
       <%= render "user_bottles/modal", user_bottle: user_bottle %>
