@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   def home
     year = Date.today.year
 
-    bottle_garder = Bottle.of_user(current_user).where('best_before > ?', year + 3)
+    bottle_garder = Bottle.of_user(current_user).where('best_after > ?', year + 4)
     @garder = 0
     bottle_garder.each do |b|
       @garder += UserBottle.find_by(bottle_id: b.id).quantity
@@ -37,14 +37,30 @@ class PagesController < ApplicationController
         @user_champ_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
       end
     end
-    @user_bordeaux_bottles = 5
+    @user_bordeaux_bottles = 0
+    @user_alsace_bottles = 0
+    @user_Corse_bottles = 0
+    @user_Baujolais_bottles = 0
+    @user_Jura_bottles = 0
+    @user_Afrique_bottles = 0
+    @user_Argentine_bottles = 0
+    @user_Languedoc_bottles = 0
+    @user_Roussillon_bottles = 0
+    @user_Chili_bottles = 0
+    @user_Bourgogne_bottles = 0
+    @user_Loire_bottles = 0
+    @user_Espagne_bottles = 0
+    @user_Champagne_bottles = 0
+    @user_Normandie_bottles = 0
+    @user_Sud_ouest_bottles = 0
+    @user_Italie_bottles = 0
+    @user_France_bottles = 0
     @user_Savoie_bottles = 0
-    @user_Provence_bottles = 3
-    @user_Rhône_bottles = 6
+    @user_Provence_bottles = 0
+    @user_Rhône_bottles = 0
     Bottle.of_user(current_user).each do |bottle|
       if bottle.region.name == 'Bordeaux'
         @user_bordeaux_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
-        # @user_bottle_name_bordeaux = {bordeaux: @user_bottle_name_bordeaux}
       elsif bottle.region.name == 'Alsace'
         @user_alsace_bottles += UserBottle.find_by(bottle_id: bottle.id).quantity
       elsif bottle.region.name == 'Corse'
@@ -89,26 +105,26 @@ class PagesController < ApplicationController
     end
     @all_bottles = {
       Bordeaux: @user_bordeaux_bottles,
-      # Alsace: @user_alsace_bottles,
-      # Corse: @user_Corse_bottles,
+      Alsace: @user_alsace_bottles,
+      Corse: @user_Corse_bottles,
       Provence: @user_Provence_bottles,
-      # Baujolais: @user_Baujolais_bottles,
-      # Jura: @user_Jura_bottles,
+      Baujolais: @user_Baujolais_bottles,
+      Jura: @user_Jura_bottles,
       Rhône: @user_Rhône_bottles,
-      # Afrique_du_sud: @user_Afrique_bottles,
-      # Argentine: @user_Argentine_bottles,
-      # Languedoc: @user_Languedoc_bottles,
-      # Roussillon: @user_Roussillon_bottles,
-      # Chili: @user_Chili_bottles,
-      # Bourgogne: @user_Bourgogne_bottles,
-      # Loire: @user_Loire_bottles,
+      Afrique_du_sud: @user_Afrique_bottles,
+      Argentine: @user_Argentine_bottles,
+      Languedoc: @user_Languedoc_bottles,
+      Roussillon: @user_Roussillon_bottles,
+      Chili: @user_Chili_bottles,
+      Bourgogne: @user_Bourgogne_bottles,
+      Loire: @user_Loire_bottles,
       Savoie: @user_Savoie_bottles,
-      # Espagne: @user_Espagne_bottles,
-      # Champagne: @user_Champagne_bottles,
-      # Normandie: @user_Normandie_bottles,
-      # Sud_ouest: @user_Sud_ouest_bottles,
-      # Italie: @user_Italie_bottles,
-      # France: @user_France_bottles
+      Espagne: @user_Espagne_bottles,
+      Champagne: @user_Champagne_bottles,
+      Normandie: @user_Normandie_bottles,
+      Sud_ouest: @user_Sud_ouest_bottles,
+      Italie: @user_Italie_bottles,
+      France: @user_France_bottles
     }
     @sorted_bottles = @all_bottles.sort_by{|key, value| -value }
   end

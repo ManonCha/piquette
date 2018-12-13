@@ -30,7 +30,7 @@
       <%= f.input :comment, label:"commentaire" %>
       <%= f.input :tasting_date, as: :string, required: true, input_html: {class: "datepicker"}, label:"date" %>
 
-      <%= f.submit class:"review-cta" %>
+      <%= f.button :submit, 'Ajouter à mon carnet', class:"review-cta" %>
     <% end %>
   </div>
 </div>
