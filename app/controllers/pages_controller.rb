@@ -13,7 +13,7 @@ class PagesController < ApplicationController
       @garder += UserBottle.find_by(bottle_id: b.id).quantity
     end
 
-    bottle_boire = Bottle.of_user(current_user).where('best_after > ?', year - 1).where('best_before < ?', year + 4)
+    bottle_boire = Bottle.of_user(current_user).where('best_after > ?', year - 1).where('best_before < ?', year + 5)
     @boire = 0
     bottle_boire.each do |b|
       @boire += UserBottle.find_by(bottle_id: b.id).quantity
