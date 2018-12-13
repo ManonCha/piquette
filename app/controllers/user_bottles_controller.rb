@@ -48,9 +48,7 @@ class UserBottlesController < ApplicationController
 
   def update_quantity
     if params[:addition_type]
-      puts "----------------------------"
       p params
-      puts "----------------------------"
       @user_bottle = UserBottle.find(params[:id])
       @user_bottle.quantity += params[:addition_type] == "plus" ? 1 : -1
       p @user_bottle
