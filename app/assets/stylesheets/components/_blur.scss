@@ -5,7 +5,17 @@
   height: 100vh;
   width: 100vw;
   z-index: 10;
-  filter: blur(4px);
-  background: white;
-  opacity: 0.9;
+  // -webkit-filter: blur(8px);
+  background: black;
+  opacity: 0;
+  display: none;
+}
+
+.blur-active {
+  opacity: 0.8 !important;
+  display: block;
+}
+
+.body-fixe {
+  position: fixed;
 }
