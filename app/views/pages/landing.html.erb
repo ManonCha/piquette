@@ -5,19 +5,18 @@
   <h6>Vos cuites n'auront<br>plus le même goût !</h6>
   <%= image_tag('grape', class:'landing-img') %>
 
-
   <% if current_user %>
-    <div class="bottle-modal-cta">
-      <%= link_to home_path do %>
+    <%= link_to home_path do %>
+      <div class="bottle-modal-cta bloup">
         <div>C'est parti !</div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   <% else %>
-    <div class="bottle-modal-cta">
-      <%= link_to new_user_session_path do %>
+    <%= link_to new_user_session_path do %>
+      <div class="bottle-modal-cta bloup">
         <div>C'est parti !</div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   <% end %>
   </div>
 </div>
