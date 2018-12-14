@@ -4,43 +4,52 @@
     <h2>Suggestions</h2>
   </div>
 </div>
-<div>
-  <% @bottles.each do |bottle| %>
-  <div type="button" data-toggle="modal" class="clickable" data-target="#modal<%= bottle.id %>">
-    <div class="piquette-wrapper">
 
-      <div class="piquette-card">
-        <div class="piquette-card-title">
-          <h3><%= bottle.title.capitalize %></h3>
-          <h4><%= bottle.winery.name.upcase%></h4>
-          <p><%= bottle.region.name%></p>
-        </div>
+<% if @bottles == [] %>
+  <div class="bottle-modal-cta" >
+    <%= link_to "Besoin d'inspiration ?", search_path %>
+  </div>
+<% else %>
+  <!-- resultat de recherche -->
+  <div>
+    <% @bottles.each do |bottle| %>
+    <div type="button" data-toggle="modal" class="clickable" data-target="#modal<%= bottle.id %>">
+      <div class="piquette-wrapper">
 
-        <div class="piquette-card-content">
-
-          <div class="piquette-card-content-item">
-            <p><strong>Couleur</strong></p>
-            <div class="piquette-card-content-item-color <%= bottle.color.name %>"></div>
+        <div class="piquette-card">
+          <div class="piquette-card-title">
+            <h3><%= bottle.title.capitalize %></h3>
+            <h4><%= bottle.winery.name.upcase%></h4>
+            <p><%= bottle.region.name%></p>
           </div>
 
-          <div class="piquette-card-content-item">
-            <p><strong>Millésime</strong></p>
-            <h5><%= bottle.year %></h5>
-          </div>
+          <div class="piquette-card-content">
 
-          <div class="piquette-card-content-item">
-            <p><strong>Maturation</strong></p>
-            <% if bottle.best_after <= Date.today.year && bottle.best_before > Date.today.year %>
-              <h5>👍</h5>
-            <% elsif bottle.best_before < Date.today.year %>
-              <h5>👎</h5>
-            <% elsif bottle.best_after > Date.today.year %>
-              <h5>✋</h5>
-            <% end %>
-          </div>
+            <div class="piquette-card-content-item">
+              <p><strong>Couleur</strong></p>
+              <div class="piquette-card-content-item-color <%= bottle.color.name %>"></div>
+            </div>
 
-          <div id="bottle-wish-heart-<%= bottle.id %>" class="bottle_wish_heart">
-            <%= render 'wishes/heart_button', bottle: bottle %>
+            <div class="piquette-card-content-item">
+              <p><strong>Millésime</strong></p>
+              <h5><%= bottle.year %></h5>
+            </div>
+
+            <div class="piquette-card-content-item">
+              <p><strong>Maturation</strong></p>
+              <% if bottle.best_after <= Date.today.year && bottle.best_before > Date.today.year %>
+                <h5>👍</h5>
+              <% elsif bottle.best_before < Date.today.year %>
+                <h5>👎</h5>
+              <% elsif bottle.best_after > Date.today.year %>
+                <h5>✋</h5>
+              <% end %>
+            </div>
+
+            <div id="bottle-wish-heart-<%= bottle.id %>" class="bottle_wish_heart">
+              <%= render 'wishes/heart_button', bottle: bottle %>
+            </div>
+
           </div>
 
         </div>
@@ -48,10 +57,9 @@
       </div>
 
     </div>
-
   </div>
-</div>
-
+  <!-- fin de résultat -->
+<% end %>
 <!-- MODALE // NE PAS TOUCHER -->
 
 <div class="modal bottle-modal slide-in-fwd-center" id="modal<%= bottle.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
