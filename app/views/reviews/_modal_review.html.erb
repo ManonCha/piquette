@@ -69,6 +69,10 @@
       <div class="modal-content review-modal-content">
         <div class="review-modal-body">
 
+          <div class="piquette-modal-review-comment">
+            <p><%= review.tasting_date.strftime("%m %B %Y") %></p>
+          </div>
+
           <div class="piquette-modal-review-rating">
             <% review.rating.times do %>
               <i class="fas fa-star"></i>
