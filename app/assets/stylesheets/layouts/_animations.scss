@@ -128,12 +128,12 @@
   }
 }
 
-// .bloup {
-//  &:focus, &:active, &:hover, &:focus-within {
-//   background: white !important;
-//   color: $pink !important;
-//  }
-// }
+.bloup {
+ &:focus, &:active, &:hover, &:focus-within {
+  background: white !important;
+  color: $pink !important;
+ }
+}
 // div.bloup {
 //   &:focus, &:active, &:hover, &:focus-within {
 //   background: lightgrey;
