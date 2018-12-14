@@ -123,21 +123,6 @@
       </div>
 
 
-
-
-
-      <div class="bottle-modal-cta reco-modal-wish">
-        <% wish = current_user.wishes.find_by(bottle: bottle) %>
-        <% if wish %>
-          <%= link_to wish_path(wish), method: :delete, remote: true do %>
-          <div>Ajouté à ma wishlist <i class="fas fa-check"></i></div>
-          <% end %>
-        <% else %>
-          <%= link_to bottle_wishes_path(bottle), method: :post, remote: true do %>
-          <div>Ajouter à ma wishlist</div>
-          <% end %>
-        <% end %>
-      </div>
     </div>
 
   </div>
