@@ -1,10 +1,8 @@
 import Chart from 'chart.js';
 
 const initLine = () => {
-  console.log('hello my dear');
   const cty = document.getElementById('bottle_lines');
   const wine_line_values = cty.dataset.line.split(',');
-  console.log(wine_line_values);
 
   const myLineChart = new Chart(cty, {
     type: 'bar',

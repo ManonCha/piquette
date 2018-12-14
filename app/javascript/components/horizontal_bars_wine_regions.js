@@ -1,7 +1,6 @@
 import Chart from 'chart.js'
 
 const initHorizontalBarChart = () => {
-  console.log('bonjour monsieur');
   const cta = document.getElementById('regions_wine');
   const wine_regions = cta.dataset.bar.split(',');
   const labels = JSON.parse(cta.dataset.labels);
@@ -17,7 +16,8 @@ const initHorizontalBarChart = () => {
             '#FF006F',
             '#FF006F',
             '#FF006F'
-        ]
+        ],
+
       }]
     },
     options: {
