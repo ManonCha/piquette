@@ -6,7 +6,7 @@
   </div>
   <div class="new-review-container">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-inputs">
+      <div class="form-inputs", style='color: white;'>
         <%= f.input :email,
                     required: false,
                     autofocus: true,
@@ -17,8 +17,19 @@
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
       </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Log in" %>
+      <div class="form-actions" >
+        <%= f.button :submit, "Log in", style:'width: 90%;
+  font-weight: bold;
+  margin: 5vw;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-family: $headers-font;
+  font-size: 24px;
+  background: linear-gradient(108.27deg, #FFAF00 17.42%, #FFC850 88.86%);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  padding: 15px 20px;' %>
       </div>
     <% end %>
   </div>
