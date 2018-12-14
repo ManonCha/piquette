@@ -89,18 +89,25 @@
 
               <div class="piquette-modal-content-item">
                 <p><strong>Apogée</strong></p>
-                <h5><%= bottle.best_after %></h5>
-                <h5><%= bottle.best_before %></h5>
+                <p><%= bottle.best_after %></p>
+                <p><%= bottle.best_before %></p>
               </div>
 
               <div class="piquette-modal-content-item">
                 <p><strong>Contenance</strong></p>
-                <h5>75cl</h5>
+                <p>75cl</p>
               </div>
 
             </div>
 
             <div class="piquette-modal-advice">
+
+              <% if bottle.grapes %>
+                <div class="piquette-modal-content">
+                  <p><strong>Cépages</strong></p>
+                  <p><%= bottle.grapes %></p>
+                </div>
+              <% end %>
 
               <% if bottle.tasting_advice %>
                 <div class="piquette-modal-content">

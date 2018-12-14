@@ -34,6 +34,13 @@
 
         </div>
 
+        <% if wish.bottle.grapes %>
+          <div class="piquette-modal-content">
+            <p><strong>Cépages</strong></p>
+            <p><%= wish.bottle.grapes %></p>
+          </div>
+        <% end %>
+
         <div class="piquette-modal-advice">
           <% if wish.bottle.tasting_advice %>
             <div class="piquette-modal-content">

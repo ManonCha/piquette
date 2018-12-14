@@ -40,6 +40,13 @@
 
           <div class="piquette-modal-advice">
 
+            <% if user_bottle.grapes %>
+              <div class="piquette-modal-content">
+                <p><strong>Cépages</strong></p>
+                <p><%= user_bottle.grapes %></p>
+              </div>
+            <% end %>
+
             <% if user_bottle.tasting_advice %>
               <div class="piquette-modal-content">
                 <p><strong>Conseils de dégustation</strong></p>
