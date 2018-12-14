@@ -29,7 +29,14 @@
   background: linear-gradient(108.27deg, #FFAF00 17.42%, #FFC850 88.86%);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
-  padding: 15px 20px;' %>
+  padding: 15px 20px;
+  font-family: $headers-font !important;
+  font-size: 25px;' %>
+      </div>
+    <% end %>
+    <%= link_to new_user_registration_path do %>
+      <div class="bottle-modal-cta bloup">
+        <div>Première visite ?</div>
       </div>
     <% end %>
   </div>
