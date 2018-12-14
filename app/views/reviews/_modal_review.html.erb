@@ -41,6 +41,13 @@
 
             <div class="piquette-modal-advice">
 
+              <% if review.bottle.grapes %>
+                <div class="piquette-modal-content">
+                  <p><strong>Cépages</strong></p>
+                  <p><%= review.bottle.grapes %></p>
+                </div>
+              <% end %>
+
               <% if review.bottle.tasting_advice %>
                 <div class="piquette-modal-content">
                   <p><strong>Conseils de dégustation</strong></p>
