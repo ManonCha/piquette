@@ -51,13 +51,22 @@
                   <p class="subtitle"> <%=@user_yellow_bottles%></p>
                 </div>
                 <div>
-
                   <svg width="51" height="146" viewBox="0 0 177 530" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect class="wine-fill-rose" x="9" y="328" width="158" height="500" fill="#DE6C74"/>
+                  <rect class="wine-fill-rose" x="9" y="241" width="158" height="280" fill="#F7E7CE"/>
+                  <circle class="bulle" cx="55" cy="332" r="12" stroke="black" stroke-width="2"/>
+                  <circle class="bulle" cx="103" cy="366" r="12" stroke="black" stroke-width="2"/>
+                  <circle class="bulle" cx="128" cy="319" r="12" stroke="black" stroke-width="2"/>
+                  <circle class="bulle" cx="62" cy="265" r="12" stroke="black" stroke-width="2"/>
+                  <circle class="bulle" cx="106" cy="272" r="12" stroke="black" stroke-width="2"/>
+                  <circle class="bulle" cx="68" cy="407" r="12" stroke="black" stroke-width="2"/>
+                  <circle class="bulle" cx="45" cy="442" r="12" stroke="black" stroke-width="2"/>
+                  <circle class="bulle" cx="132" cy="429" r="12" stroke="black" stroke-width="2"/>
+                  <circle class="bulle" cx="88" cy="474" r="12" stroke="black" stroke-width="2"/>
+                  <circle class="bulle" cx="45" cy="492" r="12" stroke="black" stroke-width="2"/>
+                  <circle class="bulle" cx="143" cy="489" r="12" stroke="black" stroke-width="2"/>
                   <path d="M123.666 162.533V8.83299C123.666 3.9574 119.709 0 114.833 0H61.833C56.9574 0 53 3.9574 53 8.83299V162.533C20.1576 181.118 -0.00931318 215.533 3.22649e-06 253.605V521.167C3.22649e-06 526.052 3.95741 530 8.833 530H167.833C172.709 530 176.666 526.052 176.666 521.167V253.614C176.674 215.533 156.508 181.118 123.666 162.533ZM158.999 512.333H17.666V253.605C17.6484 220.418 36.0928 190.58 65.7811 175.74C68.7758 174.237 70.666 171.182 70.666 167.834V17.667H105.999V167.834C105.999 171.182 107.889 174.247 110.884 175.74C140.573 190.57 159.008 220.41 158.999 253.605V512.333Z" fill="#333333"/>
-                  <path d="M114.806 44.167H61.8062V61.834H114.806V44.167Z" fill="#333333"/>
-                  <path d="M114.806 123.667H61.8062V141.334H114.806V123.667Z" fill="#333333"/>
                   </svg>
+
                   <p class="subtitle"><%=@user_pink_bottles%></p>
                 </div>
 
@@ -67,16 +76,17 @@
             <canvas id='bottle_charts' width="100" height="100" data-wine='<%=@user_red_bottles%>, <%=@user_yellow_bottles%>, <%=@user_pink_bottles%>, <%=@user_champ_bottles%> '>
             </canvas> -->
           </div>
-          <div style="width: 90%; margin: 0 auto 15px auto;">
-            <p style="margin-bottom: 0"><strong>Top regions</strong></p>
-            <canvas id='regions_wine' data-bar='<%=@sorted_bottles[0][1]%>
-              ,<%=@sorted_bottles[1][1]%>, <%=@sorted_bottles[2][1]%>, <%=@sorted_bottles[3][1]%> ' data-labels="<%= @sorted_bottles.map(&:first).first(4).to_json %>"></canvas>
-          </div>
           <div style="width: 91%; margin: 20px auto 0 auto;">
-            <p style="margin-bottom: 0"><strong>Etat des stocks</strong></p>
+            <p style="margin-bottom: 0"><strong>Etat des bouteilles</strong></p>
             <canvas id='bottle_lines' data-line='<%=@boire%>, <%=@garder%>, <%=@trop_vieux%>'>
             </canvas>
           </div>
+          <div style="width: 90%; margin: 0 auto 15px auto;">
+            <p style="margin-bottom: 0"><strong>Top regions</strong></p>
+            <canvas id='regions_wine' data-bar='<%=@sorted_bottles[0][1]%>
+              ,<%=@sorted_bottles[1][1]%>, <%=@sorted_bottles[2][1]%>, <%=@sorted_bottles[3][1]%> ' data-labels="<%= @sorted_bottles.map(&:first).first(3).to_json %>"></canvas>
+          </div>
+
         <% else %>
           <p>Ta cave est vide.</p>
         <% end %>
@@ -90,6 +100,7 @@
   <p>MES DEGUSTATIONS</p>
   <%#= link_to "", reviews_path, class:'card-link' %>
 </div> -->
+
 
 
 
